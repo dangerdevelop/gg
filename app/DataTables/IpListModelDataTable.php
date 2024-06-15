@@ -68,7 +68,7 @@ class IpListModelDataTable extends DataTable
                 Button::make('excel'),
                 Button::make('reload')
             )->ajax([
-                'url' => route('admin.listip'),
+                'url' => '/hacininyeri/ip-list',
                 "type" => 'GET',
             ]);;
     }
