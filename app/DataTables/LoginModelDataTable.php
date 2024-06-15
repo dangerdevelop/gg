@@ -54,7 +54,7 @@ class LoginModelDataTable extends DataTable
                     'reload',
                 ],
             ])->ajax([
-                'url' => route('admin.listlogin'),
+                'url' => '/hacininyeri/login-list',
                 "type" => 'GET',
             ]);
     }
