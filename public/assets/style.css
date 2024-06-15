@@ -1,0 +1,470 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Vesper+Libre:wght@400;500;700;900&display=swap");
+@import "responsive.css";
+body {
+    background: #f2f2f2;
+    font-family: "Source Sans 3";
+}
+/* .inter-<uniquifier> {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+  } 
+  */
+.inter {
+    font-family: "Inter";
+}
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.full-screen {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+header {
+    background: #038928;
+    height: 63px;
+    border-bottom: solid 3px #02691f;
+}
+
+.h-100 {
+    height: auto;
+}
+
+.logo-text {
+    font-family: "Source Sans 3";
+    font-size: 27px;
+    top: -7px;
+    position: relative;
+    font-weight: 500;
+    left: -7px;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+.poppins {
+    font-family: Poppins;
+}
+
+.vesper {
+    font-family: "Vesper Libro";
+}
+
+.side {
+    padding-left: 0px !important;
+    position: relative;
+    left: -20px;
+    top: -10px !important;
+    font-size: 22px !important;
+}
+
+.pm-0 {
+    position: relative;
+    left: -12px;
+}
+
+.logo-text.smfont {
+    top: 2px;
+}
+
+.kanit {
+    font-family: Kanit;
+}
+
+header ul.buttons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header ul.buttons li {
+    width: 50%;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: solid 1px #038928;
+}
+
+header ul.buttons li a {
+    color: #fff;
+    font-family: "Source Sans 3";
+    font-size: 14px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+header ul.buttons li.active {
+    border: solid 1px #fff;
+}
+
+.logo-area {
+    align-items: baseline;
+    display: flex;
+}
+
+header ul.buttons li a:hover {
+    color: #fff;
+}
+
+header ul.buttons li:hover {
+    border: solid 1px #fff;
+}
+header ul.buttons a:active {
+    color: #fff !important;
+    border: none !important;
+}
+.title1 {
+    font-size: 20px;
+    color: #999;
+}
+
+div#login {
+    background: #fff;
+    padding: 10px 30px 20px 20px;
+    border-bottom: solid 2px #d9d9d9;
+}
+
+#login .title {
+    color: #7fbf35;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+#login p {
+    font-size: 14px;
+}
+
+#loginForm label {
+    background: #f6f6f6;
+    height: 36px;
+    font-size: 14px;
+}
+
+#loginForm input {
+    border-radius: 0 !important;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #666;
+    background-color: #fff;
+    background-image: none;
+    height: 36px;
+    border: 1px solid #bbc3c6;
+}
+
+#loginForm input:focus {
+    border-color: #37a6ad;
+    outline: 0;
+    box-shadow: inset 0 0 0 #000;
+    -webkit-box-shadow: inset 0 0 0 #000;
+}
+.check-main span {
+    display: flex;
+    position: relative;
+    top: 8px;
+    left: 2px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.check-main input.check {
+    border-radius: 0 !important;
+    appearance: none;
+    width: 16px;
+    height: 16px !important;
+    position: relative;
+    top: 9px;
+}
+
+#loginForm .ask {
+    color: #fff;
+    background-color: #2ea8ab;
+    border-color: #2ea8ab;
+    padding: 7px 0;
+    width: 35px;
+    text-align: center;
+    font-weight: 700;
+}
+
+#login .loginbtn {
+    color: #fff;
+    background-color: #2ea8ab;
+    border-color: #2ea8ab;
+    border-radius: 0;
+    font-size: 14px;
+}
+
+.empty-label label {
+    background: #fff !important;
+}
+
+#loginForm .links {
+    float: left;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+}
+
+.links a {
+    color: #2fa8ac;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+div#helpsecure {
+    padding: 10px;
+    font-size: 14px;
+    float: left;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+    border-bottom: solid 1px #cccccc8a;
+}
+
+div#helpsecure ul li {
+    color: #333;
+    background-color: #e4e5e9;
+    border: solid 1px #d6d7d9;
+    display: flex;
+    line-height: 1.5;
+    height: 45px;
+    align-items: center;
+    cursor: pointer;
+}
+
+#helpsecure span.collapset {
+    background-color: #2ea8ab;
+    border-bottom: 1px solid #008d91;
+    float: right;
+    display: flex;
+    width: 30px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    height: 100%;
+}
+
+#helpsecure ul li span:first-child {
+    width: 88%;
+    float: left;
+    padding: 6px;
+}
+#helpsecure a {
+    color: #2fa8ac !important;
+    text-decoration: none;
+    position: relative;
+    left: 7px;
+    margin-bottom: 10px !important;
+}
+#helpsecure ul {
+    padding-bottom: 10px;
+}
+
+.other {
+    color: #2fa8ac;
+    border-bottom: solid 2px #dbdbdb;
+}
+
+.other a {
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    position: relative;
+    line-height: 1;
+    color: #2fa8ac;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.other a i {
+    float: right;
+    position: relative;
+    right: 20px;
+    font-size: 18px;
+}
+#main-section a:hover {
+    color: #3bc7cb !important;
+}
+.mbshow {
+    display: none;
+}
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+footer ul {
+    list-style: none;
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+footer ul li {
+    float: left;
+    margin-right: 19px;
+    font-size: 12px;
+    color: #a1a1a1;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #2fa8ac;
+    font-size: 12px;
+}
+
+footer p {
+    color: #9f9f9f;
+    font-size: 12px;
+}
+
+
+.advice-text.has-alert {
+    display: block;
+    background-color: #c91400;
+}
+.advice-text {
+    display: none;
+    position: relative;
+    background-color: #999;
+    color: #fff;
+    padding: 4px 8px !important;
+    margin-top: 10px;
+    overflow: visible !important;
+    clear: both;
+}
+
+.advice-text:before,.advice-text:after {
+    content: " ";
+    display: table
+}
+
+.advice-text:after {
+    clear: both
+}
+.advice-text:after {
+    border-color: #999 transparent;
+    border-style: solid;
+    border-width: 0 8px 8px;
+    top: -8px;
+    content: "";
+    display: block;
+    left: 20px;
+    position: absolute;
+    width: 0
+}
+
+.advice-text.has-alert {
+    display: block;
+    background-color: #c91400
+}
+
+.advice-text.has-alert:after {
+    border-color: #c91400 transparent
+}
+.advice-text.alert {
+    display: block;
+    background-color: #c91400
+}
+
+.advice-text.alert:after {
+    border-color: #c91400 transparent
+}
+
+.errorMessage {
+    font-size: 14px;
+}
+
+
+.errorMsg svg {
+    color: #cc0000;
+    font-size: 70px;
+}
+
+.errorMsg {
+    color: #c00;
+}
+.errorMsg h3 {font-weight: 400;font-size: 20px;font-family: "Source Sans 3";}
