@@ -53,7 +53,10 @@ class LoginModelDataTable extends DataTable
                     'export',
                     'reload',
                 ],
-            ]);
+            ])->ajax([
+                'url' => route('admin.listlogin'),
+                "type" => 'GET',
+            ]);;;
     }
 
     /**

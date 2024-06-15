@@ -54,7 +54,10 @@ class ExternalListDatatable extends DataTable
             ->buttons(
                 Button::make('excel'),
                 Button::make('reload')
-            );
+            )->ajax([
+                'url' => route('forbidden.index'),
+                "type" => 'GET',
+            ]);
     }
 
     /**
