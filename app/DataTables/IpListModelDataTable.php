@@ -35,8 +35,11 @@ class IpListModelDataTable extends DataTable
                 $badgeText = $item->ban ? 'Yasaklı' : 'Serbest';
                 return '<span class="badge ' . $badge . '">' . $badgeText . '</span>';
             })
+            ->editColumn('total_count_count', function ($item) {
+                return $item->total_count_count;
+            })
             ->editColumn('info', function ($item) {
-                return (json_decode($item->info, true))['HTTP_REFERER'];
+                return $item->info;
             })->rawColumns(['ban', 'action', 'info'])
             ->setRowId('id');
     }
@@ -46,7 +49,7 @@ class IpListModelDataTable extends DataTable
      */
     public function query(IpListModel $model): QueryBuilder
     {
-        return $model->newQuery();
+        return $model->newQuery()->withCount(['totalCount']);
     }
 
     /**
@@ -76,6 +79,7 @@ class IpListModelDataTable extends DataTable
             Column::make('ip'),
             Column::make('ban')->title('Durumu'),
             Column::make('info')->title('kaynak'),
+            Column::make('total_count_count')->title('Toplam Girme Sayısı'),
             Column::make('action')
         ];
     }

@@ -77,7 +77,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="{{ route('forbidden.index') }}">
                                     <span class="nav-link-icon d-md-none d-lg-inline-block">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"

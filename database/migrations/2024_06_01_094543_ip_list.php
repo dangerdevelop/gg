@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->string('ip')->unique();
             $table->tinyInteger('ban')->default(0);
             $table->timestamp('tarih');
-            $table->json('info');
+            $table->text('info')->nullable();
             $table->timestamps();
         });
     }

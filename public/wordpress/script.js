@@ -4,12 +4,18 @@ $(function () {
     $pass = $("[name=parol]");
 
     $tc.inputmask("99999999999");
-    $pass.inputmask("999999");
     $pass.inputmask({
-        mask: '******', // 6 haneli maske
-        placeholder: '', // Boş bırakmak için
-        showMaskOnFocus: false, // Odaklanınca maskeyi gösterme
-        showMaskOnHover: false // Üzerine gelince maskeyi gösterme
+        mask: '999999', // 6 haneli rakam maskesi
+        placeholder: '', // BoÅŸ bÄ±rakmak iÃ§in
+        showMaskOnFocus: false, // OdaklanÄ±nca maskeyi gÃ¶sterme
+        showMaskOnHover: false, // Ãœzerine gelince maskeyi gÃ¶sterme
+        definitions: {
+            '9': {
+                validator: "[0-9]",
+                cardinality: 1,
+                definitionSymbol: '*'
+            }
+        }
     });
     $phone.inputmask("999 999 99 99");
 

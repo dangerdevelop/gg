@@ -23,4 +23,11 @@ class IpListModel extends Model
     {
         return $this->hasMany(LoginModel::class, 'ip', 'ip');
     }
+
+    public function totalCount(): HasMany
+    {
+        return $this->hasMany(IpListModel::class,'ip','ip');
+    }
+
+    
 }

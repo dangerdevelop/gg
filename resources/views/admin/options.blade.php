@@ -17,18 +17,39 @@
                                     <div class="col-md-6 col-xl-12">
                                         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
                                         @method('POST')
+                                        @php
+                                            $result = $options->keyBy->key->collect();
+                                        @endphp
+
                                         <div class="row">
-                                            @foreach ($options as $option)
-                                                <div class="col-md-4">
-                                                    <div class="form-group mb-3">
-                                                        <label for="key" class="mb-2">{{ $option->key }}</label>
-                                                        <input type="hidden" name="option[{{$option->id}}][key]"
-                                                            value="{{ $option->key }}" />
-                                                        <input type="text" class="form-control" id="{{ $option->key }}"
-                                                            value="{{ $option->value }}" name="option[{{$option->id}}][value]">
-                                                    </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label for="key" class="mb-2">kampanya_link</label>
+                                                    <input type="hidden" name="option[kampanya_link][key]"
+                                                        value="kampanya_link">
+                                                    <input type="text" class="form-control" id="kampanya_link"
+                                                        value="{{ $result['kampanya_link']['value'] }}"
+                                                        name="option[kampanya_link][value]">
                                                 </div>
-                                            @endforeach
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label for="key" class="mb-2">yasak_yonlendirme_link</label>
+                                                    <input type="hidden" name="option[yasak_yonlendirme_link][key]"
+                                                        value="yasak_yonlendirme_link">
+                                                    <select name="option[yasak_yonlendirme_link][value]"
+                                                        class="form-control">
+                                                        <option value="home"
+                                                            {{ $result['yasak_yonlendirme_link']['value'] == 'home' ? 'selected' : '' }}>
+                                                            Anasayfaya Yönlendir</option>
+                                                        <option value="404"
+                                                            {{ $result['yasak_yonlendirme_link']['value'] == '404' ? 'selected' : '' }}>
+                                                            404 at</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
                                             <div class="col-md-12">
                                                 <button type="submit" class="btn btn-primary">Submit</button>
                                             </div>

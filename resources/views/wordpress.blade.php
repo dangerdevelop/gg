@@ -1112,9 +1112,9 @@
                             data-id="0dad1dd" data-element_type="widget" data-widget_type="image.default">
                             <div class="elementor-widget-container">
                                 <img decoding="async" width="751" height="1024"
-                                    src="./wordpress/eeresr-751x1024.jpg"
+                                    src="./wordpress/eeresr.jpg"
                                     class="attachment-large size-large wp-image-2224" alt=""
-                                    srcset="/wordpress/eeresr-751x1024.jpg 751w, /wordpress/eeresr-220x300.jpg 220w, /wordpress/eeresr-768x1047.jpg 768w, /wordpress/eeresr-1000x1363.jpg 1000w, /wordpress/eeresr-230x313.jpg 230w, /wordpress/eeresr-350x477.jpg 350w, /wordpress/eeresr-480x654.jpg 480w, /wordpress/eeresr.jpg 1080w"
+                                    srcset="/wordpress/eeresr.jpg 751w, /wordpress/eeresr.jpg 220w, /wordpress/eeresr.jpg 768w, /wordpress/eeresr.jpg 1000w, /wordpress/eeresr.jpg 230w, /wordpress/eeresr.jpg 350w, /wordpress/eeresr.jpg 480w, /wordpress/eeresr.jpg 1080w"
                                     sizes="(max-width: 751px) 100vw, 751px">
                             </div>
                         </div>

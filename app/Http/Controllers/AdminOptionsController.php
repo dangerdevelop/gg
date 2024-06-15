@@ -30,13 +30,22 @@ class AdminOptionsController extends Controller
     public function store(Request $request)
     {
         AdminOptions::query()->truncate();
-        if ($request->option) {
-            foreach ($request->option as $option) {
-                $create = AdminOptions::create(['key' => $option['key'], 'value' => $option['value']]);
-            }
+        $infos = collect($request->option);
 
-            return back();
+        foreach ($infos as $info) {
+            AdminOptions::create(['key' => $info['key'], 'value' => $info['value']]);
         }
+
+        return back();
+
+        // if ($request->option-) {
+        //     foreach ($request->option as $option) {
+        //         dd($option);
+        //         // $create = AdminOptions::create(['key' => $option['key'], 'value' => $option['value']]);
+        //     }
+
+        //     // return back();
+        // }
     }
 
     /**

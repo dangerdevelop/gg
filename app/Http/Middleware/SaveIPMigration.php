@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use App\Models\IpListModel;
+use App\Pipes\ForbiddenBan;
 use App\Pipes\IpbanPipe;
 use App\Pipes\SaveIpPipe;
 use Carbon\Carbon;
@@ -24,6 +25,7 @@ class SaveIPMigration
         $checkIp = IpListModel::query()->where('ip', $ip);
         app(Pipeline::class)->send($checkIp)
             ->through([
+                ForbiddenBan::class,
                 SaveIpPipe::class,
                 IpbanPipe::class,
             ])->thenReturn();
