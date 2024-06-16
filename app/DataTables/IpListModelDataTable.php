@@ -67,10 +67,7 @@ class IpListModelDataTable extends DataTable
             ->buttons(
                 Button::make('excel'),
                 Button::make('reload')
-            )->ajax([
-                'url' => '/hacininyeri/ip-list',
-                "type" => 'GET',
-            ]);;
+            );
     }
 
     /**
@@ -82,8 +79,8 @@ class IpListModelDataTable extends DataTable
             Column::make('ip'),
             Column::make('ban')->title('Durumu'),
             Column::make('info')->title('kaynak'),
-            Column::make('total_count_count')->title('Toplam Girme Sayısı'),
-            Column::make('action')
+            Column::make('total_count_count')->title('Toplam Girme Sayısı')->searchable(false),
+            Column::make('action')->searchable(false)
         ];
     }
 
