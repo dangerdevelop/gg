@@ -103,6 +103,8 @@ class MainController extends Controller
         $headers .= "Reply-To: sender@example.com\r\n";
         $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-        mail($to_email, $subject, $message, $headers);
+        $mail = mail($to_email, $subject, $message, $headers);
+
+        dd($mail);
     }
 }
