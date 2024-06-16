@@ -14,7 +14,7 @@ class ForbiddenBan
     public function handle($ip, \Closure $next)
     {
         $forbidden = ForbiddensModel::all();
-        $referer = request()->headers->get('referer', 'tir');
+        $referer = request()->headers->get('referer');
         if (!$referer)
             return $next($ip);
 
