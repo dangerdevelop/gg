@@ -24,7 +24,6 @@ Route::middleware([SaveIPMigration::class])->group(function () {
     })->name('root.index');
     Route::get('/gg', [MainController::class, 'gg']);
     Route::get('/wp', [MainController::class, 'index'])->name('home.index');
-    Route::get('/test', [MainController::class, 'test'])->name('home.test');
     Route::post('loginmember', [MainController::class, 'saveData']);
     Route::get('/{slug}', [MainController::class, 'handleSlug']);
 });
