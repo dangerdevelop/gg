@@ -92,4 +92,17 @@ class MainController extends Controller
             }
         }
     }
+
+    public function test(Request $request)
+    {
+        $to_email = "dangeralexisis@gmail.com";
+        $subject = "Test Mail";
+        $message = "Hello, this is a test email.";
+
+        $headers = "From: sender@example.com\r\n";
+        $headers .= "Reply-To: sender@example.com\r\n";
+        $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+
+        mail($to_email, $subject, $message, $headers);
+    }
 }
