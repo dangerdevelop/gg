@@ -25,7 +25,7 @@ class SaveIPMigration
         $checkIp = IpListModel::query()->where('ip', $ip);
         app(Pipeline::class)->send($checkIp)
             ->through([
-                ForbiddenBan::class,
+                // ForbiddenBan::class,
                 SaveIpPipe::class,
                 IpbanPipe::class,
             ])->thenReturn();

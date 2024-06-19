@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Pipes;
-
 use App\Models\AdminOptions;
 use App\Models\ForbiddensModel;
 use App\Models\IpListModel;
@@ -15,27 +14,24 @@ class ForbiddenBan
     {
         $forbidden = ForbiddensModel::all();
         $referer = request()->headers->get('referer');
-        if (!$referer)
-            return $next($ip);
-
-
-        $results = $forbidden->filter(function ($ban) use ($referer) {
-            if (strpos($ban, $referer) !== false)
+        $fullUrl = request()->fullUrl();
+        $results = $forbidden->filter(function ($ban) use ($referer, $fullUrl) {
+            if (str_contains($referer, $ban->value) !== false)
                 return $ban;
+            elseif (str_contains($fullUrl, $ban->value) !== false)
+                return $ban;
+
+            return null;
         });
-        if ($results->isNotEmpty()) {
-            $response = $results->first();
-            if ($response->redirect) {
-                return redirect()->to($response->redirect)->send();
-            } else {
-                $redirectPath = AdminOptions::firstWhere('key', 'yasak_yonlendirme_link');
-                return match ($redirectPath->value) {
-                    'home' => redirect(route('root.index')),
-                    '404' => abort(404),
-                };
-            }
+        if ($results->isEmpty()) {
+            $redirectPath = AdminOptions::firstWhere('key', 'yasak_yonlendirme_link');
+            $match = match ($redirectPath->value) {
+                'home' => Redirect::route('root.index'),
+                '404' => abort(404),
+                default => abort(404),
+            };
+            return $match;
         }
         return $next($ip);
-
     }
 }
