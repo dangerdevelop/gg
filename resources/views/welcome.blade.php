@@ -3,927 +3,1354 @@
 
 <head>
     <meta charset="utf-8">
-    <!--[if IE]>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- Page title -->
-    <title>Best Flowers</title>
-    <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('flower/css/bootstrap.css') }}" rel="stylesheet" type="text/css">
-    <!-- Icon fonts -->
-    <link href="{{ asset('flower/fonts/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('flower/fonts/glyphicons/bootstrap-glyphicons.css') }}"m rel="stylesheet" type="text/css">
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700i" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i" rel="stylesheet" type="text/css">
-    <!-- Style CSS -->
-    <link href="{{ asset('flower/css/style.css') }}" rel="stylesheet">
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="{{ asset('flower/css/plugins.css') }}">
-    <!-- Color Style CSS -->
-    <link href="{{ asset('flower/styles/lavender.css') }}" rel="stylesheet">
-    <!-- Favicons-->
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('flower/apple-icon-72x72.html') }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('flower/apple-icon-114x114.html') }}">
-    <link rel="shortcut icon" href="{{ asset('flower/favicon.ico') }}" type="image/x-icon">
-    <!-- Switcher Only -->
-    <link rel="stylesheet" id="switcher-css" type="text/css" href="/flower/switcher/css/switcher.css" media="all" />
-    <!-- END Switcher Styles -->
-    <!-- Demo Examples (For Module #3) -->
-    <link rel="alternate stylesheet" type="text/css" href="/flower/styles/summer.css" title="summer" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="/flower/styles/serenity.css" title="serenity" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="/flower/styles/lavender.css" title="lavender" media="all" />
-    <!-- END Demo Examples -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Welcome To Our Website</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <base href="https://bootstrapmade.com/demo/templates/Append/" />
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../../../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: Append
+  * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
+  * Updated: Jun 27 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-    <!-- Start Switcher -->
-    <div class="demo_changer">
-        <div class="demo-icon">
-            <i class="fa fa-cog fa-spin fa-2x"></i>
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1 class="sitename">Append</h1><span>.</span>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html#hero" class="active">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#team">Team</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li class="dropdown"><a href="#"><span>Dropdown</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="#">Dropdown 1</a></li>
+                            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
+                                        class="bi bi-chevron-down toggle-dropdown"></i></a>
+                                <ul>
+                                    <li><a href="#">Deep Dropdown 1</a></li>
+                                    <li><a href="#">Deep Dropdown 2</a></li>
+                                    <li><a href="#">Deep Dropdown 3</a></li>
+                                    <li><a href="#">Deep Dropdown 4</a></li>
+                                    <li><a href="#">Deep Dropdown 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Dropdown 2</a></li>
+                            <li><a href="#">Dropdown 3</a></li>
+                            <li><a href="#">Dropdown 4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted" href="index.html#about">Get Started</a>
+
         </div>
-        <!-- end opener icon -->
-        <div class="form_holder text-center">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="predefined_styles">
-                        <h5>Choose a Color Skin</h5>
-                        <!-- MODULE #3 -->
-                        <a href="summer.html" class="styleswitch"><img src="/flower/switcher/images/summer.png"
-                                alt="Summer"></a>
-                        <a href="serenity.html" class="styleswitch"><img src="/flower/switcher/images/serenity.png"
-                                alt="Serenity"></a>
-                        <a href="lavender.html" class="styleswitch"><img src="/flower/switcher/images/lavender.png"
-                                alt="Lavender"></a>
-                        <!-- END MODULE #3 -->
-                        <h5>Choose a Header style</h5>
-                        <div class="headerimg">
-                            <a href="index-2.html"><img src="/flower/switcher/images/photoheader.jpg" alt="Photo Header"
-                                    class=""></a>
-                            <a href="index2.html"><img src="/flower/switcher/images/slideheader.jpg" alt="Slide Header"
-                                    class=""></a>
+    </header>
+
+    <main class="main">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero section dark-background">
+
+            <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Our Website</h2>
+                        <p data-aos="fade-up" data-aos-delay="200">We are team of talented designers making websites
+                            with Bootstrap</p>
+                    </div>
+                    <div class="col-lg-5" data-aos="fade-up" data-aos-delay="300">
+                        <form action="forms/newsletter.php" method="post" class="php-email-form">
+                            <div class="sign-up-form"><input type="email" name="email"><input type="submit"
+                                    value="Subscribe"></div>
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </section><!-- /Hero Section -->
+
+        <!-- Clients Section -->
+        <section id="clients" class="clients section">
+
+            <div class="container" data-aos="fade-up">
+
+                <div class="row gy-4">
+
+                    <div class="col-xl-2 col-md-3 col-6 client-logo">
+                        <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+
+                    <div class="col-xl-2 col-md-3 col-6 client-logo">
+                        <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+
+                    <div class="col-xl-2 col-md-3 col-6 client-logo">
+                        <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+
+                    <div class="col-xl-2 col-md-3 col-6 client-logo">
+                        <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+
+                    <div class="col-xl-2 col-md-3 col-6 client-logo">
+                        <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+
+                    <div class="col-xl-2 col-md-3 col-6 client-logo">
+                        <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Clients Section -->
+
+        <!-- About Section -->
+        <section id="about" class="about section light-background">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row align-items-xl-center gy-5">
+
+                    <div class="col-xl-5 content">
+                        <h3>About Us</h3>
+                        <h2>Ducimus rerum libero reprehenderit cumque</h2>
+                        <p>Ipsa sint sit. Quis ducimus tempore dolores impedit et dolor cumque alias maxime. Enim
+                            reiciendis minus et rerum hic non. Dicta quas cum quia maiores iure. Quidem nulla qui
+                            assumenda incidunt voluptatem tempora deleniti soluta.</p>
+                        <a href="#" class="read-more"><span>Read More</span><i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+
+                    <div class="col-xl-7">
+                        <div class="row gy-4 icon-boxes">
+
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                <div class="icon-box">
+                                    <i class="bi bi-buildings"></i>
+                                    <h3>Eius provident</h3>
+                                    <p>Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor
+                                        voluptatem</p>
+                                </div>
+                            </div> <!-- End Icon Box -->
+
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                <div class="icon-box">
+                                    <i class="bi bi-clipboard-pulse"></i>
+                                    <h3>Rerum aperiam</h3>
+                                    <p>Autem saepe animi et aut aspernatur culpa facere. Rerum saepe rerum voluptates
+                                        quia</p>
+                                </div>
+                            </div> <!-- End Icon Box -->
+
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                                <div class="icon-box">
+                                    <i class="bi bi-command"></i>
+                                    <h3>Veniam omnis</h3>
+                                    <p>Omnis perferendis molestias culpa sed. Recusandae quas possimus. Quod consequatur
+                                        corrupti</p>
+                                </div>
+                            </div> <!-- End Icon Box -->
+
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                                <div class="icon-box">
+                                    <i class="bi bi-graph-up-arrow"></i>
+                                    <h3>Delares sapiente</h3>
+                                    <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis
+                                        quideme lorenda</p>
+                                </div>
+                            </div> <!-- End Icon Box -->
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section><!-- /About Section -->
+
+        <!-- Stats Section -->
+        <section id="stats" class="stats section dark-background">
+
+            <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
+
+            <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item text-center w-100 h-100">
+                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p>Clients</p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item text-center w-100 h-100">
+                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p>Projects</p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item text-center w-100 h-100">
+                            <span data-purecounter-start="0" data-purecounter-end="1453"
+                                data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Hours Of Support</p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item text-center w-100 h-100">
+                            <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p>Workers</p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Stats Section -->
+
+        <!-- Services Section -->
+        <section id="services" class="services section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Services</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-item d-flex">
+                            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+                            <div>
+                                <h4 class="title"><a href="services-details.html" class="stretched-link">Lorem
+                                        Ipsum</a></h4>
+                                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas
+                                    molestias excepturi sint occaecati cupiditate non provident</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Service Item -->
+
+                    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-item d-flex">
+                            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+                            <div>
+                                <h4 class="title"><a href="services-details.html" class="stretched-link">Dolor
+                                        Sitema</a></h4>
+                                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip ex ea commodo consequat tarad limino ata</p>
+                            </div>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-item d-flex">
+                            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+                            <div>
+                                <h4 class="title"><a href="services-details.html" class="stretched-link">Sed ut
+                                        perspiciatis</a></h4>
+                                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur</p>
+                            </div>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-item d-flex">
+                            <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+                            <div>
+                                <h4 class="title"><a href="services-details.html" class="stretched-link">Magni
+                                        Dolores</a></h4>
+                                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                                    qui officia deserunt mollit anim id est laborum</p>
+                            </div>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="500">
+                        <div class="service-item d-flex">
+                            <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+                            <div>
+                                <h4 class="title"><a href="services-details.html" class="stretched-link">Nemo
+                                        Enim</a></h4>
+                                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                                    blanditiis praesentium voluptatum deleniti atque</p>
+                            </div>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="600">
+                        <div class="service-item d-flex">
+                            <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+                            <div>
+                                <h4 class="title"><a href="services-details.html" class="stretched-link">Eiusmod
+                                        Tempor</a></h4>
+                                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam
+                                    libero tempore, cum soluta nobis est eligendi</p>
+                            </div>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Services Section -->
+
+        <!-- Features Section -->
+        <section id="features" class="features section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Features</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row gy-4 align-items-center features-item">
+                    <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Corporis temporibus maiores provident</h3>
+                        <p>
+                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident.
+                        </p>
+                        <a href="#" class="btn btn-get-started">Get Started</a>
+                    </div>
+                    <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out"
+                        data-aos-delay="100">
+                        <div class="image-stack">
+                            <img src="assets/img/features-light-1.jpg" alt="" class="stack-front">
+                            <img src="assets/img/features-light-2.jpg" alt="" class="stack-back">
+                        </div>
+                    </div>
+                </div><!-- Features Item -->
+
+                <div class="row gy-4 align-items-stretch justify-content-between features-item ">
+                    <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
+                        <img src="assets/img/features-light-3.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
+                        <h3>Sunt consequatur ad ut est nulla</h3>
+                        <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe
+                            odit aut quia voluptatem hic voluptas dolor doloremque.</p>
+                        <ul>
+                            <li><i class="bi bi-check"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat.</span></li>
+                            <li><i class="bi bi-check"></i><span> Duis aute irure dolor in reprehenderit in voluptate
+                                    velit.</span></li>
+                            <li><i class="bi bi-check"></i> <span>Facilis ut et voluptatem aperiam. Autem soluta ad
+                                    fugiat</span>.</li>
+                        </ul>
+                        <a href="#" class="btn btn-get-started align-self-start">Get Started</a>
+                    </div>
+                </div><!-- Features Item -->
+
+            </div>
+
+        </section><!-- /Features Section -->
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Portfolio</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="isotope-layout" data-default-filter="*" data-layout="masonry"
+                    data-sort="original-order">
+
+                    <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-app">App</li>
+                        <li data-filter=".filter-product">Card</li>
+                        <li data-filter=".filter-branding">Web</li>
+                    </ul><!-- End Portfolio Filters -->
+
+                    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                            <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid"
+                                alt="">
+                            <div class="portfolio-info">
+                                <h4>App 1</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1"
+                                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                            <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid"
+                                alt="">
+                            <div class="portfolio-info">
+                                <h4>Product 1</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1"
+                                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                            <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid"
+                                alt="">
+                            <div class="portfolio-info">
+                                <h4>Branding 1</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1"
+                                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                            <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid"
+                                alt="">
+                            <div class="portfolio-info">
+                                <h4>App 2</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2"
+                                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                            <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid"
+                                alt="">
+                            <div class="portfolio-info">
+                                <h4>Product 2</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2"
+                                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                            <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid"
+                                alt="">
+                            <div class="portfolio-info">
+                                <h4>Branding 2</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2"
+                                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                            <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid"
+                                alt="">
+                            <div class="portfolio-info">
+                                <h4>App 3</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3"
+                                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                            <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid"
+                                alt="">
+                            <div class="portfolio-info">
+                                <h4>Product 3</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3"
+                                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                            <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid"
+                                alt="">
+                            <div class="portfolio-info">
+                                <h4>Branding 3</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2"
+                                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                    </div><!-- End Portfolio Container -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Portfolio Section -->
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Pricing</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="zoom-in" data-aos-delay="100">
+
+                <div class="row g-4">
+
+                    <div class="col-lg-4">
+                        <div class="pricing-item">
+                            <h3>Free Plan</h3>
+                            <div class="icon">
+                                <i class="bi bi-box"></i>
+                            </div>
+                            <h4><sup>$</sup>0<span> / month</span></h4>
+                            <ul>
+                                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span>
+                                </li>
+                                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis
+                                        hendrerit</span></li>
+                            </ul>
+                            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                        </div>
+                    </div><!-- End Pricing Item -->
+
+                    <div class="col-lg-4">
+                        <div class="pricing-item featured">
+                            <h3>Business Plan</h3>
+                            <div class="icon">
+                                <i class="bi bi-rocket"></i>
+                            </div>
+
+                            <h4><sup>$</sup>29<span> / month</span></h4>
+                            <ul>
+                                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                            </ul>
+                            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                        </div>
+                    </div><!-- End Pricing Item -->
+
+                    <div class="col-lg-4">
+                        <div class="pricing-item">
+                            <h3>Developer Plan</h3>
+                            <div class="icon">
+                                <i class="bi bi-send"></i>
+                            </div>
+                            <h4><sup>$</sup>49<span> / month</span></h4>
+                            <ul>
+                                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                            </ul>
+                            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                        </div>
+                    </div><!-- End Pricing Item -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Pricing Section -->
+
+        <!-- Faq Section -->
+        <section id="faq" class="faq section">
+
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="content px-xl-5">
+                            <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="faq-container">
+                            <div class="faq-item faq-active">
+                                <h3><span class="num">1.</span> <span>Non consectetur a erat nam at lectus urna
+                                        duis?</span></h3>
+                                <div class="faq-content">
+                                    <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus
+                                        laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor
+                                        rhoncus dolor purus non.</p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div><!-- End Faq item-->
+
+                            <div class="faq-item">
+                                <h3><span class="num">2.</span> <span>Feugiat scelerisque varius morbi enim nunc
+                                        faucibus a pellentesque?</span></h3>
+                                <div class="faq-content">
+                                    <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
+                                        interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus
+                                        scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
+                                        Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div><!-- End Faq item-->
+
+                            <div class="faq-item">
+                                <h3><span class="num">3.</span> <span>Dolor sit amet consectetur adipiscing elit
+                                        pellentesque?</span></h3>
+                                <div class="faq-content">
+                                    <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.
+                                        Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl
+                                        suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis
+                                        convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                                    </p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div><!-- End Faq item-->
+
+                            <div class="faq-item">
+                                <h3><span class="num">4.</span> <span>Ac odio tempor orci dapibus. Aliquam eleifend
+                                        mi in nulla?</span></h3>
+                                <div class="faq-content">
+                                    <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
+                                        interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus
+                                        scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
+                                        Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div><!-- End Faq item-->
+
+                            <div class="faq-item">
+                                <h3><span class="num">5.</span> <span>Tempus quam pellentesque nec nam aliquam sem
+                                        et tortor consequat?</span></h3>
+                                <div class="faq-content">
+                                    <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse
+                                        in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl
+                                        suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                                    </p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div><!-- End Faq item-->
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section><!-- /Faq Section -->
+
+        <!-- Team Section -->
+        <section id="team" class="team section light-background">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Team</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row gy-5">
+
+                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member-img">
+                            <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info text-center">
+                            <h4>Walter White</h4>
+                            <span>Chief Executive Officer</span>
+                            <p>Aliquam iure quaerat voluptatem praesentium possimus unde laudantium vel dolorum
+                                distinctio dire flow</p>
+                        </div>
+                    </div><!-- End Team Member -->
+
+                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+                        <div class="member-img">
+                            <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info text-center">
+                            <h4>Sarah Jhonson</h4>
+                            <span>Product Manager</span>
+                            <p>Labore ipsam sit consequatur exercitationem rerum laboriosam laudantium aut quod dolores
+                                exercitationem ut</p>
+                        </div>
+                    </div><!-- End Team Member -->
+
+                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
+                        <div class="member-img">
+                            <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info text-center">
+                            <h4>William Anderson</h4>
+                            <span>CTO</span>
+                            <p>Illum minima ea autem doloremque ipsum quidem quas aspernatur modi ut praesentium vel
+                                tque sed facilis at qui</p>
+                        </div>
+                    </div><!-- End Team Member -->
+
+                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
+                        <div class="member-img">
+                            <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info text-center">
+                            <h4>Amanda Jepson</h4>
+                            <span>Accountant</span>
+                            <p>Magni voluptatem accusamus assumenda cum nisi aut qui dolorem voluptate sed et veniam
+                                quasi quam consectetur</p>
+                        </div>
+                    </div><!-- End Team Member -->
+
+                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
+                        <div class="member-img">
+                            <img src="assets/img/team/team-5.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info text-center">
+                            <h4>Brian Doe</h4>
+                            <span>Marketing</span>
+                            <p>Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus
+                                quia impedit laborum velit</p>
+                        </div>
+                    </div><!-- End Team Member -->
+
+                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
+                        <div class="member-img">
+                            <img src="assets/img/team/team-6.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info text-center">
+                            <h4>Josepha Palas</h4>
+                            <span>Operation</span>
+                            <p>Sint sint eveniet explicabo amet consequatur nesciunt error enim rerum earum et omnis
+                                fugit eligendi cupiditate vel</p>
+                        </div>
+                    </div><!-- End Team Member -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Team Section -->
+
+        <!-- Call To Action Section -->
+        <section id="call-to-action" class="call-to-action section dark-background">
+
+            <img src="assets/img/cta-bg.jpg" alt="">
+
+            <div class="container">
+                <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-xl-10">
+                        <div class="text-center">
+                            <h3>Call To Action</h3>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                officia deserunt mollit anim id est laborum.</p>
+                            <a class="cta-btn" href="#">Call To Action</a>
                         </div>
                     </div>
                 </div>
-                <!-- end col -->
             </div>
-            <!-- end row -->
-        </div>
-        <!-- end form_holder -->
-    </div>
-    <!-- end demo_changer -->
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="spinner">
-            <div class="bounce1"></div>
-        </div>
-    </div>
-    <!-- Preloader ends -->
-    <nav class="navbar navbar-custom navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display  -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#navbar-brand-centered">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <div class="navbar-brand navbar-brand-centered page-scroll">
-                    <a href="#page-top">
-                        <!-- logo  -->
-                        <img src="/flower/img/logo.png" class="img-responsive" alt="">
+
+        </section><!-- /Call To Action Section -->
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials section light-background">
+
+            <div class="container">
+
+                <div class="row align-items-center">
+
+                    <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Testimonials</h3>
+                        <p>
+                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="swiper init-swiper">
+                            <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="d-flex">
+                                            <img src="assets/img/testimonials/testimonials-1.jpg"
+                                                class="testimonial-img flex-shrink-0" alt="">
+                                            <div>
+                                                <h3>Saul Goodman</h3>
+                                                <h4>Ceo &amp; Founder</h4>
+                                                <div class="stars">
+                                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                        class="bi bi-star-fill"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            <i class="bi bi-quote quote-icon-left"></i>
+                                            <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora
+                                                entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam
+                                                eget nibh et. Maecen aliquam, risus at semper.</span>
+                                            <i class="bi bi-quote quote-icon-right"></i>
+                                        </p>
+                                    </div>
+                                </div><!-- End testimonial item -->
+
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="d-flex">
+                                            <img src="assets/img/testimonials/testimonials-2.jpg"
+                                                class="testimonial-img flex-shrink-0" alt="">
+                                            <div>
+                                                <h3>Sara Wilsson</h3>
+                                                <h4>Designer</h4>
+                                                <div class="stars">
+                                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                        class="bi bi-star-fill"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            <i class="bi bi-quote quote-icon-left"></i>
+                                            <span>Export tempor illum tamen malis malis eram quae irure esse labore quem
+                                                cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua
+                                                noster fugiat irure amet legam anim culpa.</span>
+                                            <i class="bi bi-quote quote-icon-right"></i>
+                                        </p>
+                                    </div>
+                                </div><!-- End testimonial item -->
+
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="d-flex">
+                                            <img src="assets/img/testimonials/testimonials-3.jpg"
+                                                class="testimonial-img flex-shrink-0" alt="">
+                                            <div>
+                                                <h3>Jena Karlis</h3>
+                                                <h4>Store Owner</h4>
+                                                <div class="stars">
+                                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                        class="bi bi-star-fill"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            <i class="bi bi-quote quote-icon-left"></i>
+                                            <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum
+                                                nulla quem veniam duis minim tempor labore quem eram duis noster aute
+                                                amet eram fore quis sint minim.</span>
+                                            <i class="bi bi-quote quote-icon-right"></i>
+                                        </p>
+                                    </div>
+                                </div><!-- End testimonial item -->
+
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="d-flex">
+                                            <img src="assets/img/testimonials/testimonials-4.jpg"
+                                                class="testimonial-img flex-shrink-0" alt="">
+                                            <div>
+                                                <h3>Matt Brandon</h3>
+                                                <h4>Freelancer</h4>
+                                                <div class="stars">
+                                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                        class="bi bi-star-fill"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            <i class="bi bi-quote quote-icon-left"></i>
+                                            <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos
+                                                export minim fugiat minim velit minim dolor enim duis veniam ipsum anim
+                                                magna sunt elit fore quem dolore labore illum veniam.</span>
+                                            <i class="bi bi-quote quote-icon-right"></i>
+                                        </p>
+                                    </div>
+                                </div><!-- End testimonial item -->
+
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="d-flex">
+                                            <img src="assets/img/testimonials/testimonials-5.jpg"
+                                                class="testimonial-img flex-shrink-0" alt="">
+                                            <div>
+                                                <h3>John Larson</h3>
+                                                <h4>Entrepreneur</h4>
+                                                <div class="stars">
+                                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                        class="bi bi-star-fill"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            <i class="bi bi-quote quote-icon-left"></i>
+                                            <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam
+                                                tempor noster veniam enim culpa labore duis sunt culpa nulla illum
+                                                cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                                            <i class="bi bi-quote quote-icon-right"></i>
+                                        </p>
+                                    </div>
+                                </div><!-- End testimonial item -->
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- /Testimonials Section -->
+
+        <!-- Recent Posts Section -->
+        <section id="recent-posts" class="recent-posts section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Recent Posts</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <article>
+
+                            <div class="post-img">
+                                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                            </div>
+
+                            <p class="post-category">Politics</p>
+
+                            <h2 class="title">
+                                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
+                            </h2>
+
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/blog/blog-author.jpg" alt=""
+                                    class="img-fluid post-author-img flex-shrink-0">
+                                <div class="post-meta">
+                                    <p class="post-author">Maria Doe</p>
+                                    <p class="post-date">
+                                        <time datetime="2022-01-01">Jan 1, 2022</time>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div><!-- End post list item -->
+
+                    <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <article>
+
+                            <div class="post-img">
+                                <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
+                            </div>
+
+                            <p class="post-category">Sports</p>
+
+                            <h2 class="title">
+                                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
+                            </h2>
+
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/blog/blog-author-2.jpg" alt=""
+                                    class="img-fluid post-author-img flex-shrink-0">
+                                <div class="post-meta">
+                                    <p class="post-author">Allisa Mayer</p>
+                                    <p class="post-date">
+                                        <time datetime="2022-01-01">Jun 5, 2022</time>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div><!-- End post list item -->
+
+                    <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <article>
+
+                            <div class="post-img">
+                                <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
+                            </div>
+
+                            <p class="post-category">Entertainment</p>
+
+                            <h2 class="title">
+                                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et
+                                    soluta</a>
+                            </h2>
+
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/blog/blog-author-3.jpg" alt=""
+                                    class="img-fluid post-author-img flex-shrink-0">
+                                <div class="post-meta">
+                                    <p class="post-author">Mark Dower</p>
+                                    <p class="post-date">
+                                        <time datetime="2022-01-01">Jun 22, 2022</time>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div><!-- End post list item -->
+
+                </div><!-- End recent posts list -->
+
+            </div>
+
+        </section><!-- /Recent Posts Section -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Contact</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-6">
+
+                        <div class="row gy-4">
+                            <div class="col-md-6">
+                                <div class="info-item" data-aos="fade" data-aos-delay="200">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <h3>Address</h3>
+                                    <p>A108 Adam Street</p>
+                                    <p>New York, NY 535022</p>
+                                </div>
+                            </div><!-- End Info Item -->
+
+                            <div class="col-md-6">
+                                <div class="info-item" data-aos="fade" data-aos-delay="300">
+                                    <i class="bi bi-telephone"></i>
+                                    <h3>Call Us</h3>
+                                    <p>+1 5589 55488 55</p>
+                                    <p>+1 6678 254445 41</p>
+                                </div>
+                            </div><!-- End Info Item -->
+
+                            <div class="col-md-6">
+                                <div class="info-item" data-aos="fade" data-aos-delay="400">
+                                    <i class="bi bi-envelope"></i>
+                                    <h3>Email Us</h3>
+                                    <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                            data-cfemail="31585f575e715449505c415d541f525e5c">[email&#160;protected]</a>
+                                    </p>
+                                    <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                            data-cfemail="85e6eaebf1e4e6f1c5e0fde4e8f5e9e0abe6eae8">[email&#160;protected]</a>
+                                    </p>
+                                </div>
+                            </div><!-- End Info Item -->
+
+                            <div class="col-md-6">
+                                <div class="info-item" data-aos="fade" data-aos-delay="500">
+                                    <i class="bi bi-clock"></i>
+                                    <h3>Open Hours</h3>
+                                    <p>Monday - Friday</p>
+                                    <p>9:00AM - 05:00PM</p>
+                                </div>
+                            </div><!-- End Info Item -->
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6">
+                        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+                            data-aos-delay="200">
+                            <div class="row gy-4">
+
+                                <div class="col-md-6">
+                                    <input type="text" name="name" class="form-control"
+                                        placeholder="Your Name" required="">
+                                </div>
+
+                                <div class="col-md-6 ">
+                                    <input type="email" class="form-control" name="email"
+                                        placeholder="Your Email" required="">
+                                </div>
+
+                                <div class="col-12">
+                                    <input type="text" class="form-control" name="subject" placeholder="Subject"
+                                        required="">
+                                </div>
+
+                                <div class="col-12">
+                                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                                </div>
+
+                                <div class="col-12 text-center">
+                                    <div class="loading">Loading</div>
+                                    <div class="error-message"></div>
+                                    <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                                    <button type="submit">Send Message</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div><!-- End Contact Form -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Contact Section -->
+
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-5 col-md-12 footer-about">
+                    <a href="index.html" class="logo d-flex align-items-center">
+                        <span class="sitename">Append</span>
                     </a>
-                </div>
-                <!--/navbar-brand -->
-            </div>
-            <!--/navbar-header -->
-            <!-- Collect the nav links, forms, and other content for toggling  -->
-            <div class="collapse navbar-collapse" id="navbar-brand-centered">
-                <ul class="nav navbar-nav page-scroll">
-                    <li class="active"><a href="#page-top">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#story">Our Story</a></li>
-                    <li><a href="#attendants">Attendants</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right page-scroll">
-                    <li><a href="#event">The Event</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#rsvp">RSVP</a></li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-    <!-- /navbar ends -->
-    <!-- section: intro-->
-    <section id="intro" class="container-fluid">
-        <!-- parallax ornament -->
-        <div class="ornament1 hidden-sm hidden-xs hidden-md" data-100="transform:translatey(150%);"
-            data-center-center="transform:translatey(-10%);">
-            <!-- illustration path in the color template CSS -->
-        </div>
-        <!--/ornament 1-->
-        <!-- Background blurred images -->
-        <div class="photowall">
-            <div class="col-md-4 margin1">
-                <img src="/flower/img/couple1.jpg" alt="" class="rotate1 img-photo img-responsive">
-            </div>
-            <!-- /col-md-4 -->
-            <div class="col-md-4  col-md-offset-4">
-                <img src="/flower/img/couple2.jpg" alt="" class="rotate2 img-photo img-responsive">
-            </div>
-            <!-- /col-md-4 -->
-        </div>
-        <!-- Main Picture -->
-        <div class="main-picture col-md-6 col-centered" data-100="margin-top:0px;transform: rotate(4deg);"
-            data-center-center="margin-top:50px;transform: rotate(-10deg);">
-            <!-- image-->
-            <img src="/flower/img/couplemain.jpg" alt="" class="img-photo img-responsive">
-        </div>
-        <!--/main picture-->
-        <div class="intro-heading col-md-12 text-center" data-0="opacity:1;"
-            data--100-start="transform:translatey(0%);" data-center-bottom="transform:translatey(30%);">
-            <h1>Maria <span class="italic"> & </span> Jonas
-            </h1>
-            <h5 class="margin1 text-ornament">Are getting married</h5>
-        </div>
-        <!-- /col-md-6-->
-    </section>
-    <!-- /section ends -->
-    <!-- Section: Save date-->
-    <section id="save-date">
-        <!-- parallax ornaments -->
-        <div class="ornament2 hidden-sm hidden-xs hidden-md" data-0="opacity:1;" data-100="transform:translatex(0%);"
-            data-center-center="transform:translatex(90%);">
-            <!-- illustration path in the color template CSS -->
-        </div>
-        <div class="ornament3 hidden-sm hidden-xs hidden-md" data-0="opacity:1;"
-            data-100="transform:translatex(80%);" data-center-center="transform:translatex(30%);">
-            <!-- illustration path in the color template CSS -->
-        </div>
-        <!-- /ornament3 -->
-        <!-- container -->
-        <div class="container">
-            <div class="row">
-                <!-- well starts-->
-                <div class="well col-md-10 col-md-offset-1 text-center">
-                    <div class="section-heading">
-                        <h2>June 19, 2024</h2>
-                        <!-- divider -->
-                        <div class="hr"></div>
+                    <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita
+                        valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+                    <div class="social-links d-flex mt-4">
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
                     </div>
-                    <!--/section heading -->
-                    <h5 class="margin1">Please RSVP before 15th January 2024</h5>
-                    <p>
-                        Viverra elit liquam erat volut pat phas ellus ac lorem ipsuet sodales Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit uasi quidem minus id iprum omnis metus.
-                    </p>
-                    <div class="margin1">
-                        <!-- countdown tag -->
-                        <span id="countdown"></span>
-                        <!-- edit the countdown in the main.js file-->
-                    </div>
-                    <!-- /margin1-->
-                    <div class="page-scroll">
-                        <a href="#rsvp" class="btn">RSVP now</a>
-                    </div>
-                    <!-- /page-scroll -->
                 </div>
-                <!-- /well-->
-            </div>
-            <!-- /row-->
-        </div>
-        <!-- /container -->
-    </section>
-    <!-- /section ends -->
-    <!-- section:about-->
-    <section id="about" class="watercolor">
-        <!-- container -->
-        <div class="container">
-            <div class="section-heading">
-                <h2>About The Couple</h2>
-                <!-- divider -->
-                <div class="hr"></div>
-            </div>
-            <!-- /section-heading-->
-            <!-- Bride Info -->
-            <div class="col-md-5 col-md-offset-1">
-                <img src="/flower/img/bride.jpg" alt="" class="main-img img-responsive img-circle" />
-                <h4 class="text-ornament">Maria</h4>
-                <h6 class="main-subheader">A Free-Spirited Woman</h6>
-                <p>
-                    Imperdiet interdum donec eget metus auguen unc vel lorem ispuet Ibu lum orci eget, viverra elit
-                    liquam erat volut pat phas ellus ac sodales Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                    uasi quidem minus id iprum omnis.
-                    Lorem ipsum dolor Phas ellus ac sodales felis tiam.
-                </p>
-                <!-- small social-icons -->
-                <div class="social-media smaller">
-                    <a href="#" title=""><i class="fa fa-twitter"></i></a>
-                    <a href="#" title=""><i class="fa fa-facebook"></i></a>
-                    <a href="#" title=""><i class="fa fa-linkedin"></i></a>
-                    <a href="#" title=""><i class="fa fa-pinterest"></i></a>
-                    <a href="#" title=""><i class="fa fa-instagram"></i></a>
-                </div>
-                <!-- /social-icons -->
-            </div>
-            <!-- /col-md-5 -->
-            <!-- Groom Info -->
-            <div class="col-md-5 res-margin">
-                <img src="/flower/img/groom.jpg" alt="" class="main-img img-responsive img-circle" />
-                <h4 class="text-ornament">Jonas</h4>
-                <h6 class="main-subheader">Hopeless Romantic</h6>
-                <p>
-                    Imperdiet interdum donec eget metus auguen unc vel lorem ispuet Ibu lum orci eget, viverra elit
-                    liquam erat volut pat phas ellus ac sodales Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                    uasi quidem minus id iprum omnis.
-                    Lorem ipsum dolor Phas ellus ac sodales felis tiam.
-                </p>
-                <!-- small social-icons -->
-                <div class="social-media smaller">
-                    <a href="#" title=""><i class="fa fa-twitter"></i></a>
-                    <a href="#" title=""><i class="fa fa-facebook"></i></a>
-                    <a href="#" title=""><i class="fa fa-linkedin"></i></a>
-                    <a href="#" title=""><i class="fa fa-pinterest"></i></a>
-                    <a href="#" title=""><i class="fa fa-instagram"></i></a>
-                </div>
-                <!-- /social-icons -->
-            </div>
-            <!-- /col-md-5 -->
-        </div>
-        <!-- /container -->
-    </section>
-    <!-- /section ends -->
-    <!-- parallax ornament -->
-    <div class="ornament4 hidden-sm hidden-xs hidden-md" data-0="opacity:1;"
-        data--100-start="transform:translatex(90%);" data-center-bottom="transform:translatex(0%);">
-        <!-- illustration path in the color template CSS -->
-    </div>
-    <!-- /ornament4 -->
-    <!-- section:story -->
-    <section id="story">
-        <div class="container">
-            <div class="section-heading">
-                <h2>Our Story</h2>
-                <!-- divider -->
-                <div class="hr"></div>
-            </div>
-            <!-- /section-heading -->
-            <!-- Polaroids -->
-            <div class="row">
-                <ul id="story-carousel" class="polaroids owl-carousel margin1">
-                    <!-- image1 -->
-                    <li class="polaroid-item" data-0="transform:translatey(0%);"
-                        data-center="transform:translatey(0%);transform:rotate(-4deg)">
-                        <a href="/flower/img/polaroid1.jpg" data-gal="prettyPhoto[gallery]">
-                            <img alt="" src="/flower/img/polaroid1.jpg" class="img-responsive" />
-                            <span>2010</span>
-                            <p>Our first trip together after dating for 3 Months</p>
-                        </a>
-                    </li>
-                    <!-- image2 -->
-                    <li class="polaroid-item" data-0="transform:translatey(-0%);"
-                        data-center="transform:translatey(0%);transform:rotate(8deg)">
-                        <a href="/flower/img/polaroid2.jpg" data-gal="prettyPhoto[gallery]">
-                            <img alt="" src="/flower/img/polaroid2.jpg" class="img-responsive" />
-                            <span>2012</span>
-                            <p>Moving Together...</p>
-                        </a>
-                    </li>
-                    <!-- image3 -->
-                    <li class="polaroid-item" data-0="transform:translatey(0%);rotate:0;"
-                        data-center="transform:translatey(0%); transform:rotate(-2deg)">
-                        <a href="/flower/img/polaroid3.jpg" data-gal="prettyPhoto[gallery]">
-                            <img alt="" src="/flower/img/polaroid3.jpg" class="img-responsive" />
-                            <span>2014</span>
-                            <p>We even got a dog!</p>
-                        </a>
-                    </li>
-                    <!-- image4 -->
-                    <li class="polaroid-item" data-0="transform:translatey(0%);"
-                        data-center="transform:translatey(0%);transform:rotate(-12deg)">
-                        <a href="/flower/img/polaroid4.jpg" data-gal="prettyPhoto[gallery]">
-                            <img alt="" src="/flower/img/polaroid4.jpg" class="img-responsive" />
-                            <span>2016</span>
-                            <p>Valentines Day Surprise</p>
-                        </a>
-                    </li>
-                    <!-- image5 -->
-                    <li class="polaroid-item" data-0="transform:translatey(0%);"
-                        data-center="transform:translatey(0%);transform:rotate(-12deg)">
-                        <a href="/flower/img/polaroid5.jpg" data-gal="prettyPhoto[gallery]">
-                            <img alt="" src="/flower/img/polaroid5.jpg" class="img-responsive" />
-                            <span>2017</span>
-                            <p>The Proposal</p>
-                        </a>
-                    </li>
-                    <!-- /li polaroid -->
-                </ul>
-                <!-- /ul-polaroids -->
-            </div>
-            <!-- /row-fluid -->
-        </div>
-        <!-- /container-->
-    </section>
-    <!-- /section ends -->
-    <!-- Section:attendants -->
-    <section id="attendants" class="watercolor">
-        <!-- parallax ornament -->
-        <div class="ornament5 hidden-sm hidden-xs hidden-md" data-0="opacity:1;"
-            data--100-start="transform:translatex(-10%);" data-center-bottom="transform:translatex(100%);">
-            <!-- illustration path in the color template CSS -->
-        </div>
-        <div class="container">
-            <div class="section-heading">
-                <h2>Bridemaids <span class="italic">&</span> Groomsman</h2>
-                <!-- divider -->
-                <div class="hr"></div>
-            </div>
-            <!-- /section-heading -->
-            <!-- /col-md-3 -->
-            <div class="col-md-12">
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#bridemaids" data-toggle="tab">The Ladies</a></li>
-                    <li><a href="#groomsman" data-toggle="tab">The Gentlemen</a></li>
-                </ul>
-                <!--/nav nav-tabs -->
-                <div class="tabbable">
-                    <div class="tab-content">
-                        <!-- tab 1 -->
-                        <div class="tab-pane active in fade" id="bridemaids">
-                            <!-- attendants carousel 1-->
-                            <div id="owl-attendants1" class="owl-carousel">
-                                <!-- attendants member 1 -->
-                                <div class="attendants-wrap col-md-12">
-                                    <div class="member text-center">
-                                        <div class="wrap">
-                                            <!-- image -->
-                                            <img src="/flower/img/attendant1.jpg" alt=""
-                                                class="img-circle img-responsive">
-                                            <!-- Info -->
-                                            <div class="info">
-                                                <h5 class="name">Jolie Smith</h5>
-                                                <h4 class="description">Best Friend</h4>
-                                            </div>
-                                            <!-- /info -->
-                                        </div>
-                                        <!-- /wrap -->
-                                    </div>
-                                    <!-- / member -->
-                                </div>
-                                <!--/ attendants-wrap -->
-                                <!-- attendants member 2 -->
-                                <div class="attendants-wrap col-md-12">
-                                    <div class="member text-center">
-                                        <div class="wrap">
-                                            <!-- image -->
-                                            <img src="/flower/img/attendant2.jpg" alt=""
-                                                class="img-circle img-responsive">
-                                            <!-- Info -->
-                                            <div class="info">
-                                                <h5 class="name">Maria Smith</h5>
-                                                <h4 class="description">Sister</h4>
-                                            </div>
-                                            <!-- /info -->
-                                        </div>
-                                        <!-- /wrap -->
-                                    </div>
-                                </div>
-                                <!--/ attendants-wrap -->
-                                <!-- attendants member 3 -->
-                                <div class="attendants-wrap col-md-12">
-                                    <div class="member text-center">
-                                        <div class="wrap">
-                                            <!-- image -->
-                                            <img src="/flower/img/attendant3.jpg" alt=""
-                                                class="img-circle img-responsive">
-                                            <!-- Info -->
-                                            <div class="info">
-                                                <h5 class="name">Paula Larson</h5>
-                                                <h4 class="description">Cousin</h4>
-                                            </div>
-                                            <!-- /info -->
-                                        </div>
-                                        <!-- /wrap -->
-                                    </div>
-                                    <!-- / member -->
-                                </div>
-                                <!--/ attendants-wrap -->
-                                <!-- attendants member 4-->
-                                <div class="attendants-wrap col-md-12">
-                                    <div class="member text-center">
-                                        <div class="wrap">
-                                            <!-- image -->
-                                            <img src="/flower/img/attendant4.jpg" alt=""
-                                                class="img-circle img-responsive">
-                                            <!-- Info -->
-                                            <div class="info">
-                                                <h5 class="name">Anna Luise </h5>
-                                                <h4 class="description">School Friend</h4>
-                                            </div>
-                                            <!-- /info -->
-                                        </div>
-                                        <!-- /wrap -->
-                                    </div>
-                                    <!-- / member -->
-                                </div>
-                                <!--/ attendants-wrap -->
-                                <!-- attendants member 5 -->
-                                <div class="attendants-wrap col-md-12">
-                                    <div class="member text-center">
-                                        <div class="wrap">
-                                            <!-- image -->
-                                            <img src="/flower/img/attendant5.jpg" alt=""
-                                                class="img-circle img-responsive">
-                                            <!-- Info -->
-                                            <div class="info">
-                                                <h5 class="name">Jane Mars</h5>
-                                                <h4 class="description">Aunt</h4>
-                                            </div>
-                                            <!-- /info -->
-                                        </div>
-                                        <!-- /wrap -->
-                                    </div>
-                                    <!-- / member -->
-                                </div>
-                                <!--/ attendants-wrap -->
-                            </div>
-                            <!-- /owl-carousel -->
-                        </div>
-                        <!--/ tab 1 ends -->
-                        <!-- tab 2 -->
-                        <div class="tab-pane fade" id="groomsman">
-                            <!-- Attendants carousel 2 -->
-                            <div id="owl-attendants2" class="owl-carousel">
-                                <!-- attendants member 6 -->
-                                <div class="attendants-wrap col-md-12">
-                                    <div class="member text-center">
-                                        <div class="wrap">
-                                            <!-- image -->
-                                            <img src="/flower/img/attendant6.jpg" alt=""
-                                                class="img-circle img-responsive">
-                                            <!-- Info -->
-                                            <div class="info">
-                                                <h5 class="name">Jonas Smith</h5>
-                                                <h4 class="description">Best Friend</h4>
-                                            </div>
-                                            <!-- /info -->
-                                        </div>
-                                        <!-- /wrap -->
-                                    </div>
-                                    <!-- / member -->
-                                </div>
-                                <!--/ attendants-wrap -->
-                                <!-- attendants member 7 -->
-                                <div class="attendants-wrap col-md-12">
-                                    <div class="member text-center">
-                                        <div class="wrap">
-                                            <!-- image -->
-                                            <img src="/flower/img/attendant7.jpg" alt=""
-                                                class="img-circle img-responsive">
-                                            <!-- Info -->
-                                            <div class="info">
-                                                <h5 class="name">Lucas Fonseca</h5>
-                                                <h4 class="description">Cousin</h4>
-                                            </div>
-                                            <!-- /info -->
-                                        </div>
-                                        <!-- /wrap -->
-                                    </div>
-                                </div>
-                                <!--/ attendants-wrap -->
-                                <!-- attendants member 8 -->
-                                <div class="attendants-wrap col-md-12">
-                                    <div class="member text-center">
-                                        <div class="wrap">
-                                            <!-- image -->
-                                            <img src="/flower/img/attendant8.jpg" alt=""
-                                                class="img-circle img-responsive">
-                                            <!-- Info -->
-                                            <div class="info">
-                                                <h5 class="name">Paul Larson</h5>
-                                                <h4 class="description">Business Partner</h4>
-                                            </div>
-                                            <!-- /info -->
-                                        </div>
-                                        <!-- /wrap -->
-                                    </div>
-                                    <!-- / member -->
-                                </div>
-                                <!--/ attendants-wrap -->
-                                <!-- attendants member 9 -->
-                                <div class="attendants-wrap col-md-12">
-                                    <div class="member text-center">
-                                        <div class="wrap">
-                                            <!-- image -->
-                                            <img src="/flower/img/attendant9.jpg" alt=""
-                                                class="img-circle img-responsive">
-                                            <!-- Info -->
-                                            <div class="info">
-                                                <h5 class="name">John Doe </h5>
-                                                <h4 class="description">Friend</h4>
-                                            </div>
-                                            <!-- /info -->
-                                        </div>
-                                        <!-- /wrap -->
-                                    </div>
-                                    <!-- / member -->
-                                </div>
-                                <!--/ attendants-wrap -->
-                                <!-- attendants member 10 -->
-                                <div class="attendants-wrap col-md-12">
-                                    <div class="member text-center">
-                                        <!-- image -->
-                                        <img src="/flower/img/attendant10.jpg" alt=""
-                                            class="img-circle img-responsive">
-                                        <div class="wrap">
-                                            <!-- Info -->
-                                            <div class="info">
-                                                <h5 class="name">Marlon Mars</h5>
-                                                <h4 class="description">Uncle</h4>
-                                            </div>
-                                            <!-- /info -->
-                                        </div>
-                                        <!-- /wrap -->
-                                    </div>
-                                    <!-- / member -->
-                                </div>
-                                <!--/ attendants-wrap -->
-                            </div>
-                            <!-- /owl-carousel -->
-                        </div>
-                        <!-- /tab-pane -->
-                    </div>
-                    <!-- /tab-content -->
-                </div>
-                <!-- /tabbable -->
-            </div>
-            <!-- /col-md-12 -->
-        </div>
-        <!-- /.container -->
-    </section>
-    <!-- /Section ends -->
-    <!-- Section: Event-->
-    <section id="event">
-        <div class="section-heading">
-            <h2>The Event</h2>
-            <!-- divider -->
-            <div class="hr"></div>
-        </div>
-        <!--/section-heading -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6" data--100-start="transform:translatey(-60%);"
-                    data-center-bottom="transform:translatey(20%);">
-                    <!-- image -->
-                    <img src="/flower/img/party2.jpg" alt="" class="img-photo rotate1 img-responsive">
-                </div>
-                <!-- paper well -->
-                <div class="well col-md-6">
-                    <h3>Celebrate With Us</h3>
-                    <p> Imperdiet interdum donec eget metus auguen unc vel lorem ispuet Ibu lum orci eget, viverra elit
-                        liquam erat Elit uasi quidem minus id omnis a nibh fusce mollis imperdie tlorem ipuset phas
-                        ellus ac sodales Lorem ipsum dolor Phas ellus
-                    </p>
-                    <p>
-                        Sed eu odio interdum, molestie lorem nec, interdum leo. Suspendisse et auctor justo. Donec
-                        fermentum, nibh sit amet commodo hendrerit, enim risus mattis dui, tincidunt ornare dolor purus
-                        vel eros. Integer porta ex massa. Morbi ut nisl mauris. Nullam mollis consectetur ex vitae
-                        bibendum. Phasellus rhoncus placerat scelerisque.
-                    </p>
-                </div>
-                <!-- /well -->
-            </div>
-            <!-- /row -->
-            <div class="row margin1">
-                <!-- paper well -->
-                <div class="well col-md-7">
-                    <h5>A very special day...</h5>
-                    <p>Imperdiet interdum donec eget metus auguen unc vel lorem ispuet Ibu lum orci eget, viverra elit
-                        liquam erat Elit uasi quidem minus id omnis a nibh fusce mollis imperdie tlorem ipuset phas
-                        ellus ac sodales Lorem ipsum dolor Phas ellus
-                    </p>
-                    <p class="alert">
-                        Yincidunt ornare dolor purus vel eros. Integer porta ex massa. Morbi ut nisl mauris. Nullam
-                        mollis consectetur ex vitae bibendum. Phasellus rhoncus placerat scelerisque.
-                    </p>
-                </div>
-                <!-- /well -->
-                <div class="col-md-5" data--100-start="transform:translatey(-60%);"
-                    data-center-bottom="transform:translatey(20%);">
-                    <!-- image -->
-                    <img src="/flower/img/party1.jpg" alt="" class="img-photo rotate2 img-responsive">
-                </div>
-                <!-- /col-md-5 -->
-            </div>
-            <!-- /row-->
-        </div>
-        <!-- /container -->
-        <!-- row-fluid -->
-        <div class="container-fluid" id="scroll-effect">
-            <div class="col-lg-7 col-md-7 no-padding">
-                <!-- map-->
-                <div id="map-canvas"></div>
-                <!-- image1 -->
-            </div>
-            <!-- paper well with effect -->
-            <div class="well col-lg-5 col-lg-offset-7 col-md-5 col-md-offset-7 " data-start="left: 20%;"
-                data-center="left:0%;">
-                <div class="col-md-12 text-center">
-                    <h3 class="date">June 19, 2022</h3>
-                    <h6>6 PM - 11 PM</h6>
-                    <h6>Westminster Cathedral, London UK</h6>
-                    <hr>
-                    <p>Ispuet Ibu lum orci eget, viverra elit liquam erat Elit uasi quidem minus id omnis a nibh fusce
-                        mollis imperdie tlorem ipuset phas ellus ac sodales Lorem ipsum dolor Phas ellus
-                    </p>
-                </div>
-            </div>
-            <!-- /well -->
-        </div>
-        <!-- /row-fluid -->
-    </section>
-    <!-- Section ends -->
-    <!-- Section: Quote -->
-    <section id="quote" class="container-fluid">
-        <div class="col-md-7 col-centered" data-center-top="opacity: 1" data-center-bottom="opacity: 0">
-            <blockquote>
-                <h2>Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.
-                </h2>
-            </blockquote>
-        </div>
-        <!-- /col-md-7-->
-    </section>
-    <!-- /section ends -->
-    <!-- Section: Registry -->
-    <section id="registry">
-        <div class="section-heading text-center">
-            <h2>Registry</h2>
-            <!-- divider -->
-            <div class="hr"></div>
-        </div>
-        <!--/section-heading -->
-        <div class="container text-center">
-            <div class="row">
-                <!-- Brand 1 -->
-                <div class="col-sm-6 col-md-3">
-                    <a href="#"><img src="/flower/img/brand1.png" alt=""
-                            class="brand col-centered img-responsive" /></a>
-                </div>
-                <!-- Brand 2 -->
-                <div class="col-sm-6 col-md-3 res-margin">
-                    <a href="#"><img src="/flower/img/brand2.png" alt=""
-                            class="brand col-centered img-responsive" /></a>
-                </div>
-                <!-- Brand 3 -->
-                <div class="col-sm-6 col-md-3 res-margin">
-                    <a href="#"><img src="/flower/img/brand3.png" alt=""
-                            class="brand col-centered img-responsive" /></a>
-                </div>
-                <!-- Brand 4 -->
-                <div class="col-sm-6 col-md-3 res-margin">
-                    <a href="#"><img src="/flower/img/brand4.png" alt=""
-                            class="brand col-centered img-responsive" /></a>
-                </div>
-            </div>
-            <!-- /row -->
-        </div>
-        <!-- /container -->
-    </section>
-    <!-- Section ends -->
-    <!-- Section: Gallery -->
-    <section id="gallery" class="watercolor">
-        <div class="section-heading text-center">
-            <h2>Gallery</h2>
-            <!-- divider -->
-            <div class="hr"></div>
-        </div>
-        <!--/section-heading -->
-        <div class="container-fluid">
-            <!-- row fluid -->
-            <div class="row-fluid">
-                <!-- Navigation -->
-                <div class="text-center col-md-12">
-                    <ul class="nav nav-pills category text-center" role="tablist" id="gallerytab">
-                        <li class="active"><a href="#" data-toggle="tab" data-filter="*">All</a>
-                        <li><a href="#" data-toggle="tab" data-filter=".our-photos">Our Photos</a></li>
-                        <li><a href="#" data-toggle="tab" data-filter=".wedding">Wedding</a></li>
+
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Terms of service</a></li>
+                        <li><a href="#">Privacy policy</a></li>
                     </ul>
                 </div>
-                <!-- Gallery -->
-                <div class="col-md-12 gallery margin1">
-                    <div id="lightbox">
-                        <!-- Image 1 -->
-                        <div class="wedding col-lg-4 col-sm-6 col-md-6">
-                            <div class="isotope-item">
-                                <div class="gallery-thumb">
-                                    <img class="img-responsive" src="/flower/img/gallery1.jpg" alt="">
-                                    <a href="/flower/img/gallery1.jpg" data-gal="prettyPhoto[gallery]"
-                                        title="You can add caption to pictures.">
-                                        <span class="overlay-mask"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Image 2 -->
-                        <div class="our-photos col-lg-4 col-sm-6 col-md-6">
-                            <div class="isotope-item">
-                                <div class="gallery-thumb">
-                                    <img class="img-responsive" src="/flower/img/gallery2.jpg" alt="">
-                                    <a href="/flower/img/gallery2.jpg" data-gal="prettyPhoto[gallery]"
-                                        title="You can add caption to pictures.">
-                                        <span class="overlay-mask"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Image 3 -->
-                        <div class="wedding col-lg-4 col-sm-6 col-md-6">
-                            <div class="isotope-item">
-                                <div class="gallery-thumb">
-                                    <img class="img-responsive" src="/flower/img/gallery3.jpg" alt="">
-                                    <a href="/flower/img/gallery3.jpg" data-gal="prettyPhoto[gallery]"
-                                        title="You can add caption to pictures.">
-                                        <span class="overlay-mask"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Image 4 -->
-                        <div class="wedding col-lg-4 col-sm-6 col-md-6">
-                            <div class="isotope-item">
-                                <div class="gallery-thumb">
-                                    <img class="img-responsive" src="/flower/img/gallery4.jpg" alt="">
-                                    <a href="/flower/img/gallery4.jpg" data-gal="prettyPhoto[gallery]"
-                                        title="You can add caption to pictures.">
-                                        <span class="overlay-mask"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Image 5 -->
-                        <div class="wedding col-lg-4 col-sm-6 col-md-6">
-                            <div class="isotope-item">
-                                <div class="gallery-thumb">
-                                    <img class="img-responsive" src="/flower/img/gallery5.jpg" alt="">
-                                    <a href="/flower/img/gallery5.jpg" data-gal="prettyPhoto[gallery]"
-                                        title="You can add caption to pictures.">
-                                        <span class="overlay-mask"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Image 6 -->
-                        <div class="our-photos col-lg-4 col-sm-6 col-md-6">
-                            <div class="isotope-item">
-                                <div class="gallery-thumb">
-                                    <img class="img-responsive" src="/flower/img/gallery6.jpg" alt="">
-                                    <a href="/flower/img/gallery6.jpg" data-gal="prettyPhoto[gallery]"
-                                        title="You can add caption to pictures.">
-                                        <span class="overlay-mask"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Image 7 -->
-                        <div class="our-photos col-lg-4 col-sm-6 col-md-6">
-                            <div class="isotope-item">
-                                <div class="gallery-thumb">
-                                    <img class="img-responsive" src="/flower/img/gallery7.jpg" alt="">
-                                    <a href="/flower/img/gallery7.jpg" data-gal="prettyPhoto[gallery]"
-                                        title="You can add caption to pictures.">
-                                        <span class="overlay-mask"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /lightbox-->
+
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Product Management</a></li>
+                        <li><a href="#">Marketing</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                    </ul>
                 </div>
-                <!-- /col-lg-12 -->
-            </div>
-            <!-- /row fluid -->
-        </div>
-        <!-- /container fluid-->
-    </section>
-    <!-- /Section ends -->
-    <!-- Section: RSVP  -->
-    <section id="rsvp">
-        <!-- parallax ornament -->
-        <div class="ornament6 hidden-sm hidden-xs hidden-md" data-0="opacity:1;"
-            data-100="transform:translatex(90%);" data-center-center="transform:translatex(30%);">
-            <!-- illustration path in the color template CSS -->
-        </div>
-        <!-- parallax ornament -->
-        <div class="ornament7 hidden-sm hidden-xs hidden-md" data-0="opacity:1;" data-100="transform:translatex(0%);"
-            data-center-center="transform:translatex(90%);">
-            <!-- illustration path in the color template CSS -->
-        </div>
-        <div class="container">
-            <div class="section-heading">
-                <h2>RSVP</h2>
-                <!-- divider -->
-                <div class="hr"></div>
-            </div>
-            <!-- /section-heading -->
-            <div class="col-lg-5">
-                <!-- image -->
-                <img src="/flower/img/rsvp.jpg" alt="" class="margin1 img-photo rotate2 img-responsive">
-            </div>
-            <!-- well -->
-            <div class="col-lg-7 well">
-                <div id="rsvp_form">
-                    <div class="form-group text-center">
-                        <!-- name field-->
-                        <h5>Full Name<span class="required">*</span></h5>
-                        <input type="text" name="name" class="form-control input-field" required="">
-                        <!-- checkbox attending-->
-                        <input id="yes" type="radio" value="Accepts with pleasure" name="attending" />
-                        <label for="yes" class="side-label">Accepts with pleasure</label>
-                        <input id="no" type="radio" value="Declines with regrets" name="attending" />
-                        <label for="no" class="side-label">Declines with regrets</label>
-                        <!-- if attending=yes then the form bellow will show -->
-                        <div class="accept-form">
-                            <!-- guests checkbox -->
-                            <h5>Are you bringing guests?<span class="required">*</span></h5>
-                            <input id="bringing-guests" type="radio" value="yes" name="guest" /><label
-                                for="bringing-guests" class="side-label">Yes</label>
-                            <input type="radio" id="just-me" value="no" name="guest" /><label
-                                for="just-me" class="side-label">No</label><br>
-                            <!-- guest name text field-->
-                            <div id="guest-name">
-                                <h5>Guest Names</h5>
-                                <input type="text" name="guests" class="form-control input-field">
-                            </div>
-                            <!--/guest-name -->
-                        </div>
-                        <!--/accept form -->
-                        <!-- if attending=no then only the message box will show -->
-                        <div class="message-comments">
-                            <h5>Message</h5>
-                            <textarea name="message" id="message-box" class="textarea-field form-control" rows="3"></textarea>
-                        </div>
-                        <!--/message-comments -->
-                        <div class="text-center">
-                            <button type="submit" id="submit_rsvp" value="Submit" class="btn">Submit</button>
-                        </div>
-                        <!-- /col-md-12 -->
-                    </div>
-                    <!-- /Form-group -->
-                    <!-- Contact results -->
-                    <div id="contact_results"></div>
+
+                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                    <h4>Contact Us</h4>
+                    <p>A108 Adam Street</p>
+                    <p>New York, NY 535022</p>
+                    <p>United States</p>
+                    <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+                    <p><strong>Email:</strong> <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                data-cfemail="5d34333b321d38253c302d3138733e3230">[email&#160;protected]</a></span></p>
                 </div>
-                <!-- /rsvp form-->
+
             </div>
-            <!-- /well-->
         </div>
-        <!-- /container -->
-    </section>
-    <!-- /Section ends -->
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="col-md-12 text-center">
-                <!-- Footer logo -->
-                <img src="/flower/img/logo.png" alt="" class="center-block img-responsive">
+
+        <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="sitename">Append</strong> <span>All Rights Reserved</span></p>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you've purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
             </div>
-            <!-- /col-md-12 -->
-            <!-- Credits-->
-            <div class="credits col-md-12 text-center">
-                Copyright © 2022 - Designed by <a href="http://www.ingridkuhn.com/">Ingrid Kuhn</a>
-                <!-- Go To Top Link -->
-                <div class="page-scroll hidden-sm hidden-xs">
-                    <a href="#page-top" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-                </div>
-            </div>
-            <!-- /credits -->
         </div>
-        <!-- /.container -->
+
     </footer>
-    <!-- /footer ends -->
-    <!-- Core JavaScript Files -->
-    <script src="/flower/js/jquery.min.js"></script>
-    <script src="/flower/js/bootstrap.min.js"></script>
-    <!-- Main Js -->
-    <script src="/flower/js/main.js"></script>
-    <!-- RSVP form -->
-    <script src="/flower/js/rsvp.js"></script>
-    <!--Other Plugins -->
-    <script src="/flower/js/plugins.js"></script>
-    <!-- Prefix free CSS -->
-    <script src="/flower/js/prefixfree.js"></script>
-    <!-- maps-->
-    <script src="/flower/js/map.js"></script>
-    <!-- Bootstrap Select Tool (For Module #4) -->
-    <script src="/flower/switcher/js/bootstrap-select.js"></script>
-    <!-- UI jQuery (For Module #5 and #6) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.js" type="text/javascript"></script>
-    <!-- All Scripts & Plugins -->
-    <script src="/flower/switcher/js/dmss.js"></script>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../../../assets/vendor/aos/aos.js"></script>
+    <script src="../../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../../../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+        integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+        data-cf-beacon='{"rayId":"89b855f9dcbb972d","version":"2024.4.1","token":"68c5ca450bae485a842ff76066d69420"}'
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
