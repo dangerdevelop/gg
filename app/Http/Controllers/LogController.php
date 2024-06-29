@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\DataTables\IpListModelDataTable;
 use App\DataTables\LoginModelDataTable;
 use App\Models\IpListModel;
+use App\Models\LoginModel;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
@@ -23,8 +24,8 @@ class LogController extends Controller
 
 
     public function listByLogin(LoginModelDataTable $dataTable)
-    {        
-        return $dataTable->render('admin.datatable', ['title' => 'Login Logları']);
+    {
+        return $dataTable->render('admin.datatable', ['title' => 'Login Logları', 'page' => 'login-log']);
     }
 
 
@@ -56,5 +57,12 @@ class LogController extends Controller
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
+    }
+
+    public function resetDB(Request $request)
+    {
+        LoginModel::query()->truncate();
+
+        return back();
     }
 }

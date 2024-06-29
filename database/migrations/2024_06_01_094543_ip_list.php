@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->tinyInteger('ban')->default(0);
             $table->timestamp('tarih');
             $table->text('info')->nullable();
+            $table->integer('total')->default(0);
             $table->timestamps();
         });
     }

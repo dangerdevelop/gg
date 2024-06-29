@@ -47,10 +47,10 @@ class LoginModelDataTable extends DataTable
             ->parameters([
                 'dom' => 'Blfrtip',
                 'order' => [[0, 'desc']],
-                "lengthMenu" => [10, 25, 50, 500],
-                "pageLength" => "10",
+                "lengthMenu" => [10, 50, 100, 500],
+                "pageLength" => "50",
                 'buttons' => [
-                    'export',
+                    'excel',
                     'reload',
                 ],
             ])->ajax([

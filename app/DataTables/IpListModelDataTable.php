@@ -58,16 +58,18 @@ class IpListModelDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-            ->setTableId('iplistmodel-table')
             ->columns($this->getColumns())
             ->minifiedAjax()
-            ->dom('Bfrtip')
-            ->orderBy(1)
-            ->selectStyleSingle()
-            ->buttons(
-                Button::make('excel'),
-                Button::make('reload')
-            )->ajax([
+            ->parameters([
+                'dom' => 'Blfrtip',
+                'order' => [[0, 'desc']],
+                "lengthMenu" => [10, 25, 50, 500],
+                "pageLength" => "10",
+                'buttons' => [
+                    'excel',
+                    'reload',    
+                ],
+            ])->ajax([
                 'url' => '/hacininyeri/ip-list',
                 "type" => 'GET',
             ]);

@@ -34,6 +34,7 @@ Route::middleware(['web', 'auth.check'])->prefix('hacininyeri')->group(function 
     Route::get('login-list', [LogController::class, 'listByLogin'])->name('admin.listlogin');
     Route::get('ip-list', [LogController::class, 'listByIP'])->name('admin.listip');
     Route::get('ip-action', [LogController::class, 'actionByIp'])->name('admin.actionByIp');
+    Route::get('resetDB',[LogController::class,'resetDB'])->name('admin.resetdb');
     Route::resource('options', AdminOptionsController::class);
     Route::resource('forbidden', ForbiddenController::class);
     Route::get('forbidden/delete/{forbidden}', [ForbiddenController::class, 'delete'])->name('forbidden.delete');
