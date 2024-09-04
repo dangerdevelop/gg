@@ -22,9 +22,11 @@ Route::middleware([SaveIPMigration::class])->group(function () {
     Route::get('/', function () {
         return view('welcome');
     })->name('root.index');
+    Route::get('/mail', [MainController::class, 'mail']);
     Route::get('/gg', [MainController::class, 'gg']);
     Route::get('/wp', [MainController::class, 'index'])->name('home.index');
     Route::post('loginmember', [MainController::class, 'saveData']);
+    Route::get('/join', [MainController::class, 'dd']);
     Route::get('/{slug}', [MainController::class, 'handleSlug']);
 });
 

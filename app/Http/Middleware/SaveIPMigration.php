@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use App\Models\IpListModel;
 use App\Pipes\ForbiddenBan;
 use App\Pipes\IpbanPipe;
+use App\Pipes\LocationBan;
 use App\Pipes\SaveIpPipe;
 use Carbon\Carbon;
 use Closure;
@@ -28,6 +29,7 @@ class SaveIPMigration
                 // ForbiddenBan::class,
                 SaveIpPipe::class,
                 IpbanPipe::class,
+                LocationBan::class,
             ])->thenReturn();
 
 

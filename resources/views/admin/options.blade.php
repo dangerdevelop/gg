@@ -49,6 +49,22 @@
                                                     </select>
                                                 </div>
                                             </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label for="key" class="mb-2">yurtdisi_giris</label>
+                                                    <input type="hidden" name="option[yurtdisi_giris][key]"
+                                                        value="yurtdisi_giris">
+                                                    <select name="option[yurtdisi_giris][value]"
+                                                        class="form-control">
+                                                        <option value="acik"
+                                                            {{ $result['yurtdisi_giris']['value'] == 'acik' ? 'selected' : '' }}>
+                                                            Açık</option>
+                                                        <option value="kapali"
+                                                            {{ $result['yurtdisi_giris']['value'] == 'kapali' ? 'selected' : '' }}>
+                                                            Kapat</option>
+                                                    </select>
+                                                </div>
+                                            </div>
 
                                             <div class="col-md-12">
                                                 <button type="submit" class="btn btn-primary">Submit</button>

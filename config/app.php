@@ -69,7 +69,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Europe/Istanbul',
 
     /*
     |--------------------------------------------------------------------------
@@ -197,6 +197,7 @@ return [
         Jenssegers\Agent\AgentServiceProvider::class,
         Yajra\DataTables\DataTablesServiceProvider::class,
         Yajra\DataTables\ButtonsServiceProvider::class,
+        Torann\GeoIP\GeoIPServiceProvider::class,
     
     ],
 
@@ -215,6 +216,7 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
         'Agent' => Jenssegers\Agent\Facades\Agent::class,
         'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+        'GeoIP' => Torann\GeoIP\Facades\GeoIP::class,
 
         
     ])->toArray(),

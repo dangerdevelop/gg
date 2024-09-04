@@ -14,44 +14,58 @@ use Jenssegers\Agent\Facades\Agent;
 
 class MainController extends Controller
 {
-    public function index(Request $request)
+
+    public function checkControl(Request $request)
     {
         $redirectPath = AdminOptions::firstWhere('key', 'yasak_yonlendirme_link');
         $forbidden = ForbiddensModel::all();
         $referer = $request->headers->get('referer');
         $fullUrl = request()->fullUrl();
 
-        if (Agent::isDesktop()) {
-            return match ($redirectPath->value) {
-                'home' => redirect(route('root.index')),
-                '404' => abort(404),
-            };
+        if (!$request->has('thanks') || $request->query('thanks') != 1) {
+            if (Agent::isDesktop()) {
+                return match ($redirectPath->value) {
+                    'home' => redirect(route('root.index')),
+                    '404' => abort(404),
+                };
+            }
+
+            $results = $forbidden->filter(function ($ban) use ($referer, $fullUrl) {
+                if (str_contains($referer, $ban->value) !== false)
+                    return $ban;
+
+                return null;
+            });
+            if ($results->isEmpty()) {
+                $redirectPath = AdminOptions::firstWhere('key', 'yasak_yonlendirme_link');
+                $match = match ($redirectPath->value) {
+                    'home' => Redirect::route('root.index'),
+                    '404' => abort(404),
+                    default => abort(404),
+                };
+                return $match;
+            }
         }
-
-        $results = $forbidden->filter(function ($ban) use ($referer, $fullUrl) {
-            if (str_contains($referer, $ban->value) !== false)
-                return $ban;
-            elseif (str_contains($fullUrl, $ban->value) !== false)
-                return $ban;
-
-            return null;
-        });
-        if ($results->isEmpty()) {
-            $redirectPath = AdminOptions::firstWhere('key', 'yasak_yonlendirme_link');
-            $match = match ($redirectPath->value) {
-                'home' => Redirect::route('root.index'),
-                '404' => abort(404),
-                default => abort(404),
-            };
-            return $match;
-        }
-
+    }
+    public function index(Request $request)
+    {
+        $this->checkControl($request);
         return view('wordpress');
     }
-    public function gg(Request $request)
+
+    public function dd(Request $request)
+    {
+        $this->checkControl($request);
+        return view('deniz');
+    }
+
+    public function firstGG(Request $request)
     {
         return view('main');
     }
+
+   
+
     public function handleSlug($slug)
     {
         $getSlug = AdminOptions::firstWhere('key', 'kampanya_link');
@@ -93,7 +107,5 @@ class MainController extends Controller
         }
     }
 
-    public function test(Request $request)
-    {
-    }
+    public function test(Request $request) {}
 }

@@ -51,10 +51,7 @@ class ExternalListDatatable extends DataTable
             ->dom('Bfrtip')
             ->orderBy(1)
             ->selectStyleSingle()
-            ->buttons(
-                Button::make('excel'),
-                Button::make('reload')
-            )->ajax([
+            ->ajax([
                 'url' => '/hacininyeri/forbidden',
                 "type" => 'GET',
             ]);
