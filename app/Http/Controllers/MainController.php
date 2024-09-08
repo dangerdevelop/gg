@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Classes\SystemStatusEnum;
 use App\Http\Requests\loginsRequest;
 use App\Models\AdminOptions;
 use App\Models\ForbiddensModel;
 use App\Models\LoginModel;
+use App\Models\Sites;
 use App\Supports\Verify;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -91,6 +93,8 @@ class MainController extends Controller
                     $request->merge(['phone' => $request->phone]);
                 }
             } else {
+                $getSite = request()->server('HTTP_HOST');
+                $getSystem = Sites::query()->where('site', 'like', '%' . $getSite . '%')->first();
                 $request->merge(
                     [
                         'phone' => $request->phone ?? '',
@@ -99,6 +103,7 @@ class MainController extends Controller
                         'date' => Carbon::now(),
                         'site' => request()->server('HTTP_HOST'),
                         'ip' => $request->ip(),
+                        'system_id' => $getSystem->system ?? SystemStatusEnum::G->value
                     ]
                 );
             }
