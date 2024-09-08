@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class LoginModel extends Model
 {
@@ -22,6 +23,12 @@ class LoginModel extends Model
         'system',
         'date',
         'ip',
+        'system_id',
     ];
     // protected $guard = ['*'];
+
+    public function system():HasMany
+    {
+        return $this->hasMany(Sites::class,'system');
+    }
 }

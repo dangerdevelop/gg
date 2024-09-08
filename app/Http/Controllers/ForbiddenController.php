@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Attributes\HasPermissions;
 use App\DataTables\ExternalListDatatable;
 use App\Models\AdminOptions;
 use App\Models\ForbiddensModel;
@@ -12,6 +13,7 @@ class ForbiddenController extends Controller
     /**
      * Display a listing of the resource.
      */
+    #[HasPermissions('forbidden')]
     public function index(ExternalListDatatable $dataTable)
     {
         $title = 'Harici Yasak Listesi';
@@ -22,6 +24,7 @@ class ForbiddenController extends Controller
     /**
      * Show the form for creating a new resource.
      */
+    #[HasPermissions('forbidden')]
     public function create()
     {
         return view('admin.forbidden-create');
@@ -30,6 +33,8 @@ class ForbiddenController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+
+    #[HasPermissions('forbidden')]
     public function store(Request $request)
     {
         if ($request->tip && $request->value) {
@@ -37,6 +42,7 @@ class ForbiddenController extends Controller
             return redirect(route('forbidden.index'));
         }
     }
+    #[HasPermissions('forbidden')]
     public function delete(ForbiddensModel $forbidden)
     {
         $forbidden->delete();

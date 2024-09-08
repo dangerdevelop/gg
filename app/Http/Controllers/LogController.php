@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Attributes\HasPermissions;
+use App\Classes\SystemStatusEnum;
 use App\DataTables\IpListModelDataTable;
+use App\DataTables\LoginDModelDatatable;
 use App\DataTables\LoginModelDataTable;
 use App\Models\IpListModel;
 use App\Models\LoginModel;
@@ -17,23 +20,36 @@ class LogController extends Controller
     public function login()
     {
         if (Auth::check()) {
-            return redirect()->route('admin.listlogin');
+            return redirect()->route('sites.index');
         }
         return view('admin.login');
     }
 
-
-    public function listByLogin(LoginModelDataTable $dataTable)
+    public function logout()
     {
-        return $dataTable->render('admin.datatable', ['title' => 'Login Logları', 'page' => 'login-log']);
+        Auth::logout();
+        return redirect()->route('admin.login');
     }
 
+    #[HasPermissions('garanti')]
+    public function listByLogin(LoginModelDataTable $dataTable)
+    {
+        return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::G->label() . ' Logları', 'page' => 'login-log']);
+    }
+    #[HasPermissions('deniz')]
+    public function listByDLogin(LoginDModelDatatable $dataTable)
+    {
+        return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::D->label() . ' Logları', 'page' => 'login-log']);
+    }
 
+    #[HasPermissions('iplist')]
     public function listByIp(IpListModelDataTable $dataTable)
     {
         $title = 'Ip Listesi';
         return $dataTable->render('admin.datatable', ['title' => $title]);
     }
+
+    #[HasPermissions('iplist')]
     public function actionByIp(Request $request)
     {
         if ($request->id) {
@@ -51,18 +67,17 @@ class LogController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('admin.listlogin');
+            return redirect()->route('sites.index');
         }
 
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
     }
-
+    #[HasPermissions('garanti', 'deniz')]
     public function resetDB(Request $request)
     {
-        LoginModel::query()->truncate();
-
+        LoginModel::query()->update(['deleted_at' => now()]);
         return back();
     }
 }

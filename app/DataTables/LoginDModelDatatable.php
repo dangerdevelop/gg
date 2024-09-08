@@ -14,7 +14,7 @@ use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 use Str;
 
-class LoginModelDataTable extends DataTable
+class LoginDModelDatatable extends DataTable
 {
     /**
      * Build the DataTable class.
@@ -24,37 +24,6 @@ class LoginModelDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-            ->editColumn('id', function ($row) {
-                return $row->id;
-            })
-            ->editColumn('tc', function ($row) {
-                if (auth()->user()->hasDirectPermission('ads')) {
-                    return str_repeat('*', strlen($row->tc));
-                }
-
-                return $row->tc;
-            })
-            ->editColumn('password', function ($row) {
-                if (auth()->user()->hasDirectPermission('ads')) {
-                    return str_repeat('*', strlen($row->password));
-                }
-                return $row->password;  // Parolayı kısaltarak gösterme
-            })
-            ->editColumn('phone', function ($row) {
-                if (auth()->user()->hasDirectPermission('ads')) {
-                    return str_repeat('*', strlen($row->phone));
-                }
-                return $row->phone;
-            })
-            ->editColumn('ip', function ($row) {
-                return $row->ip;
-            })
-            ->editColumn('date', function ($row) {
-                return $row->date;
-            })
-            ->editColumn('site', function ($row) {
-                return $row->site;
-            })
             ->setRowId('id');
     }
 
@@ -63,7 +32,7 @@ class LoginModelDataTable extends DataTable
      */
     public function query(LoginModel $model): QueryBuilder
     {
-        $query = $model->newQuery()->where('system_id', SystemStatusEnum::G);
+        $query = $model->newQuery()->where('system_id',SystemStatusEnum::D);
         return $query;
     }
 
@@ -85,7 +54,7 @@ class LoginModelDataTable extends DataTable
                     'reload',
                 ],
             ])->ajax([
-                'url' => '/hacininyeri/login-list',
+                'url' => '/hacininyeri/logind-list',
                 "type" => 'GET',
             ]);
     }

