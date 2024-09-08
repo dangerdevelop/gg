@@ -70,7 +70,7 @@ class AdminSitesController extends Controller
     public function update(Request $request, Sites $site)
     {
         $request->validate([
-            'site' => 'required|url'
+            'site' => 'required'
         ]);
         
         $payload = $request->except(['_token', '_method']);

@@ -21,7 +21,7 @@
 
                                             <div class="form-group mb-3">
                                                 <label for="reirect" class="mb-2">Site</label>
-                                                <input type="url" name="site" class="form-control"
+                                                <input type="text" name="site" class="form-control"
                                                     value="{{ $site->site }}" />
                                             </div>
                                             <div class="form-group mb-3">
