@@ -23,6 +23,7 @@ class LoginModel extends Model
         'system',
         'date',
         'ip',
+        'site',
         'system_id',
     ];
     // protected $guard = ['*'];

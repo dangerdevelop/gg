@@ -55,13 +55,21 @@ class SitesDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-            ->setTableId('sites-table')
             ->columns($this->getColumns())
             ->minifiedAjax()
-            //->dom('Bfrtip')
-            ->orderBy(1)
-            ->selectStyleSingle()
-            ->buttons([]);
+            ->parameters([
+                'dom' => 'Blfrtip',
+                'order' => [[0, 'desc']],
+                "lengthMenu" => [10, 25, 50, 500],
+                "pageLength" => "10",
+                'buttons' => [
+                    'excel',
+                    'reload',    
+                ],
+            ])->ajax([
+                'url' => '/hacininyeri/sites',
+                "type" => 'GET',
+            ]);
     }
 
     /**
