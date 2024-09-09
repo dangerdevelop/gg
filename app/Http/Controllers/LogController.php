@@ -69,7 +69,7 @@ class LogController extends Controller
             $request->session()->regenerate();
             $permName = strtolower(SystemStatusEnum::G->label());
             $hasG = auth()->user()->permissions->pluck('name')->contains($permName);
-            if ($hasG) {
+            if ($hasG || auth()->user()->hasPermissionTo('super')) {
                 return redirect()->route('admin.listlogin');
             } else {
                 return redirect()->route('admin.listdlogin');
