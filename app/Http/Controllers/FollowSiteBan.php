@@ -12,7 +12,7 @@ class FollowSiteBan extends Controller
     /**
      * Handle the incoming request.
      */
-    public function __invoke(Request $request)
+    public function handle(Request $request)
     {
         $domain = $request->domain;
         if ($domain) {
@@ -20,15 +20,14 @@ class FollowSiteBan extends Controller
 
             $endpoint = 'https://www.usom.gov.tr/api/address/index?q=' . $filterDomain;
 
-            $checkPoint = Http::get($endpoint);
+            $checkPoint = Http::timeout(20)->get($endpoint);
             if ($checkPoint->successful()) {
                 $responseJson = $checkPoint->json();
                 $exists = $responseJson['count'];
 
                 if ($exists) {
-                    // Sites::query()->orWhere('site', 'like', "%$filterDomain%")
-                    //     ->update(['status' => SiteStatusEnum::USOM]);
-
+                    Sites::query()->orWhere('site', 'like', "%$filterDomain%")
+                        ->update(['status' => SiteStatusEnum::USOM]);
                     return response()->json(['status' => 'success']);
                 }
             }

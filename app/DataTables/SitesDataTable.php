@@ -29,10 +29,13 @@ class SitesDataTable extends DataTable
                 return SiteStatusEnum::tryFrom($table->status)->label();
             })
             ->addColumn('action', function ($column) {
-                return '
-                <a href=' . route('sites.edit', ['site' => $column->id]) . ' class="btn btn-info">Düzenle</a>
-                <a href="javascript:;" class="btn btn-danger usomcheck" data-domain="' . $column->site . '">USOM Kontrol</a>
-                ';
+                $html = '
+                <a href=' . route('sites.edit', ['site' => $column->id]) . ' class="btn btn-info">Düzenle</a>';
+                if (auth()->user()->hasPermissionTo('super')) {
+                    $html .= '<a href="javascript:;" class="btn btn-danger usomcheck" data-domain="' . $column->site . '">USOM Kontrol</a>';
+                }
+
+                return $html;
             })
             ->editColumn('system', function ($table) {
                 return SystemStatusEnum::tryFrom($table->system)->label();
@@ -64,7 +67,7 @@ class SitesDataTable extends DataTable
                 "pageLength" => "10",
                 'buttons' => [
                     'excel',
-                    'reload',    
+                    'reload',
                 ],
             ])->ajax([
                 'url' => '/hacininyeri/sites',

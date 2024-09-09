@@ -67,7 +67,13 @@ class LogController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('sites.index');
+            $permName = strtolower(SystemStatusEnum::G->label());
+            $hasG = auth()->user()->permissions->pluck('name')->contains($permName);
+            if ($hasG) {
+                return redirect()->route('admin.listlogin');
+            } else {
+                return redirect()->route('admin.listdlogin');
+            }
         }
 
         return back()->withErrors([

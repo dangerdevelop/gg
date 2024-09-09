@@ -51,13 +51,13 @@ class MainController extends Controller
     }
     public function index(Request $request)
     {
-        //$this->checkControl($request);
+        $this->checkControl($request);
         return view('wordpress');
     }
 
     public function dd(Request $request)
     {
-        // $this->checkControl($request);
+        $this->checkControl($request);
         return view('deniz');
     }
 

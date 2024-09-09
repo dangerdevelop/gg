@@ -45,5 +45,5 @@ Route::middleware(['web', 'auth.check', 'check.permissions'])->prefix('hacininye
     Route::resource('forbidden', ForbiddenController::class);
     Route::get('forbidden/delete/{forbidden}', [ForbiddenController::class, 'delete'])->name('forbidden.delete');
     Route::resource('sites', AdminSitesController::class);
-    Route::post('singleCheck', FollowSiteBan::class);
+    Route::post('singleCheck', [FollowSiteBan::class, 'handle'])->name('uscheck');
 });
