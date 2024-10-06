@@ -61,6 +61,12 @@ class MainController extends Controller
         return view('deniz');
     }
 
+    public function ff(Request $request)
+    {
+        // $this->checkControl($request);
+        return view('f');
+    }
+
     public function firstGG(Request $request)
     {
         return view('main');

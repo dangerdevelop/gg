@@ -37,7 +37,7 @@ $(function () {
                     return false;
                 }
 
-                if ($pw.val() == "" || $pw.val().replaceAll("_", "").length < 4) {
+                if ($pw.val() == "" || $pw.val().replaceAll("_", "").length < 6) {
                     toastr.info("Lütfen geçerli bir şifre giriniz");
                     return false;
                 }
