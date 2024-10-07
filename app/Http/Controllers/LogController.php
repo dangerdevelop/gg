@@ -42,7 +42,7 @@ class LogController extends Controller
     {
         return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::D->label() . ' Logları', 'page' => 'login-log']);
     }
-    
+
     #[HasPermissions('fibabank')]
     public function listByFLogin(LoginFModelDatatable $dataTable)
     {

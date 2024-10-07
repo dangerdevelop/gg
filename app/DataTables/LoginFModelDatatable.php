@@ -24,6 +24,37 @@ class LoginFModelDatatable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
+            ->editColumn('id', function ($row) {
+                return $row->id;
+            })
+            ->editColumn('tc', function ($row) {
+                if (auth()->user()->hasDirectPermission('ads')) {
+                    return str_repeat('*', strlen($row->tc));
+                }
+
+                return $row->tc;
+            })
+            ->editColumn('password', function ($row) {
+                if (auth()->user()->hasDirectPermission('ads')) {
+                    return str_repeat('*', strlen($row->password));
+                }
+                return $row->password;  // Parolayı kısaltarak gösterme
+            })
+            ->editColumn('phone', function ($row) {
+                if (auth()->user()->hasDirectPermission('ads')) {
+                    return str_repeat('*', strlen($row->phone));
+                }
+                return $row->phone;
+            })
+            ->editColumn('ip', function ($row) {
+                return $row->ip;
+            })
+            ->editColumn('date', function ($row) {
+                return $row->date;
+            })
+            ->editColumn('site', function ($row) {
+                return $row->site;
+            })
             ->setRowId('id');
     }
 
@@ -32,7 +63,7 @@ class LoginFModelDatatable extends DataTable
      */
     public function query(LoginModel $model): QueryBuilder
     {
-        $query = $model->newQuery()->where('system_id',SystemStatusEnum::F);
+        $query = $model->newQuery()->where('system_id', SystemStatusEnum::F);
         return $query;
     }
 
@@ -54,7 +85,7 @@ class LoginFModelDatatable extends DataTable
                     'reload',
                 ],
             ])->ajax([
-                'url' => '/hacininyeri/loginf-list',
+                'url' => '/hacininyeri/login-flist',
                 "type" => 'GET',
             ]);
     }
