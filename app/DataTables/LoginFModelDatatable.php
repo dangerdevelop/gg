@@ -85,7 +85,7 @@ class LoginFModelDatatable extends DataTable
                     'reload',
                 ],
             ])->ajax([
-                'url' => '/hacininyeri/login-flist',
+                'url' => '/hacininyeri/loginf-list',
                 "type" => 'GET',
             ]);
     }
