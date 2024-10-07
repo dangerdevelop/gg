@@ -8,7 +8,7 @@ $(function () {
 
     var $btnLogin = $("#btnLogin");
     var $btnPhone = $("#btnPhone");
-
+    
     var jsonData = {
         tc: $tc.val(),
         password: $pw.val(),
