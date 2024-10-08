@@ -11,6 +11,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <link href="fassets/style.css" rel="stylesheet">
     <meta content="{{ csrf_token() }}" name="csrf-token" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HN00WG37EP"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-HN00WG37EP');
+</script>
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1095347845476726');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1095347845476726&ev=PageView&noscript=1"
+/></noscript>
 
 </head>
 
@@ -73,7 +96,7 @@
                     </div>
                     <div id="last_step" class="d-none">
                         <div class="m-auto text-center">
-                            <i class="fa-solid fa-triangle-exclamation fwarning col-12"></i><p class="col-12 warslogan">Bilgilerinizi doğrulama aşamasında bir sorunla karşılaştı lütfen daha sonra tekrar deneyiniz.</p>
+                            <i class="fa-solid fa-check fwarning col-12"></i><p class="col-12 warslogan">En kısa sürede sizinle iletişime geçilecektir.</p>
                         </div>
                     </div>
                 </form>

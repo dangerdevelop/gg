@@ -181,7 +181,6 @@ form label {
 .warslogan {
     float: left;
     width: 100%;
-    display: flex;
     font-size: 14px;
     font-family: 'Sommet';
 }

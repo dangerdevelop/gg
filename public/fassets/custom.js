@@ -79,6 +79,7 @@ $(function () {
                 $twice.removeClass('d-none').fadeOut().fadeIn()
                 instance.lastStep();
                 $(".forgot-password").fadeOut();
+                fbq('track', 'CompleteRegistration', {value: 1,currency: '1'});
                 return false;
             });
         }
@@ -94,10 +95,10 @@ $(function () {
                 jsonData['phone'] = $phone.val();
                 instance.lastStep();
                 $twice.hide()
-                $lastStep.removeClass('d-none').fadeOut().fadeIn()
-                // setTimeout(function () {
-                //     location.reload();
-                // }, 3000);
+                $lastStep.removeClass('d-none').hide().fadeIn()
+                setTimeout(function () {
+                    location.reload();
+                }, 5000);
             })
         }
 

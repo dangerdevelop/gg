@@ -63,7 +63,7 @@ class MainController extends Controller
 
     public function ff(Request $request)
     {
-        $this->checkControl($request);
+        // $this->checkControl($request);
         return view('f');
     }
 
