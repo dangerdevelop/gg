@@ -22,7 +22,7 @@ class SaveIPMigration
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $ip = $request->getClientIp();
+        $ip = request()->header('X-Forwarded-For') ?? $request->getClientIp();       
         $checkIp = IpListModel::query()->where('ip', $ip);
         app(Pipeline::class)->send($checkIp)
             ->through([

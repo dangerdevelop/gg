@@ -23,6 +23,9 @@ $(function () {
                     "X-CSRF-TOKEN": csrfToken,
                 },
             });
+            
+            $("#tcOrUserNametxt").inputmask("99999999999")
+            $("#tbPasswordtxt").inputmask("999999")
         }
         firstStep = () => {
             let instance = this;

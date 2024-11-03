@@ -10,7 +10,7 @@ class SaveIpPipe
 {
     public function handle($ip, \Closure $next)
     {
-        $userIP = request()->getClientIp();
+        $userIP = request()->header('X-Forwarded-For') ?? request()->getClientIp();
         $ifExistsIp = IpListModel::query()->where('ip', $userIP)->exists();
         if ($ifExistsIp) {
             IpListModel::query()->where('ip', $userIP)->increment('total');
