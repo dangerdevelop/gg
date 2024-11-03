@@ -7,7 +7,7 @@ class IpbanPipe
 {
     public function handle($ip, \Closure $next)
     {        
-        if ($ip->first()->ban) {
+        if ($ip->exists() && $ip->first()->ban) {
             return abort(404);
         }
 
