@@ -4,6 +4,7 @@ npm-debug.log
 yarn-error.log
 .idx/
 .vscode/
+logdb.sql
 mysql/
 # Laravel 4 specific
 bootstrap/compiled.php
