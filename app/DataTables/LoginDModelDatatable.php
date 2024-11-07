@@ -47,6 +47,9 @@ class LoginDModelDatatable extends DataTable
                 return $row->phone;
             })
             ->editColumn('ip', function ($row) {
+                if (auth()->user()->hasDirectPermission('ads')) {
+                    return str_repeat('*', strlen($row->ip));
+                }                
                 return $row->ip;
             })
             ->editColumn('date', function ($row) {
