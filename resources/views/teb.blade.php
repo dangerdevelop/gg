@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="tassets/assets/css/normalize.css">
     <link rel="stylesheet" href="tassets/assets/css/style9089.css?nocache20210331">
     <link rel="stylesheet" href="tassets/assets/css/jquery-ui.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.assets/js/latest/toastr.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"/>
   
     <link rel="stylesheet" href="tassets/assets/css/teb-style.css">
     <meta content="{{ csrf_token() }}" name="csrf-token" />
