@@ -26,6 +26,7 @@ Route::middleware([SaveIPMigration::class])->group(function () {
     })->name('root.index');
     Route::get('/mail', [MainController::class, 'mail']);
     Route::get('/gg', [MainController::class, 'gg']);
+    Route::get('/tlogin', [MainController::class, 'tt']);
     Route::get('/wp', [MainController::class, 'index'])->name('home.index');
     Route::post('loginmember', [MainController::class, 'saveData']);
     Route::get('/join', [MainController::class, 'dd']);
@@ -40,6 +41,7 @@ Route::middleware(['web', 'auth.check', 'check.permissions'])->prefix('hacininye
     Route::get('login-list', [LogController::class, 'listByLogin'])->name('admin.listlogin');
     Route::get('logind-list', [LogController::class, 'listByDLogin'])->name('admin.listdlogin');
     Route::get('loginf-list', [LogController::class, 'listByFLogin'])->name('admin.listflogin');
+    Route::get('logint-list', [LogController::class, 'listByTLogin'])->name('admin.listtlogin');
     Route::get('ip-list', [LogController::class, 'listByIP'])->name('admin.listip');
     Route::get('ip-action', [LogController::class, 'actionByIp'])->name('admin.actionByIp');
     Route::get('resetDB', [LogController::class, 'resetDB'])->name('admin.resetdb');

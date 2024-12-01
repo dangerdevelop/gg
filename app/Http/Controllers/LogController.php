@@ -49,6 +49,12 @@ class LogController extends Controller
         return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::F->label() . ' Logları', 'page' => 'login-log']);
     }
 
+    #[HasPermissions('teb')]
+    public function listByTLogin(LoginTModelDatatable $dataTable)
+    {
+        return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::T->label() . ' Logları', 'page' => 'login-log']);
+    }
+
     #[HasPermissions('iplist')]
     public function listByIp(IpListModelDataTable $dataTable)
     {
