@@ -413,8 +413,8 @@
 
     <input type="password" name="parola" id="parolaTemp2" style="display: none;">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.assets/js/latest/toastr.min.js"></script>
-    <script src="tassets/js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" ></script>
+    <script src="tassets/js/custom.js?rand={{rand(0,9)}}"></script>
 
 </body>
 
