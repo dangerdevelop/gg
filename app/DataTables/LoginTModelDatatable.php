@@ -1,5 +1,4 @@
 <?php
-
 namespace App\DataTables;
 
 use App\Classes\SystemStatusEnum;
@@ -14,7 +13,7 @@ use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 use Str;
 
-class LoginTModelDatabase extends DataTable
+class LoginTModelDatatable extends DataTable
 {
     /**
      * Build the DataTable class.
