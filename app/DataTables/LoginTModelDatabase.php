@@ -14,7 +14,7 @@ use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 use Str;
 
-class LoginDModelDatatable extends DataTable
+class LoginTModelDatabase extends DataTable
 {
     /**
      * Build the DataTable class.
