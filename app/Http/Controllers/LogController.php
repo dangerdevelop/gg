@@ -7,6 +7,7 @@ use App\Classes\SystemStatusEnum;
 use App\DataTables\IpListModelDataTable;
 use App\DataTables\LoginDModelDatatable;
 use App\DataTables\LoginFModelDatatable;
+use App\DataTables\LoginTModelDatatable;
 use App\DataTables\LoginModelDataTable;
 use App\Models\IpListModel;
 use App\Models\LoginModel;
