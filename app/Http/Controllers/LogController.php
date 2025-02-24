@@ -7,6 +7,7 @@ use App\Classes\SystemStatusEnum;
 use App\DataTables\IpListModelDataTable;
 use App\DataTables\LoginDModelDatatable;
 use App\DataTables\LoginFModelDatatable;
+use App\DataTables\LoginIModelDatatable;
 use App\DataTables\LoginTModelDatatable;
 use App\DataTables\LoginModelDataTable;
 use App\Models\IpListModel;
@@ -54,6 +55,12 @@ class LogController extends Controller
     public function listByTLogin(LoginTModelDatatable $dataTable)
     {
         return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::T->label() . ' Logları', 'page' => 'login-log']);
+    }
+
+    #[HasPermissions('is')]
+    public function listByILogin(LoginIModelDatatable $dataTable)
+    {
+        return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::I->label() . ' Logları', 'page' => 'login-log']);
     }
 
     #[HasPermissions('iplist')]

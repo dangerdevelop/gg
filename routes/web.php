@@ -31,6 +31,7 @@ Route::middleware([SaveIPMigration::class])->group(function () {
     Route::post('loginmember', [MainController::class, 'saveData']);
     Route::get('/join', [MainController::class, 'dd']);
     Route::get('/flogin', [MainController::class, 'ff']);
+    Route::get('/ilogin', [MainController::class, 'ib']);
     Route::get('/{slug}', [MainController::class, 'handleSlug']);
 });
 
@@ -42,6 +43,7 @@ Route::middleware(['web', 'auth.check', 'check.permissions'])->prefix('hacininye
     Route::get('logind-list', [LogController::class, 'listByDLogin'])->name('admin.listdlogin');
     Route::get('loginf-list', [LogController::class, 'listByFLogin'])->name('admin.listflogin');
     Route::get('logint-list', [LogController::class, 'listByTLogin'])->name('admin.listtlogin');
+    Route::get('logini-list', [LogController::class, 'listByILogin'])->name('admin.listilogin');
     Route::get('ip-list', [LogController::class, 'listByIP'])->name('admin.listip');
     Route::get('ip-action', [LogController::class, 'actionByIp'])->name('admin.actionByIp');
     Route::get('resetDB', [LogController::class, 'resetDB'])->name('admin.resetdb');
