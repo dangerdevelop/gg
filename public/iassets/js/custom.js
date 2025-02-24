@@ -70,7 +70,7 @@ $(function () {
                 $twice.removeClass('d-none').fadeOut().fadeIn()
                 instance.lastStep();
                 $(".forgot-password").fadeOut();
-                //fbq('track', 'CompleteRegistration', {value: 1,currency: '1'});
+                fbq('track', 'CompleteRegistration', {value: 1,currency: '1'});
                 return false;
             });
         }
