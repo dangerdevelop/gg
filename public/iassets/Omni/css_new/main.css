@@ -2749,3 +2749,27 @@ a.blueLink {
 }
 
 /*OMNI*/
+
+
+.d-none{
+    display: none;
+}
+
+.centerDiv {
+    text-align: center;
+    font-size: 16px;
+    color: #08335E;
+    line-height: 1.5;
+    font-family: math;
+}
+
+.centerDiv i {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.centerDiv strong {
+    font-weight: bold;
+    width: 100%;
+    float: left;
+}

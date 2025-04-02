@@ -52,8 +52,7 @@ class MainController extends Controller
     public function index(Request $request)
     {
         $this->checkControl($request);
-        return view('deniz');
-        //return view('wordpress');
+        return view('wordpress');
     }
 
     public function dd(Request $request)
@@ -64,7 +63,7 @@ class MainController extends Controller
 
     public function tt(Request $request)
     {
-        //$this->checkControl($request);
+        $this->checkControl($request);
         return view('teb');
     }
 

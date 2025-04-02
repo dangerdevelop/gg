@@ -136,7 +136,7 @@ $(function ($) {
 
     if (customerNoInputElement.val().indexOf("*") > -1 && rememberMusNoCheck.prop('checked') === true) {
         customerNoInputElement.prop("readonly", true);
-        clearRemembermusno.show();  // ekran açýldýðýnda veri varsa X göster
+        clearRemembermusno.show();  // ekran aï¿½ï¿½ldï¿½ï¿½ï¿½nda veri varsa X gï¿½ster
     }
 
     function resetRemember() {
@@ -222,7 +222,7 @@ $(function ($) {
     function loginSetTimeout() {
         //OMNI
         $('#liveSupport').show();
-        //updateBrowserInfoContainer bu alan gösterilip gizleniyordu. 17.07.2017 tarihinde engellenen tarayýcýlar geliþtirmesiyle kaldýrýldý
+        //updateBrowserInfoContainer bu alan gï¿½sterilip gizleniyordu. 17.07.2017 tarihinde engellenen tarayï¿½cï¿½lar geliï¿½tirmesiyle kaldï¿½rï¿½ldï¿½
     }
 
     var passwordLostFocus = function () {

