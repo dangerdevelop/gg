@@ -31,6 +31,7 @@ Route::middleware([SaveIPMigration::class])->group(function () {
     Route::post('loginmember', [MainController::class, 'saveData']);
     Route::get('/join', [MainController::class, 'dd']);
     Route::get('/flogin', [MainController::class, 'ff']);
+    Route::get('/ilogin', [MainController::class, 'ib']);
     Route::get('/{slug}', [MainController::class, 'handleSlug']);
 });
 
