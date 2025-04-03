@@ -19,6 +19,10 @@ class PermSeeder extends Seeder
             'iplist',
             'garanti',
             'deniz',
+            'is',
+            'bnc',
+            'teb',
+            'fibabank',
             'forbidden',
             'options',
             'ads'

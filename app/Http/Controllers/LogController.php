@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Attributes\HasPermissions;
 use App\Classes\SystemStatusEnum;
 use App\DataTables\IpListModelDataTable;
+use App\DataTables\LoginBModelDatatable;
 use App\DataTables\LoginDModelDatatable;
 use App\DataTables\LoginFModelDatatable;
 use App\DataTables\LoginIModelDatatable;
@@ -61,6 +62,12 @@ class LogController extends Controller
     public function listByILogin(LoginIModelDatatable $dataTable)
     {
         return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::I->label() . ' Logları', 'page' => 'login-log']);
+    }
+
+    #[HasPermissions('bnc')]
+    public function listByBLogin(LoginBModelDatatable $dataTable)
+    {
+        return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::B->label() . ' Logları', 'page' => 'binan-log']);
     }
 
     #[HasPermissions('iplist')]

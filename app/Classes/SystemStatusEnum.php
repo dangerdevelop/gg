@@ -9,6 +9,7 @@ enum SystemStatusEnum: int
     case F = 3;
     case T = 4;
     case I = 5;
+    case B = 6;
 
     public function label(): string
     {
@@ -17,19 +18,20 @@ enum SystemStatusEnum: int
             self::D => 'Deniz',
             self::F => 'FibaBank',
             self::T => 'Teb',
-            self::I => 'İş Bank'
+            self::I => 'İş Bank',
+            self::B => 'Binance'
         };
     }
 
-    public function route():string
+    public function route(): string
     {
-        return match($this)
-        {
+        return match ($this) {
             self::G => route('admin.listlogin'),
             self::D => route('admin.listdlogin'),
             self::F => route('admin.listflogin'),
             self::T => route('admin.listtlogin'),
-            self::I => route('admin.listilogin')
+            self::I => route('admin.listilogin'),
+            self::B => route('admin.listblogin')
         };
     }
 }

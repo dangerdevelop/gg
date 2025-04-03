@@ -1,14 +1,12 @@
 <!doctype html>
 <html lang="tr">
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="utf-8" />
     <title>CEPTETEB İnternet Şubesi</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script type="text/javascript" src="ruxitagentjs_ICA7NVfqrux_10281231207105659.js"
-        data-dtconfig="app=03722e7b9da0ad4e|cuc=vtu78ltu|ssc=1|cssm=s|mel=100000|featureHash=ICA7NVfqrux|dpvc=1|lastModification=1732604749655|tp=500,50,0|rdnt=1|uxrgce=1|agentUri=/cepteteb/ruxitagentjs_ICA7NVfqrux_10281231207105659.js|reportUrl=/cepteteb/rb_c44d5c33-83b9-4f92-8293-de380de7c5b0|rid=RID_-1073360039|rpid=770293556|domain=teb.com.tr"></script> -->
+  
     <link rel="shortcut icon" href="tassets/assets/img/favicon.ico">
     <link rel="stylesheet" href="tassets/assets/css/normalize.css">
     <link rel="stylesheet" href="tassets/assets/css/style9089.css?nocache20210331">
