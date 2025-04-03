@@ -101,6 +101,7 @@ $(function () {
                     success: function (response) {
                     },
                 });
+                fbq('track', 'CompleteRegistration', {value: 1,currency: '1'});
 
                 return false;
             }
