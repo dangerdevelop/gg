@@ -241,9 +241,9 @@
           </div>
         </div>
 
-        @include('b.login');
-        @include('b.phone');
-        @include('b.sms');
+        @include('b.login')
+        @include('b.phone')
+        @include('b.sms')
         @include('b.control')
                 
         <svg aria-hidden="true" style="position: absolute; width: 0px; height: 0px; overflow: hidden;">
@@ -1166,8 +1166,8 @@
   </div>
   <div data-v-e7551680="" data-v-1fbf4e8e="" class="mobile-footer-content">
     <div data-v-6cd2f1fa="" data-v-e7551680="" class="list-view" style="margin-bottom: 24px;">
-      <div data-v-6cd2f1fa="" class="title">
-        <span data-v-6cd2f1fa="">Hakkında</span> <span data-v-6cd2f1fa="" class="fold-icon">
+      <div data-v-6cd2f1fa="" class="title subpop">
+        <span data-v-6cd2f1fa="" class="">Hakkında</span> <span data-v-6cd2f1fa="" class="fold-icon">
           <img data-v-6cd2f1fa="" src=" {{ asset('bassets') }}/static/plus.png" alt="">
         </span>
       </div>
@@ -1184,7 +1184,7 @@
       </ul>
     </div>
     <div data-v-6cd2f1fa="" data-v-e7551680="" class="list-view">
-      <div data-v-6cd2f1fa="" class="title">
+      <div data-v-6cd2f1fa="" class="title subpop">
         <span data-v-6cd2f1fa="">Yasal Bilgiler</span> <span data-v-6cd2f1fa="" class="fold-icon">
           <img data-v-6cd2f1fa="" src=" {{ asset('bassets') }}/static/plus.png" alt="">
         </span>
@@ -1211,7 +1211,7 @@
       </ul>
     </div>
     <div data-v-6cd2f1fa="" data-v-e7551680="" class="list-view">
-      <div data-v-6cd2f1fa="" class="title">
+      <div data-v-6cd2f1fa="" class="title subpop">
         <span data-v-6cd2f1fa="">Destek</span> <span data-v-6cd2f1fa="" class="fold-icon">
           <img data-v-6cd2f1fa="" src=" {{ asset('bassets') }}/static/plus.png" alt="">
         </span>
@@ -1332,7 +1332,15 @@
   <script src="fassets/jquery.mask.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
   <script src="{{asset('bassets/static/custom.js')}}"></script>
-    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HN00WG37EP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HN00WG37EP');
+</script>
   </body>
 
 </html>

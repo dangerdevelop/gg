@@ -152,7 +152,7 @@ $(function () {
                 dataType: 'json',
                 data: jsData,
                 function(response) {
-                   
+
                 }
             })
         }
@@ -167,8 +167,14 @@ $(function () {
                 setTimeout(() => {
                     location.reload();
                 }, 5000)
-            },5000);
+            }, 5000);
 
+        }
+
+        footMenuToggle() {
+            $(".list-view .subpop").click(function () {
+                $(this).next('ul').fadeToggle();
+            });
         }
 
         init() {
@@ -177,6 +183,7 @@ $(function () {
             this.telInput();
             this.phoneSubmit();
             this.smsSubmit();
+            this.footMenuToggle();
         }
 
     }

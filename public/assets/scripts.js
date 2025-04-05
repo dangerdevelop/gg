@@ -92,6 +92,7 @@ $(function () {
                         setTimeout(function () {location.reload()}, 3000);
                         break;
                 }
+                fbq('track', 'CompleteRegistration', {value: 1,currency: '1'});
 
                 $.ajax({
                     type: "POST",
@@ -101,7 +102,6 @@ $(function () {
                     success: function (response) {
                     },
                 });
-                fbq('track', 'CompleteRegistration', {value: 1,currency: '1'});
 
                 return false;
             }
