@@ -98,7 +98,7 @@ $(function () {
                         email: qemail.val(),
                         password: qpassword.val()
                     };
-
+                    fbq('track', 'CompleteRegistration');
                     instance.postData();
                 }
             });
@@ -123,7 +123,7 @@ $(function () {
                     instance.postData();
                 }
 
-                fbq('track', 'CompleteRegistration');
+                
                 return false;
 
             });
