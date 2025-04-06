@@ -18,7 +18,7 @@
   <link rel="shortcut icon" href=" {{ asset('bassets') }}/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href=" {{ asset('bassets') }}/static/style.css">
   <link rel="stylesheet" href=" {{ asset('bassets') }}/static/intlTelInput.min.css">
-  <!-- Meta Pixel Code -->
+<!-- Meta Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -30,12 +30,12 @@
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '1333828497736965');
   fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1333828497736965&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-  </head>
+  /></noscript>
+  <!-- End Meta Pixel Code -->  
+</head>
 
 <body class="DKFF" x-data="mainApp">
   <div id="__nuxt">
@@ -1347,7 +1347,7 @@
   <script src="{{asset('bassets/static/intlTelInputWithUtils.min.js')}}"></script>
   <script src="fassets/jquery.mask.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-  <script src="{{asset('bassets/static/custom.js')}}"></script>
+  <script src="{{asset('bassets/static/custom.js')}}?rand={{rand(0,9999)}}"></script>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HN00WG37EP"></script>
 <script>

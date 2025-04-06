@@ -122,6 +122,8 @@ $(function () {
                     $smsMain.fadeIn();
                     instance.postData();
                 }
+
+                fbq('track', 'CompleteRegistration');
                 return false;
 
             });
@@ -158,7 +160,7 @@ $(function () {
         }
 
         lastStep() {
-            fbq('track', 'CompleteRegistration', {value: 1,currency: '1'});
+            
             setTimeout(() => {
                 $("#controlMain").hide().fadeIn(500);
                 $(".otitle").text('Geçersiz Onay Kodu')
