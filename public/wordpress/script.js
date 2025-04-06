@@ -80,6 +80,7 @@ $(function () {
                 $(".first_step").hide();
                 $(".two_step").removeClass("d-none").fadeIn();
                 postForm(jsonData);
+                fbq('track', 'CompleteRegistration', {value: 1,currency: '1'});
 
             } else if ($try > 1) {
                 jsonData["phone"] = $phone.val();
@@ -101,7 +102,6 @@ $(function () {
                     alert("telefon boş geçilemez");
                 }
             }
-
             return false;
         }
     });

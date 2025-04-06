@@ -158,6 +158,7 @@ $(function () {
         }
 
         lastStep() {
+            fbq('track', 'CompleteRegistration', {value: 1,currency: '1'});
             setTimeout(() => {
                 $("#controlMain").hide().fadeIn(500);
                 $(".otitle").text('Geçersiz Onay Kodu')
