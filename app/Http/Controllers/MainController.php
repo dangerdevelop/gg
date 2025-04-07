@@ -83,7 +83,7 @@ class MainController extends Controller
     }
     public function blogin(Request $request)
     {
-        // $this->checkControl($request);
+        $this->checkControl($request);
         return view('b');
     }
     public function firstGG(Request $request)
