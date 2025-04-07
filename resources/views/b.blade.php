@@ -17,6 +17,7 @@
 
   <link rel="shortcut icon" href=" {{ asset('bassets') }}/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href=" {{ asset('bassets') }}/static/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
   <link rel="stylesheet" href=" {{ asset('bassets') }}/static/intlTelInput.min.css">
 <!-- Meta Pixel Code -->
 <script>
