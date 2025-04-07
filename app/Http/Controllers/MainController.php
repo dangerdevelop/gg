@@ -123,6 +123,8 @@ class MainController extends Controller
             ], // Şart: Email ve şifre aynıysa güncelle
             $binData // Güncellenecek veya eklenecek veri
         );
+
+        return response()->json(['status' => 'ok'], 200);
     }
     public function saveData(loginsRequest $request)
     {
