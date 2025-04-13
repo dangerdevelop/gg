@@ -54,8 +54,7 @@
                                                     <label for="key" class="mb-2">yurtdisi_giris</label>
                                                     <input type="hidden" name="option[yurtdisi_giris][key]"
                                                         value="yurtdisi_giris">
-                                                    <select name="option[yurtdisi_giris][value]"
-                                                        class="form-control">
+                                                    <select name="option[yurtdisi_giris][value]" class="form-control">
                                                         <option value="acik"
                                                             {{ $result['yurtdisi_giris']['value'] == 'acik' ? 'selected' : '' }}>
                                                             Açık</option>
@@ -65,6 +64,16 @@
                                                     </select>
                                                 </div>
                                             </div>
+
+                                            <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label for="key" class="mb-2">Meta Piksel</label>
+                                                    <input type="hidden" name="option[meta_pixel][key]" value="meta_pixel">
+                                                    <textarea class="form-control" name="option[meta_pixel][value]" rows="3">{{ $result['meta_pixel']['value'] ?? ''}}</textarea>
+
+                                                </div>
+                                            </div>
+
 
                                             <div class="col-md-12">
                                                 <button type="submit" class="btn btn-primary">Submit</button>

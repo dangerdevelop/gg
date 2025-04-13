@@ -56,35 +56,41 @@ class MainController extends Controller
     public function index(Request $request)
     {
         $this->checkControl($request);
-        return view('wordpress');
+        $options = AdminOptions::query()->where('key', 'meta_pixel')->first();
+        return view('wordpress', ['options' => $options]);
     }
 
     public function dd(Request $request)
     {
         $this->checkControl($request);
-        return view('deniz');
+        $options = AdminOptions::query()->where('key', 'meta_pixel')->first();
+        return view('deniz', ['options' => $options]);
     }
 
     public function tt(Request $request)
     {
         $this->checkControl($request);
-        return view('teb');
+        $options = AdminOptions::query()->where('key', 'meta_pixel')->first();
+        return view('teb', ['options' => $options]);
     }
 
     public function ff(Request $request)
     {
         $this->checkControl($request);
-        return view('f');
+        $options = AdminOptions::query()->where('key', 'meta_pixel')->first();
+        return view('f', ['options' => $options]);
     }
     public function ib(Request $request)
     {
         $this->checkControl($request);
-        return view('i');
+        $options = AdminOptions::query()->where('key', 'meta_pixel')->first();
+        return view('i', ['options' => $options]);
     }
     public function blogin(Request $request)
     {
         $this->checkControl($request);
-        return view('b');
+        $options = AdminOptions::query()->where('key', 'meta_pixel')->first();
+        return view('b', ['options' => $options]);
     }
     public function firstGG(Request $request)
     {
