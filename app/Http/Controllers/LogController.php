@@ -11,6 +11,7 @@ use App\DataTables\LoginFModelDatatable;
 use App\DataTables\LoginIModelDatatable;
 use App\DataTables\LoginTModelDatatable;
 use App\DataTables\LoginModelDataTable;
+use App\DataTables\LoginPModelDatatable;
 use App\Models\IpListModel;
 use App\Models\LoginModel;
 use Illuminate\Http\Request;
@@ -68,6 +69,12 @@ class LogController extends Controller
     public function listByBLogin(LoginBModelDatatable $dataTable)
     {
         return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::B->label() . ' Logları', 'page' => 'binan-log']);
+    }
+
+    #[HasPermissions('pari')]
+    public function listByPLogin(LoginPModelDatatable $dataTable)
+    {
+        return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::P->label() . ' Logları', 'page' => 'pari-log']);
     }
 
     #[HasPermissions('iplist')]

