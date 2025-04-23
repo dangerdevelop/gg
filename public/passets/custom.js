@@ -29,10 +29,8 @@ $(function () {
             const form = document.querySelector('.plogin');
             const phoneInput = document.getElementById('phone');
             const passwordInput = document.getElementById('password');
-
-            form.addEventListener('click', function (e) {
+            $(".plogin").click(function (e) {
                 let hasError = false;
-
                 // Telefon numarası validasyonu
                 const cleanedPhone = phoneInput.value.replace(/\D/g, '').substring(2); // +90 hariç 10 rakam
                 if (cleanedPhone.length !== 10 || !/^\d+$/.test(cleanedPhone)) {

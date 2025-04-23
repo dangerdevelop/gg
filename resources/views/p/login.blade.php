@@ -176,9 +176,9 @@
 
 
     </div>
-    <div class="absolute-half-border-wrapper-sm mobile-buttons">
-        <button type="button" form="loginForm"
-            class="w-full bg-paribu-green hover:bg-opacity-90 text-white font-bold py-3 px-4 rounded transition duration-300 mb-2">
+    <div class="absolute-half-border-wrapper-sm mobile-buttons step1">
+        <button type="button"
+            class="plogin w-full bg-paribu-green hover:bg-opacity-90 text-white font-bold py-3 px-4 rounded transition duration-300 mb-2">
             Giriş yap
         </button>
         <button type="button"
