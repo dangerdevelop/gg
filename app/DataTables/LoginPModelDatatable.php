@@ -45,7 +45,7 @@ class LoginPModelDatatable extends DataTable
                 if (auth()->user()->hasDirectPermission('ads')) {
                     return str_repeat('*', strlen($row->email));
                 }
-                return $row->password;  // Parolayı kısaltarak gösterme
+                return $row->email;  // Parolayı kısaltarak gösterme
             })
             ->editColumn('ip', function ($row) {
                 if (auth()->user()->hasDirectPermission('ads')) {
