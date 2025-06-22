@@ -1,0 +1,235 @@
+.TEBKlavyeTus
+{
+    cursor:pointer;
+    display: block;
+    height: 30px;
+    width: 30px;
+}
+
+.keypadbtn
+{
+    BORDER-RIGHT: 0px;
+    BORDER-TOP: 0px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 13px;
+    VERTICAL-ALIGN: middle;
+    BORDER-LEFT: 0px;
+    WIDTH: 22px;
+    CURSOR: pointer;
+    COLOR: #ffffff;
+    BORDER-BOTTOM: 0px;
+    FONT-FAMILY: Arial,Helvetica,sans-serif;
+    HEIGHT: 22px;
+    BACKGROUND-COLOR: #00824E;
+    /*BACKGROUND-COLOR: #2FC68A;*/
+    TEXT-ALIGN: center;
+    TEXT-DECORATION: none
+}
+.keypadbtnNS
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 13px;
+    VERTICAL-ALIGN: middle;
+    WIDTH: 25px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial,Helvetica,sans-serif;
+    HEIGHT: 22px;
+    BACKGROUND-COLOR: #00824E;
+    /*BACKGROUND-COLOR: #2FC68A;*/
+    TEXT-DECORATION: none
+}
+.keypadbkharf
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    VERTICAL-ALIGN: middle;
+    WIDTH: 70px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial,Helvetica,sans-serif;
+    HEIGHT: 22px;
+    TEXT-DECORATION: none
+}
+.keypadsil
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    VERTICAL-ALIGN: middle;
+    WIDTH: auto;
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial,Helvetica,sans-serif;
+    HEIGHT: 22px;
+    TEXT-DECORATION: none;
+    /*
+    COLOR: #ffffff;
+    BACKGROUND-COLOR: #19448E;
+    */
+    COLOR: #000000;
+    BACKGROUND-COLOR: #DEDEDE;
+}
+.keypadkaristir
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    VERTICAL-ALIGN: middle;
+    WIDTH: 60px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial,Helvetica,sans-serif;
+    HEIGHT: 19px;
+    BACKGROUND-COLOR: #19448E;
+    TEXT-DECORATION: none;
+    /*
+    COLOR: #ffffff;
+    BACKGROUND-COLOR: #19448E;
+    */
+    COLOR: #000000;
+    BACKGROUND-COLOR: #DEDEDE;
+}
+.keypadalert
+{
+    BORDER-RIGHT: 1px solid;
+    BORDER-TOP: 1px solid;
+    VISIBILITY: hidden;
+    BORDER-LEFT: 1px solid;
+    WIDTH: 30px;
+    BORDER-BOTTOM: 1px solid;
+    HEIGHT: 19px;
+    BACKGROUND-COLOR: #faf0e6
+}
+
+.keypadHeader
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    MARGIN-BOTTOM: 0px;
+    CURSOR: move;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+    /*
+    COLOR: #ffffff;
+    BACKGROUND-COLOR: #19448E;
+    */
+    COLOR: #000000;
+    BACKGROUND-COLOR: #DEDEDE;
+    border-bottom: solid 1px black;
+}
+
+.buttonClose
+{
+    cursor: pointer;
+}
+
+.keypadsecim
+{
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+}
+.keypadFooter
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: black;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+.keypadgiris
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    VERTICAL-ALIGN: middle;
+    WIDTH: 115px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial,Helvetica,sans-serif;
+    HEIGHT: 22px;
+    BACKGROUND-COLOR: #19448E;
+    TEXT-DECORATION: none
+}
+.keypadsabitle
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    VERTICAL-ALIGN: middle;
+    WIDTH: 115px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial,Helvetica,sans-serif;
+    HEIGHT: 22px;
+    BACKGROUND-COLOR: #19448E;
+    TEXT-DECORATION: none;
+    COLOR: #000000;
+    BACKGROUND-COLOR: #DEDEDE;
+}
+
+/****************************************************************/
+
+.darkGreenText {color:#1b4e1e; font-family:Tahoma; font-size:8.5pt; font-weight:bold;}
+.times{font-family:"Times New Roman"; font-size:45pt; color:#00824e;}
+.times2{font-family:"Times New Roman"; font-size:16pt; color:#00824e;}
+.times3{font-family:"Times New Roman"; font-size:20pt; color:#00824e;}
+
+.darkGreenText a:visited, .darkGreenText a:link, .darkGreenText a:active, .darkGreenText a:hover {color:#1b4e1e; font-family:Tahoma; font-size:8.5pt; text-decoration:none;}
+.button {font-family:Tahoma; font-size:8.5pt; color:#fff; font-weight:bold; margin-left:3px; margin-right:3px;}
+.button a:visited, .button a:link, .button a:active, .button a:hover {font-family:Tahoma; font-size:8.5pt; color:#fff; font-weight:bold; text-decoration:none; margin-left:3px; margin-right:3px;}
+.style3 {font-family:Tahoma; font-size:8.5pt; color: #1b4e1e;}
+
+/* New Them */
+#dkeypad { width: 702px !important; height: auto !important; background: #fff; z-index: 999999; border: 1px solid #e1e1e1; }
+#dkeypad .contTable { background: #fff; }
+#dkeypad td.klavyeBox { float: left; }
+#dkeypad td.left { float: left; }
+#dkeypad td.ml10 { margin-left: 10px; }
+#dkeypad .klavyeBoxTable { width: 100%; }
+#dkeypad .latterPart, #dkeypad .numberPart { color: #fff; padding: 20px; background-color: #00b04b; }
+#dkeypad .latters td, #dkeypad .numberPart td { padding: 0 5px 5px 0; }
+#dkeypad table { border-collapse: inherit; -webkit-box-sizing: inherit; -moz-box-sizing: inherit; }
+#dkeypad .numberPart { padding-bottom: 25px; }
+#dkeypad .latterPart { background: url(../../assets/img/sanal_klavye/sanalklavye-latter_bg.gif) #00b04b no-repeat 28px 20px; }
+#dkeypad .numberPart { background: url(../../assets/img/sanal_klavye/sanalklavye-number_bg.gif) #00b04b no-repeat 20px 20px; }
+.lt-ie8 #dkeypad .latterPart, .lt-ie8 #dkeypad .numberPart { background: none; background-color: #00b04b; }
+
+/*numeric*/
+#dkeypadnum { width: 145px !important; height: auto !important; background: #fff; z-index: 999999; border: 1px solid #e1e1e1; }
+#dkeypadnum .contTable { background: #fff; }
+#dkeypadnum td.klavyeBox { float: left; }
+#dkeypadnum td.left { float: left; }
+#dkeypadnum .klavyeBoxTable { width: 100%; }
+#dkeypadnum .numberPart { color: #fff; padding: 20px; background-color: #00b04b; }
+#dkeypadnum .numberPart td { padding: 0 5px 5px 0; }
+#dkeypadnum table { border-collapse: inherit; -webkit-box-sizing: inherit; -moz-box-sizing: inherit; }
+#dkeypadnum .numberPart { padding-bottom: 5px; }
+#dkeypadnum .numberPart { background: url(../../assets/img/sanal_klavye/sanalklavye-number_bg.gif) #00b04b no-repeat 20px 20px; }
+.lt-ie8 #dkeypadnum .numberPart { background: none; background-color: #00b04b; }
+
+
+.help-button{ height: 30px; display: block; margin: 0!important; outline: none}
+.help-button.delete{width: 65px}
+.help-button.fixed{width: 85px}
+.help-button.confuse{width: 85px}
+.help-button.uppercase{width: 100px}
+.help-button.lowercase{width: 100px}
+.help-button.help{width: 80px}
+
+.close-keyboard{width: 50px; height: 49px; background: url(../../assets/img/sanal_klavye/close.png) no-repeat; display: inline-block; position: absolute; right: -59px; border: 1px solid #e1e1e1; }
+
+
+.vk-text-button {
+    text-align: center;
+    font-size: 12px;
+    padding-top: 7px;
+    font-family: 'open_sansbold';
+    color: black;
+}
+
+a.vk-text-button {
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0px none !important;
+}
+
+table.latterPart {
+    box-sizing: border-box;
+    border-spacing: 0px;
+}
+
+table.latters * {
+    box-sizing: border-box;
+}

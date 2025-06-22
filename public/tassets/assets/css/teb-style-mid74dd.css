@@ -1,0 +1,358 @@
+.banner{
+    display: none;
+}
+
+.login-info-bar .banner{
+    display: inherit;
+}
+
+
+.wrap {
+    width: 100%;
+}
+
+.wrap.login-page {
+    width: 100%;
+    padding: 15px;
+    margin: 0px;
+}
+
+
+.wrap.login-page .logo {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.welcome-slogan {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.welcome-slogan  span{
+    display:block;
+}
+
+
+
+.login-area {
+    width: 100%;
+
+}
+
+.login-area .banner,
+.login-area .banner img
+{
+    float: none;
+}
+
+.login-area .footer {
+    float: none;
+
+}
+
+.login-form{
+    float: none;
+    margin: 5px 0px;
+    padding: 0px;
+}
+
+.login-form table {
+    margin: auto;
+    width: 85%;
+}
+
+.forgot-pass {
+    float: none;
+    width: 342px;
+    height: 62px;
+    margin: 15px auto 0px auto;
+}
+
+ul.forgot-pass li {
+    width: 170px;
+    height: 60px;
+}
+
+.login-info-bar {
+    width: 100%;
+    padding: 0px;
+    border: none;
+    float: none;
+}
+
+.hidden-message {
+    border-top: none;
+    float: none;
+    margin: auto;
+    padding: inherit;
+}
+
+.hidden-message .login-info-bar {
+    width: 100%;
+}
+
+.hidden-message .banner div {
+    float: none;
+    width: auto;
+    height: auto;
+}
+
+.login-area .footer ul {
+    float: none;
+}
+
+.header-bottom .search .search-inp {
+    width: 350px;
+}
+
+.hidden-message.login {
+    width: 100%;
+}
+
+.sub-header .left-area {
+    width: 100%;
+}
+
+#teb-footer-logo{
+    position: inherit !important;
+    bottom: auto;
+    left: auto;
+    height: auto;
+    width: auto;
+}
+
+#teb-footer-logo img{
+    display: block;
+    margin: auto;
+}
+
+
+/* şimdilik gizle */
+.sub-header.open .right-area,
+#footer,
+#teb-logo,
+.notDraggable,
+.top-right-nav,
+.virtual-keyb
+{
+    display: none;
+}
+
+#forgotPassResponsive {
+    display: block !important;
+    color: #3b3e3b;
+    float:left;
+    width: 150px;
+    height: 45px;
+    font-size:10px;
+    margin-top: 15px;
+    border: 1px solid #e1e1e1;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    font-family: "open_sansbold";
+    padding: 13px 0px 13px 20px;
+    background-color: #f1f3f1;
+    background: url(../img/login_forgot_icon.png) no-repeat 0 center;
+    background-position-x: 5px;
+    -ms-background-position-x: 5px;
+    text-align: center;
+}
+
+
+.index {
+    width: 100%;
+    margin: 10px auto;
+}
+
+
+
+/* PRATIK BORSA */
+
+#loginTabs UL,
+#login-info-bar1
+{
+    display : none;
+}
+
+.login-area .footer img {
+    display : none;
+}
+
+.login-area .footer {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.login-area .footer ul {
+    display: inline-block;
+/*    width: 100%; */
+}
+
+.wrongPass {
+    width: 100%;
+    margin: auto ;
+}
+
+.wrongPass img {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    float: none;
+}
+
+.wrongPass div {
+    float: none;
+    width: 100%;
+}
+
+.wrongPass div p {
+    margin: 5px;
+    padding: 1px;
+    text-align: justify;
+}
+
+.wrongPass div h4 {
+    line-height: normal;
+    margin:auto;
+    text-align: center;
+}
+
+
+.login-form td, .login-form tr{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.login-form td label {
+    display: inline;
+}
+
+
+.login-info-bar {
+    width: 100%;
+}
+
+#tokenForm.login-form{
+    float: none;
+}
+
+tr.form-row2:first-child td:first-child {
+    width: auto;
+}
+
+.hidden-message .login-form table td {
+    text-align: left;
+}
+
+#tokenForm .continue-btn {
+    float: none;
+}
+
+.wrongPass .api-tamam-btn {
+    display: block;
+    width: 175px;
+    padding: 13px 0;
+    border: none;
+    background: #00b04b;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    font-family: 'open_sansbold';
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.login-form  td.choice-otp label{
+    float: none;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#tokenForm table {
+    width: 100%;
+}
+
+.login-form tr.son-hatali-giris {
+    display:none;
+}
+
+.logo img {
+    width: 140px;
+    height: 49px;
+}
+
+.footer {
+/*    display: none;*/
+}
+
+.wrongPass .continue-btn {
+    display: none;
+}
+
+
+.log-out-box{
+    width: auto;
+    height: auto;
+    padding-bottom: 50px;
+    margin: auto;
+}
+
+.lightbox.feedback{
+    width: auto;
+}
+
+.anket-light-box {
+    margin: 10px 90px 10px 10px ;
+    left: auto;
+    top: auto;
+}
+
+.lightbox.feedback .answer {
+    padding-left: 0px;
+}
+
+
+#input-webklncno {
+    width: 100%;
+}
+
+#divhatirla {
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+}
+
+#divhatirla .icheckbox {
+    top: 0px;
+}
+
+#lblhatirla {
+    vertical-align: middle;
+
+}
+
+.login-form table.blacklist td label {
+    display: inherit;
+}
+
+.clearleftonmobile {
+    clear: left;
+}
