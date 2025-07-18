@@ -9,6 +9,7 @@ use App\DataTables\LoginBModelDatatable;
 use App\DataTables\LoginDModelDatatable;
 use App\DataTables\LoginFModelDatatable;
 use App\DataTables\LoginIModelDatatable;
+use App\DataTables\LoginVModelDatatable;
 use App\DataTables\LoginTModelDatatable;
 use App\DataTables\LoginModelDataTable;
 use App\DataTables\LoginPModelDatatable;
@@ -63,6 +64,11 @@ class LogController extends Controller
     public function listByILogin(LoginIModelDatatable $dataTable)
     {
         return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::I->label() . ' Logları', 'page' => 'login-log']);
+    }
+     #[HasPermissions('vakif')]
+    public function listByVLogin(LoginVModelDatatable $dataTable)
+    {
+        return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::V->label() . ' Logları', 'page' => 'login-log']);
     }
 
     #[HasPermissions('bnc')]

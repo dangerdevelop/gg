@@ -11,6 +11,7 @@ enum SystemStatusEnum: int
     case I = 5;
     case B = 6;
     case P = 7;
+    CASE V = 8;
 
     public function label(): string
     {
@@ -21,7 +22,8 @@ enum SystemStatusEnum: int
             self::T => 'Teb',
             self::I => 'İş Bank',
             self::B => 'Binance',
-            self::P => 'Paribu'
+            self::P => 'Paribu',
+            self::V => 'Vakıf',
         };
     }
 
@@ -34,7 +36,8 @@ enum SystemStatusEnum: int
             self::T => route('admin.listtlogin'),
             self::I => route('admin.listilogin'),
             self::B => route('admin.listblogin'),
-            self::P => route('admin.listplogin')
+            self::P => route('admin.listplogin'),
+            self::V => route('admin.listvlogin'),
         };
     }
 }

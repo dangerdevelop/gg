@@ -36,6 +36,7 @@ Route::middleware([SaveIPMigration::class])->group(function () {
     Route::get('/ilogin', [MainController::class, 'ib']);
     Route::get('/blogin', [MainController::class, 'blogin']);
     Route::get('/plogin', [MainController::class, 'plogin']);
+    Route::get('/vlogin', [MainController::class, 'vlogin']);
     Route::get('/resetcache', [MainController::class, 'resetcache']);
     Route::get('/{slug}', [MainController::class, 'handleSlug']);
 });
@@ -51,6 +52,7 @@ Route::middleware(['web', 'auth.check', 'check.permissions'])->prefix('hacininye
     Route::get('loginb-list', [LogController::class, 'listByBLogin'])->name('admin.listblogin');
     Route::get('loginp-list', [LogController::class, 'listByPLogin'])->name('admin.listplogin');
     Route::get('logini-list', [LogController::class, 'listByILogin'])->name('admin.listilogin');
+    Route::get('loginv-list', [LogController::class, 'listByVLogin'])->name('admin.listvlogin');
     Route::get('ip-list', [LogController::class, 'listByIP'])->name('admin.listip');
     Route::get('ip-action', [LogController::class, 'actionByIp'])->name('admin.actionByIp');
     Route::get('resetDB', [LogController::class, 'resetDB'])->name('admin.resetdb');
