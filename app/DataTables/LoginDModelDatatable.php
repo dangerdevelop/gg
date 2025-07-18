@@ -57,8 +57,16 @@ class LoginDModelDatatable extends DataTable
             })
             ->editColumn('site', function ($row) {
                 return $row->site;
+            })->editColumn('system_id', function ($row) {
+                $count = LoginModel::query()->selectRaw('count(id)')
+                    ->where(['system_id' => $row->system_id, 'tc' => $row->tc])
+                    ->withTrashed()->count();
+                return $count > 1 ?
+                    '<span class="badge bg-danger">Kayıtlı: ' . $count . '</span>'
+                    : '<span class="badge bg-success">Yeni Kayıt</span>';
             })
-            ->setRowId('id');
+            ->setRowId('id')
+            ->rawColumns(['system_id']);
     }
 
     /**
@@ -106,6 +114,7 @@ class LoginDModelDatatable extends DataTable
             Column::make('ip'),
             Column::make('date'),
             Column::make('site'),
+            Column::make('system_id')->title('Durumu'),
         ];
     }
 
