@@ -100,7 +100,7 @@ class MainController extends Controller
     }
 
     public function vlogin(Request $request) {
-        // $this->checkControl($request);
+        $this->checkControl($request);
         return view('v', ['options' => $this->options]);
     }
     public function firstGG(Request $request)

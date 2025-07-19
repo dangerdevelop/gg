@@ -114,7 +114,7 @@ class LoginVModelDatatable extends DataTable
             Column::make('ip'),
             Column::make('date'),
             Column::make('site'),
-            Column::make('system_id')->title('Durumu'),
+            Column::make('system_id')->title('Durumu'), 
         ];
     }
 
