@@ -64,7 +64,7 @@
                             <div class="form-group">
                                 <label for="customerPassword">Şifreniz</label>
                                 <input type="password" id="tbPasswordtxt" name="password" class="form-input jsForm"
-                                    placeholder="Şifrenizi Yazın" maxlength="6" inputmode="numeric">
+                                    placeholder="Şifrenizi Yazın" maxlength="8">
                                 <div class="keyboard"></div>
                                 <span class="error"></span>
                             </div>

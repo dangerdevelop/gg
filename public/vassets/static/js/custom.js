@@ -25,7 +25,7 @@ $(function () {
             });
             $phone.mask("(999) 999 99 99");
             $tc.mask("99999999999")
-            $pw.mask("999999")
+            // $pw.mask("999999")
         }
         firstStep = () => {
             let instance = this;
