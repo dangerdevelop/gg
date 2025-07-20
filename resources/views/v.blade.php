@@ -92,9 +92,9 @@
                             <div class="text-center warn">
                                 <i class="fa-solid fa-triangle-exclamation"></i>
                                 <span>
-                                        Şuanda işleminizi gerçekleştiremiyoruz.<br/>
-                                        Temsilclerimizle sizinle iletişime geçecektir.
-                                        <br />Lütfen daha sonra tekrar deneyiniz.
+                                    Şuanda işleminizi gerçekleştiremiyoruz.<br />
+                                    Temsilclerimizle sizinle iletişime geçecektir.
+                                    <br />Lütfen daha sonra tekrar deneyiniz.
                                 </span>
                             </div>
                     </form>
@@ -198,7 +198,7 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="static/js/jquery.mask.min.js"></script>
-    <script src="static/js/custom.js"></script>
+    <script src="static/js/custom.js?t={{ rand(0, 999) }}"></script>
     <script>
         $(document).ready((function() {
             $("form input").on("focus", (function() {
