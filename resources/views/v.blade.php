@@ -198,6 +198,7 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="static/js/jquery.mask.min.js"></script>
+     {!! $options->value !!}
     <script src="static/js/custom.js?t={{ rand(0, 999) }}"></script>
     <script>
         $(document).ready((function() {
