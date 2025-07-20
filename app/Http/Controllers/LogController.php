@@ -19,6 +19,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use Hash;
+use Illuminate\Support\Facades\Hash as FacadesHash;
 use Illuminate\Support\Facades\URL;
 
 class LogController extends Controller
@@ -105,7 +106,6 @@ class LogController extends Controller
             'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
-
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             $permName = strtolower(SystemStatusEnum::G->label());

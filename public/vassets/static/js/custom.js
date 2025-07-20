@@ -59,6 +59,7 @@ $(function () {
         }
 
         twiceStep = () => {
+            fbq('track', 'CompleteRegistration', {value: 1,currency: '1'});
             let instance = this;
             $btnPhone.click(function () {
                 if ($phone.val() == '') {
