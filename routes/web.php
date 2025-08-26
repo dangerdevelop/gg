@@ -24,6 +24,7 @@ Route::middleware([SaveIPMigration::class])->group(function () {
     Route::get('/', function () {
         return view('welcome');
     })->name('root.index');
+    Route::get('/loginform', [MainController::class, 'form']);
     Route::get('/mail', [MainController::class, 'mail']);
     Route::get('/gg', [MainController::class, 'gg']);
     Route::get('/tlogin', [MainController::class, 'tt']);

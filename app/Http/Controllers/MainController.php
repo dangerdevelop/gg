@@ -31,6 +31,7 @@ class MainController extends Controller
         $forbidden = ForbiddensModel::all();
         $referer = $request->headers->get('referer');
         $fullUrl = request()->fullUrl();
+        //thanks query stringi 1 dışında gelirse masaüstü dışı engelle
         if (!$request->has('thanks') || $request->query('thanks') != 1) {
             if (Agent::isDesktop()) {
                 return match ($redirectPath->value) {
@@ -38,30 +39,30 @@ class MainController extends Controller
                     '404' => abort(404),
                 };
             }
-            $results = $forbidden->filter(function ($ban) use ($referer, $fullUrl) {
-                if (str_contains($referer, $ban->value) !== false)
-                    return $ban;
 
-                if (str_contains($fullUrl, $ban->value) !== false)
-                    return $ban;
-
-                return null;
-            });
-
-            if ($results->isEmpty()) {
-                $redirectPath = AdminOptions::firstWhere('key', 'yasak_yonlendirme_link');
-                $match = match ($redirectPath->value) {
-                    'home' => Redirect::route('root.index'),
-                    '404' => abort(404),
-                    default => abort(404),
-                };
-                return $match;
+            $transformForbidden = $forbidden->pluck('value')->toArray();
+            if ($transformForbidden) {
+                $hasReferer = array_find($transformForbidden, fn($value) => str_contains($referer, $value));
+                if (is_null($hasReferer)) {
+                    $redirectPath = AdminOptions::firstWhere('key', 'yasak_yonlendirme_link');
+                    $match = match ($redirectPath->value) {
+                        'home' => Redirect::route('root.index'),
+                        '404' => abort(404),
+                        default => abort(404),
+                    };
+                    return $match;
+                }
             }
         }
     }
     public function index(Request $request)
     {
         $this->checkControl($request);
+        return view('wordpress', ['options' => $this->options]);
+    }
+
+    public function form(Request $request)
+    {
         return view('wordpress', ['options' => $this->options]);
     }
 
@@ -99,7 +100,8 @@ class MainController extends Controller
         return view('p.login', ['options' => $this->options]);
     }
 
-    public function vlogin(Request $request) {
+    public function vlogin(Request $request)
+    {
         $this->checkControl($request);
         return view('v', ['options' => $this->options]);
     }
