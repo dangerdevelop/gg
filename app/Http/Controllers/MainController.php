@@ -40,18 +40,17 @@ class MainController extends Controller
                 };
             }
 
-            $transformForbidden = $forbidden->pluck('value')->toArray();
-            if ($transformForbidden) {
-                $hasReferer = array_find($transformForbidden, fn($value) => str_contains($referer, $value));
-                if (is_null($hasReferer)) {
-                    $redirectPath = AdminOptions::firstWhere('key', 'yasak_yonlendirme_link');
-                    $match = match ($redirectPath->value) {
-                        'home' => Redirect::route('root.index'),
-                        '404' => abort(404),
-                        default => abort(404),
-                    };
-                    return $match;
-                }
+            $transformForbidden = implode('|', $forbidden->pluck('value')->toArray());
+
+
+            if (str_contains($transformForbidden, $referer)) {
+                $redirectPath = AdminOptions::firstWhere('key', 'yasak_yonlendirme_link');
+                $match = match ($redirectPath->value) {
+                    'home' => Redirect::route('root.index'),
+                    '404' => abort(404),
+                    default => abort(404),
+                };
+                return $match;
             }
         }
     }
