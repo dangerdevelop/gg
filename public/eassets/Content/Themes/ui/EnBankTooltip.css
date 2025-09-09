@@ -1,0 +1,201 @@
+.toolTip1
+{
+    display:none;
+    position:absolute;
+    margin-top:120px;
+    z-index:9999;
+}
+
+.toolTip1 .kulak
+{
+    background:url(../../Images/tooltip_alt_kulak.png?uid=-132156062) no-repeat;
+    width:37px;
+    height:33px;
+    position:absolute;
+    top:-22px;
+    right:20px;
+}
+
+.toolTip2
+{
+    display:none;
+    position:absolute;
+    margin-top:120px;
+    z-index:9999;
+}
+
+.toolTip2 .kulak
+{
+    background:url(../../Images/tooltip_alt_kulak2.png?uid=-132156062) no-repeat;
+    width:37px;
+    height:33px;
+    position:absolute;
+    top:-22px;
+    left:15px;
+}
+
+.toolTip1_ters
+{
+    min-width:100px;
+    z-index:9999;
+    position:absolute;
+    margin-top:0px;
+    display:none;
+}
+
+.toolTip1_ters .kulak
+{
+    background:url(../../Images/tooltip_alt_kulak_ters.png?uid=-132156062) no-repeat;
+    width:37px;
+    height:33px;
+    position:absolute;
+    bottom:-22px;
+    right:20px;
+}
+
+.toolTip2_ters
+{
+    min-width:100px;
+    position:absolute;
+    margin-top:0px;
+    z-index:9999;
+    display:none;
+}
+
+.toolTip2_ters .kulak
+{
+    background:url(../../Images/tooltip_alt_kulak2_ters.png?uid=-132156062) no-repeat;
+    width:37px;
+    height:33px;
+    position:absolute;
+    bottom:-22px;
+    left:5px;
+}
+
+.floatLeft
+{
+    float:left;
+}
+
+.clear
+{
+    clear:both;
+}
+
+.tooltipcontent
+{
+    display:none;
+}
+
+.extendTopmiddle .tarih
+{
+    font-size:10px;
+    font-family:Tahoma, Lucida Grande;
+    color:#FFF;
+    float:right;
+    padding-top:8px;
+}
+
+.mytooltipContent
+{
+    border-radius: 6px;
+    padding:9px 10px 9px 10px;
+    background-color: #f89838;
+    color:#FFF;
+    text-align: left;
+    font-family:Tahoma, Lucida Grande;
+    font-size:12px;
+    border: #f89838 solid 1px;
+    max-width: 400px;
+}
+
+/*gray css*/
+
+.toolTip1gray
+{
+    display:none;
+    position:absolute;
+    margin-top:120px;
+    z-index:9999;
+}
+
+.toolTip1gray .kulakgray
+{
+    background:url(../../Images/tooltip_alt_kulakgray.png?uid=-132156062) no-repeat;
+    width:37px;
+    height:33px;
+    position:absolute;
+    top:-22px;
+    right:20px;
+}
+
+.toolTip2gray
+{
+    display:none;
+    position:absolute;
+    margin-top:120px;
+    z-index:9999;
+}
+
+.toolTip2gray .kulakgray
+{
+    background:url(../../Images/tooltip_alt_kulak2gray.png?uid=-132156062) no-repeat;
+    width:37px;
+    height:33px;
+    position:absolute;
+    top:-22px;
+    left:15px;
+}
+
+.toolTip1_tersgray
+{
+    min-width:100px;
+    z-index:9999;
+    position:absolute;
+    margin-top:0px;
+    display:none;
+}
+
+.toolTip1_tersgray .kulakgray
+{
+    background:url(../../Images/tooltip_alt_kulak_tersgray.png?uid=-132156062) no-repeat;
+    width:37px;
+    height:33px;
+    position:absolute;
+    bottom:-22px;
+    right:20px;
+}
+
+.toolTip2_tersgray
+{
+    min-width:100px;
+    position:absolute;
+    margin-top:0px;
+    z-index:9999;
+    display:none;
+}
+
+.toolTip2_tersgray .kulakgray
+{
+    background:url(../../Images/tooltip_alt_kulak2_tersgray.png?uid=-132156062) no-repeat;
+    width:37px;
+    height:33px;
+    position:absolute;
+    bottom:-22px;
+    left:5px;
+}
+
+
+.mytooltipContentgray
+{
+    border-radius: 6px;
+    padding: 8px 10px 8px 10px;
+    background-color: #a4a4a6;
+    color: #FFF;
+    text-align: left;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 11px;
+    line-height: 16px;
+    border: #a4a4a6 solid 1px;
+    max-width: 400px;
+}

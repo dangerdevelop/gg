@@ -104,6 +104,12 @@ class MainController extends Controller
         $this->checkControl($request);
         return view('v', ['options' => $this->options]);
     }
+
+    public function elogin(Request $request)
+    {
+        // $this->checkControl($request);
+        return view('e', ['options' => $this->options]);
+    }
     public function firstGG(Request $request)
     {
         return view('main');

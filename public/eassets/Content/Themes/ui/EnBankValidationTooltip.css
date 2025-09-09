@@ -1,0 +1,74 @@
+.ValidatorTooltip
+{
+    min-width:100px;
+    z-index:3003;
+    position:absolute;
+    display:none;
+}
+
+.ValidatorTooltip .kulak
+{
+    background:url(../../../Content/Images/tooltip_alt_kulak2_validation.png?uid=-132156078) no-repeat;
+    width:13px;
+    height:10px;
+    position:absolute;
+    top:-6;
+}
+
+.floatLeft
+{
+    float:left;
+}
+
+.clear
+{
+    clear:both;
+}
+
+.ValidatorTooltip .tooltipcontent
+{
+    display:none;
+}
+
+.ValidatorTooltip .mytooltipContent
+{
+    border-radius: 6px;
+    padding:7px 10px 7px 10px;
+    background-color: #f99d34;
+    color:#FFF;
+    text-align: left;
+    font-family:Tahoma, Lucida Grande;
+    font-size:12px;
+    border: #f99d34 solid 1px;
+}
+
+.invalidtext
+{
+    border:1px solid Red;
+    background-color:#f99d34;
+}
+
+.ValidatableElementStyle
+{
+    border: 2px solid #f99d34 !important;
+    background-color: transparent !important;
+}
+
+/*Special 2rowcheckbox*/
+
+.doublerowcheckbox.CheckBoxList.ValidatableElementStyle
+{
+    border:none!important;
+    }
+.doublerowcheckbox.CheckBoxList.ValidatableElementStyle input[type="checkbox"] + label
+{   
+    background:url("../../Images/extend/checkboxRounded.png?uid=-132156078") no-repeat scroll left -101px transparent;}
+
+.RadioButtonList.ValidatableElementStyle
+{
+    border:none!important;
+}
+.RadioButtonList.ValidatableElementStyle input[type="radio"] + label
+{   
+    background:url("../../Images/extend/radio.png?id=1") no-repeat scroll left -101px transparent;
+}

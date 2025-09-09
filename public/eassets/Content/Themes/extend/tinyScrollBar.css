@@ -1,0 +1,22 @@
+.scrollbarmain { width: 988px; clear: both; margin: 0px 0 0px; }
+.scrollbarmain .viewport { width: 968px; height: 482px; overflow-y: hidden; overflow-x:hidden; position: relative;}
+.scrollbarmain .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; }
+.scrollbarmain .scrollbar{ background: transparent url(../../../Content/Images/scrollbar/bg-scrollbar-track-y.png?uid=-132156078) no-repeat 0 0; position: relative;background-position: 0 0; float: right; width: 15px; }
+.scrollbarmain .track { background: transparent url(../../../Content/Images/scrollbar/bg-scrollbar-trackend-y.png?uid=-132156078) no-repeat 0 100%; height: 100%; width:13px; position: relative; padding: 0 1px; }
+.scrollbarmain .thumb { background: transparent url(../../../Content/Images/scrollbar/bg-scrollbar-thumb-y.png?uid=-132156078) no-repeat 50% 100%; height: 20px; width: 25px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left: -5px; display:none;margin-top:4px; }
+.scrollbarmain .thumb .end { background: url("../../../Content/Images/scrollbar/bg-scrollbar-thumb-y.png?uid=-132156078") no-repeat scroll 50% 0 #E4E4E4;
+    height: 8px;
+    margin-left: 8px;
+    overflow: hidden;
+    width: 9px;}
+.scrollbarmain .disable { display: none; }
+
+
+.scrollbarmainSearch { width: 741px; clear: both; margin: 0px 0 0px; }
+.scrollbarmainSearch .viewport { width: 720px; height:170px; overflow-y: hidden; overflow-x:hidden; position: relative; border:1px solid #CCC;}
+.scrollbarmainSearch .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; }
+.scrollbarmainSearch .scrollbar{ background: transparent url(../../../Content/Images/scrollbar/bg-scrollbar-track-y.png?uid=-132156078) no-repeat 0 0; position: relative; background-position: 0 0; float: right; width: 15px; }
+.scrollbarmainSearch .track { background: transparent url(../../../Content/Images/scrollbar/bg-scrollbar-trackend-y.png?uid=-132156078) no-repeat 0 100%; height: 100%; width:13px; position: relative; padding: 0 1px; }
+.scrollbarmainSearch .thumb { background: transparent url(../../../Content/Images/scrollbar/bg-scrollbar-thumb-y3.png?uid=-132156078) no-repeat 50% 100%; height: 20px; width: 25px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left: -5px; }
+.scrollbarmainSearch .thumb .end { background: transparent url(../../../Content/Images/scrollbar/bg-scrollbar-thumb-y3.png?uid=-132156078) no-repeat 50% 0; overflow: hidden; height: 8px; width: 25px; }
+.scrollbarmainSearch .disable { display: none; }

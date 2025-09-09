@@ -22,6 +22,8 @@ class PermSeeder extends Seeder
             'is',
             'bnc',
             'teb',
+            'vakif',
+            'enpara',
             'fibabank',
             'forbidden',
             'options',

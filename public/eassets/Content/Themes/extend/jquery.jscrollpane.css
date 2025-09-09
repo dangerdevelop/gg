@@ -1,0 +1,132 @@
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+ 
+ 
+ 
+
+.jspContainer
+{
+	overflow: hidden;
+	position: relative;
+	padding-bottom: 0px;
+}
+
+.jspPane
+{
+	position: absolute;
+}
+
+.jspVerticalBar
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 8px;
+	height: 100%;
+}
+
+.jspHorizontalBar
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 8px;
+}
+
+.jspVerticalBar *,
+.jspHorizontalBar *
+{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+.jspHorizontalBar .jspCap
+{
+	float: left;
+}
+
+.jspTrack
+{
+	/*background:url(../../Images/custom_scroll_bg.png?uid=-132156093) no-repeat center;*/
+	background:#f9f9fa;
+	
+	-moz-border-radius: 3px;-webkit-border-radius: 3px; -khtml-border-radius: 3px;border-radius: 3px;
+	box-shadow: #ececed 2px 2px inset;
+	/*background: #dde;*/
+	position: relative;
+	behavior: url(Content/js/PIE.htc);
+}
+/*.modal .jspTrack {background:#efeff0;-moz-border-radius: 3px;-webkit-border-radius: 3px; -khtml-border-radius: 3px;border-radius: 3px;position: relative;box-shadow: #d5d5d5 2px 2px inset;behavior: url(Content/js/PIE.htc);}
+.modal2 .jspTrack {background:#efeff0;-moz-border-radius: 3px;-webkit-border-radius: 3px; -khtml-border-radius: 3px;border-radius: 3px;position: relative;box-shadow: #d5d5d5 2px 2px inset;behavior: url(Content/js/PIE.htc);}
+.modal-talimat .jspTrack {background:#efeff0;-moz-border-radius: 3px;-webkit-border-radius: 3px; -khtml-border-radius: 3px;border-radius: 3px;position: relative;box-shadow: #d5d5d5 2px 2px inset;behavior: url(Content/js/PIE.htc);}*/
+.jspDrag
+{
+	background:url(../../Images/custom_scroll_bar.png?uid=-132156093) #b4b4b4 no-repeat center center;
+	-moz-border-radius: 3px;-webkit-border-radius: 3px; -khtml-border-radius: 3px;border-radius: 3px;
+	behavior: url(Content/js/PIE.htc);
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+.jspCapBottom {width:8px;/*background:url(../../Images/custom_scroll_bg_bot.png?uid=-132156093) no-repeat top*/;position:absolute;bottom:0;left:0;height:2px;display:none;}
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+{
+	float: left;
+	height: 100%;
+}
+
+.jspArrow
+{
+	background: #50506d;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+}
+
+.jspArrow.jspDisabled
+{
+	cursor: default;
+	background: #80808d;
+}
+
+.jspVerticalBar .jspArrow
+{
+	height: 16px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+	width: 16px;
+	float: left;
+	height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+	outline: none;
+}
+
+.jspCorner
+{
+	background: #eeeef4;
+	float: left;
+	height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+	margin: 0 -3px 0 0;
+}
+.jspScrollable { outline:none; }
+.jspScrollable table.fixTD {width:98%!important}
+.jspScrollable table.fixTD td {padding:13px 0px 12px 5px!important}

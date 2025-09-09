@@ -1,0 +1,480 @@
+i/* Finansbank Combobox skin */
+
+/*global*/
+.RadComboBox_FinansbankSkin,
+.RadComboBox_FinansbankSkin .rcbInput
+{
+    background-color: transparent;
+    color: #333333;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 12px;
+    padding: 7px 10px 7px 4px;
+    -webkit-appearance: none;
+}
+
+.RadComboBoxDropDown_FinansbankSkin
+{
+    background: #ffffff;
+    border-top: 2px solid #cccccc !important;
+    border-bottom: 2px solid #cccccc !important;
+    border-right: 2px solid #cccccc !important;
+    border-left: 2px solid #cccccc !important;
+    border-radius: 6px;
+    color: #333333;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 12px;
+    padding: 7px 10px 7px 4px;
+    -webkit-appearance: none;
+}
+
+.RadComboBox_FinansbankSkin.invalid,
+.RadComboBox_FinansbankSkin.invalid .rcbInput,
+.RadComboBoxDropDown_FinansbankSkin.invalid
+{
+    background-color: transparent;
+    color: #848484;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 12px;
+    -webkit-appearance: none;
+    border-color: #f99d1c !important;
+}
+
+
+
+/* combobox */
+    .RadComboBox_FinansbankSkin.invalid .rcbInputCellLeft,
+    .RadComboBox_FinansbankSkin.invalid .rcbInputCellRight,
+    .RadComboBox_FinansbankSkin.invalid .rcbArrowCellLeft,
+    .RadComboBox_FinansbankSkin.invalid .rcbArrowCellRight {
+        /* IE9 and all other browsers */
+        background-image: url(../../Images/DropDownList/rcbENRoundedInvalid.png?v=2);
+        /* IE7 and IE8 */
+        *background-image: url(../../Images/DropDownList/rcbENInvalid.png?v=2);
+    }
+
+.RadComboBox_FinansbankSkin .rcbInputCellLeft,
+.RadComboBox_FinansbankSkin .rcbInputCellRight,
+.RadComboBox_FinansbankSkin .rcbArrowCellLeft,
+.RadComboBox_FinansbankSkin .rcbArrowCellRight {
+    /* IE9 and all other browsers */
+    background-image: url(../../Images/DropDownList/rcbENRounded.png?v=2);
+    /* IE7 and IE8 */
+    *background-image: url(../../Images/DropDownList/rcbEN.png?v=2);
+}
+.rcbArrowCellLeft a,.rcbArrowCellRight a
+{
+    cursor:pointer!important;
+}
+@media \0screen
+{
+    .RadComboBox_FinansbankSkin .rcbInputCellLeft,
+    .RadComboBox_FinansbankSkin .rcbInputCellRight,
+    .RadComboBox_FinansbankSkin .rcbArrowCellLeft,
+    .RadComboBox_FinansbankSkin .rcbArrowCellRight {
+        /* IE7 and IE8 */
+        background-image: url(../../Images/DropDownList/rcbEN.png?v=2);
+    }
+
+    .RadComboBox_FinansbankSkin.invalid .rcbInputCellLeft,
+    .RadComboBox_FinansbankSkin.invalid .rcbInputCellRight,
+    .RadComboBox_FinansbankSkin.invalid .rcbArrowCellLeft,
+    .RadComboBox_FinansbankSkin.invalid .rcbArrowCellRight {
+        /* IE7 and IE8 */
+        background-image: url(../../Images/DropDownList/rcbENInvalid.png?v=2);
+    }
+}
+
+.RadComboBox_FinansbankSkin td.rcbInputCellLeft
+{
+    background-position: 0 0 !important;
+}
+
+.RadComboBox_FinansbankSkin td.rcbInputCellRight
+{
+    background-position: 100% 0 !important;
+}
+
+.RadComboBox_FinansbankSkin .rcbHovered .rcbInputCellLeft
+{
+    background-position: 0 0 !important;
+}
+
+.RadComboBox_FinansbankSkin .rcbHovered .rcbInputCellRight
+{
+    background-position: 100% 0 !important;
+}
+
+.RadComboBox_FinansbankSkin .rcbFocused .rcbInputCellLeft
+{
+    background-position: 0 0 !important;
+}
+
+.RadComboBox_FinansbankSkin .rcbFocused .rcbInputCellRight
+{
+    background-position: 100% 0 !important;
+}
+
+.RadComboBox_FinansbankSkin .rcbHovered .rcbReadOnly td.rcbInputCellLeft
+{
+    background-position: 0 0 !important;
+}
+
+.RadComboBox_FinansbankSkin .rcbHovered .rcbReadOnly td.rcbInputCellRight
+{
+    background-position: 100% 0 !important;
+}
+
+.RadComboBox_FinansbankSkin .rcbFocused .rcbReadOnly td.rcbInputCellLeft
+{
+    background-position: 0 0 !important;
+}
+
+.RadComboBox_FinansbankSkin .rcbFocused .rcbReadOnly td.rcbInputCellRight
+{
+    background-position: 100% 0 !important;
+}
+
+.RadComboBox_FinansbankSkin .rcbInputCell .rcbEmptyMessage
+{
+    color: #333333;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 12px;
+    font-style: normal !important;
+    height: 15px;
+    padding: 7px 10px 7px 10px !important;
+    -webkit-appearance: none;
+}
+
+.RadComboBox_FinansbankSkin.invalid .rcbInputCell .rcbEmptyMessage
+{
+    color: #f99d1c;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 12px;
+    font-weight:normal;
+    font-style: normal !important;
+    height: 15px;
+    padding: 7px 10px 7px 10px !important;
+    -webkit-appearance: none;
+}
+
+.RadComboBox_FinansbankSkin .rcbInputCell .rcbInput
+{
+    background-position: 1px 0px !important;
+    color: #333333;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 12px;
+    font-weight:normal;
+    height: 15px;
+    padding: 7px 10px 7px 10px !important;
+    -webkit-appearance: none;
+}
+
+
+.msie9 .RadComboBox_FinansbankSkin .rcbInputCell .rcbInput {
+    width: 101% !important;
+}
+
+
+.RadComboBox_FinansbankSkin .rcbInputCell .rcbInputWithImage
+{
+    padding:7px 10px 7px 52px !important;
+    background-position: 12px 0 !important;
+}
+.RadComboBox_FinansbankSkin .rcbDisabled .rcbInputCell .rcbInput.rcbInputWithImage
+{
+    color: #333333 !important;
+    cursor: default;
+    background-position:0 0 !important;
+    font-weight:normal;
+    padding-left:35px!important;
+    text-align: left;
+}
+
+.RadComboBox_FinansbankSkin.invalid .rcbInputCell .rcbInput
+{
+    background-position: 12px 2px !important;
+    color: #f99d1c;
+    font-family: Tahoma, Lucida Grande;
+    font-weight:normal;
+    font-size: 12px;
+    height: 15px;
+    padding: 7px 10px 7px 10px !important;
+    -webkit-appearance: none;
+}
+
+.RadComboBox_FinansbankSkin.invalid .rcbInputCell .rcbInputWithImage
+{
+    padding:7px 10px 7px 48px !important;
+    background-position: 12px 0 !important;
+}
+
+.RadComboBox_FinansbankSkin .rcbHovered .rcbInputCell .rcbInput
+{
+    cursor: pointer;
+}
+
+.RadComboBox_FinansbankSkin td.rcbArrowCellLeft
+{
+    background-position: -18px -88px !important;
+}
+
+.RadComboBox_FinansbankSkin td.rcbArrowCellRight 
+{
+    background-position: -1975px 0px !important;
+    position: relative;
+    height: 34px;
+}
+
+.RadComboBox_FinansbankSkin .rcbHovered .rcbArrowCellLeft
+{
+    background-position: -54px -88px !important;
+    cursor: pointer;
+}
+
+.RadComboBox_FinansbankSkin .rcbHovered .rcbArrowCellRight 
+{
+    background-position: -1975px 0px !important;
+    cursor: pointer;
+    position: relative;
+}
+
+.RadComboBox_FinansbankSkin .rcbFocused .rcbArrowCellLeft
+{
+    background-position: -90px -88px !important;
+}
+
+.RadComboBox_FinansbankSkin .rcbFocused .rcbArrowCellRight 
+{
+    background-position: -1975px 0px !important;
+}
+
+.RadComboBox_FinansbankSkin td.rcbArrowCellHidden,
+.RadComboBox_FinansbankSkin .rcbHovered td.rcbArrowCellHidden,
+.RadComboBox_FinansbankSkin .rcbFocused td.rcbArrowCellHidden
+{
+    background-position: -1975px 0px !important;
+    cursor: pointer;
+}
+
+.RadComboBox_FinansbankSkin_rtl td.rcbArrowCellHidden,
+.RadComboBox_FinansbankSkin_rtl .rcbHovered td.rcbArrowCellHidden,
+.RadComboBox_FinansbankSkin_rtl .rcbFocused td.rcbArrowCellHidden
+{
+    background-position: -18px -88px;
+    cursor: pointer;
+}
+
+/* Read-only styles */
+.RadComboBox_FinansbankSkin .rcbReadOnly td.rcbArrowCellLeft
+{
+    background-position: -18px -88px;
+}
+
+.RadComboBox_FinansbankSkin .rcbReadOnly td.rcbArrowCellRight
+{
+    background-position: -2px -88px;
+}
+
+.RadComboBox_FinansbankSkin .rcbHovered .rcbReadOnly .rcbArrowCellLeft
+{
+    background-position: -54px -88px;
+}
+
+.RadComboBox_FinansbankSkin .rcbHovered .rcbReadOnly .rcbArrowCellRight
+{
+    background-position: -38px -88px;
+}
+
+.RadComboBox_FinansbankSkin .rcbFocused .rcbReadOnly .rcbArrowCellLeft
+{
+    background-position: -90px -88px;
+}
+
+.RadComboBox_FinansbankSkin .rcbFocused .rcbReadOnly .rcbArrowCellRight
+{
+    background-position: -74px -88px;
+}
+
+.RadComboBox_FinansbankSkin .rcbReadOnly td.rcbArrowCellHidden
+{
+    background-position: -15px -88px;
+}
+
+.RadComboBox_FinansbankSkin .rcbHovered .rcbReadOnly td.rcbArrowCellHidden
+{
+    background-position: -51px -88px;
+}
+
+.RadComboBox_FinansbankSkin .rcbFocused .rcbReadOnly td.rcbArrowCellHidden
+{
+    background-position: -87px -88px;
+}
+
+.RadComboBox_FinansbankSkin_rtl .rcbReadOnly td.rcbArrowCellHidden
+{
+    background-position: -18px -88px;
+}
+
+.RadComboBox_FinansbankSkin_rtl .rcbHovered .rcbReadOnly td.rcbArrowCellHidden
+{
+    background-position: -54px -88px;
+}
+
+.RadComboBox_FinansbankSkin_rtl .rcbFocused .rcbReadOnly td.rcbArrowCellHidden
+{
+    background-position: -90px -88px;
+}
+
+/* dropdown */
+.RadComboBoxDropDown_FinansbankSkin .rcbHeader,
+.RadComboBoxDropDown_FinansbankSkin .rcbFooter,
+.RadComboBoxDropDown_FinansbankSkin .rcbMoreResults a {
+    /* IE9 and all other browsers */
+    background-image: url(../../Images/DropDownList/rcbENRounded.png?v=2);
+    /* IE7 and IE8 */
+    *background-image: url(../../Images/DropDownList/rcbEN.png?v=2);
+}
+
+.RadComboBoxDropDown_FinansbankSkin .rcbHeader,
+.RadComboBoxDropDown_FinansbankSkin .rcbFooter
+{
+    background-color: #f1f2f4;
+    background-position: 0 -110px;
+}
+
+.RadComboBoxDropDown_FinansbankSkin .rcbHeader
+{
+    border-bottom-color: #d5d5d5;
+}
+
+.RadComboBoxDropDown_FinansbankSkin .rcbFooter
+{
+    border-top-color: #d5d5d5;
+}
+
+.RadComboBoxDropDown_FinansbankSkin .rcbItem em
+{
+    background: #e5e5e5;
+}
+
+.RadComboBoxDropDown_FinansbankSkin .rcbHovered
+{
+    cursor: pointer;
+    background-color:#e2e2e2;
+}
+
+.RadComboBoxDropDown_FinansbankSkin .rcbCheckAllItems,
+.RadComboBoxDropDown_FinansbankSkin .rcbCheckAllItemsHovered
+{
+    color: #000000;
+    background-color: #dbebf3;
+}
+
+.RadComboBoxDropDown_FinansbankSkin .rcbCheckAllItemsHovered
+{
+    color: #000000;
+}
+
+.RadComboBoxDropDown_FinansbankSkin .rcbSeparator
+{
+    /*
+    color: #666;
+    background: #D3ECF9;
+    */
+}
+
+.RadComboBox_FinansbankSkin .rcbDisabled .rcbInputCell .rcbInput,
+.RadComboBoxDropDown_FinansbankSkin .rcbDisabled
+{
+    color: #333333 !important;
+    cursor: default;
+    padding-left: 0 !important;
+    text-align: left;
+}
+
+.RadComboBox .rcbDisabled
+{
+    opacity: 1 !important;
+}
+
+.rcbDisabled .rcbInputCell 
+{
+    background-image:none!important;
+    
+}
+.rcbDisabled .rcbArrowCell 
+{
+    background-image:none!important;
+}
+
+.RadComboBoxDropDown_FinansbankSkin .rcbLoading
+{
+    background: #f0f0f0;
+}
+
+.RadComboBoxDropDown_FinansbankSkin .rcbMoreResults
+{
+    border-top-color: #c6c7d2;
+    background: #fff;
+}
+
+.RadComboBoxDropDown_FinansbankSkin .rcbMoreResults a
+{
+    background-position: -157px -94px;
+}
+
+.RadComboBoxDropDown_FinansbankSkin .rcbMoreResults a:hover
+{
+    background-position: -188px -94px;
+}
+
+.RadComboBox TABLE TD.rcbInputCell
+{
+    height: 34px !important;
+}
+
+.RadComboBox TABLE TD.rcbArrowCell
+{
+    width: 25px !important;
+    min-width: 25px;
+    display: block;
+}
+
+.rcbList
+{
+    font-size: 12px !important;
+    background: #ffffff;
+    max-height:113px!important;
+}
+
+.RadComboBox .rcbArrowCell a {
+    width: 25px !important;
+}
+
+.RadComboBox_FinansbankSkin .rcbInputCell .rcbFakeInput
+{
+    display:none;
+}
+
+
+
+.RadComboBoxDropDown .rcbImage{margin:0 3px 2px 0!important;vertical-align:middle;}
+
+.RadComboBoxDropDown .rcbScroll
+{
+    /*min-height:100px;*/
+    overflow-x:visible !important;
+    overflow-y:scroll !important;
+    width:100%;
+}
+.RadComboBoxDropDown .rcbScroll, .RadComboBoxDropDown .rcbList,.rcbSlide,.RadComboBoxDropDown
+{
+    white-space:nowrap !important;
+    width:auto !important;
+}
+
+.RadComboBoxDropDown .rcbItem, .RadComboBoxDropDown .rcbHovered, .RadComboBoxDropDown .rcbDisabled, .RadComboBoxDropDown .rcbLoading, .RadComboBoxDropDown .rcbCheckAllItems, .RadComboBoxDropDown .rcbCheckAllItemsHovered
+{
+    width:auto !important;
+    padding:2px 15px 2px 6px!important;
+}

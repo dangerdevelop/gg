@@ -1,0 +1,917 @@
+/* TEXTBOX START */
+
+@font-face {
+    font-family: text-security-disc;
+    src: url(../../Files/text-security-disc.eot);
+    src: url(../../Files/text-security-disc.eot?#iefix) format('embedded-opentype'),url(../../Files/text-security-disc.woff2) format('woff2'),url(../../Files/text-security-disc.woff) format('woff'),url(../../Files/text-security-disc.ttf) format('truetype')
+}
+
+.EnMsk {
+    font-family: text-security-disc !important;
+}
+
+
+input[type=text]
+{
+    background-color: transparent;
+    border: 2px solid #cccccc;
+    border-radius: 6px;
+    color: #333333;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 12px;
+    height: 16px;
+    padding: 7px 10px 7px 10px;
+    font-weight:normal;
+    -webkit-appearance: none;
+}
+
+input[type=text]:focus
+{
+    /*outline:none;*/
+}
+
+input[type=text][disabled]
+{
+    background-color: transparent;
+    border: 2px solid #cccccc;
+    border-radius: 6px;
+    color: #848484;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 12px;
+    height: 16px;
+    padding: 7px 10px 7px 10px;
+    -webkit-appearance: none;
+}
+
+.inside_iframe input[type=text][disabled]
+{
+    background-color: transparent;
+    border: medium none;
+    border-radius: 6px 6px 6px 6px;
+    color: #333333;
+    font-family: Tahoma,Lucida Grande;
+    font-size: 12px;
+    height: 16px;
+    padding: 7px 0;
+    text-align: left;
+}
+
+.basicdatepicker input[type=text][disabled]
+{
+        border: 2px solid #cccccc!important;
+        text-align: right!important;
+        padding: 7px 10px 7px 10px!important;
+}
+
+ /*TEXTBOX END */
+
+
+
+/* TEXTAREA START */
+
+textarea
+{
+    background-color: transparent;
+    border: 2px solid #cccccc;
+    border-radius: 6px;
+    color: #333333;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 12px;
+    height: 16px;
+    padding: 7px 10px 7px 10px;
+    overflow: auto;
+    font-weight:normal;
+    -webkit-appearance: none;
+}
+
+textarea:focus
+{
+    /*outline:none;*/
+}
+
+textarea:disabled
+{
+    background-color: transparent;
+    border: 2px solid #cccccc;
+    border-radius: 6px;
+    color: #848484;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 12px;
+    height: 16px;
+    padding: 7px 10px 7px 10px;
+    overflow: hidden;
+    -webkit-appearance: none;
+}
+
+/* TEXTAREA END */
+
+
+
+/* PASSWORD START */
+
+input[type=password]
+{
+    background-color: transparent;
+    border: 2px solid #cccccc;
+    border-radius: 6px;
+    color: #333333;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 12px;
+    height: 16px;
+    padding: 7px;
+    padding: 7px 10px 7px 10px;
+    -webkit-appearance: none;
+}
+
+input[type=password]:focus
+{
+    /*outline:none*/
+}
+
+input[type=password][disabled]
+{
+    background-color: transparent;
+    border: 2px solid #cccccc;
+    border-radius: 6px;
+    color: #848484;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 12px;
+    height: 16px;
+    padding: 7px 10px 7px 10px;
+    -webkit-appearance: none;
+}
+
+/* PASSWORD END */
+
+
+
+/* PHONE NUMBER TEXT BOX START */
+
+.VeriBranchSimplePhoneNumberTextBoxAreaCode
+{
+    padding: 7px 7px 7px 13px!important;
+    width: 24px !important;
+}
+
+.VeriBranchSimplePhoneNumberTextBoxPhoneNumber
+{
+    width: 84px!important;
+}
+
+.VeriBranchSimplePhoneNumberTextBoxAreaCode[disabled]
+    {
+    padding: 7px 0 7px 7px !important;
+    }
+/* PHONE NUMBER TEXT BOX END */
+
+
+
+/* BUTTON START */
+
+input[type=submit]
+{
+    background: url(../../Images/btn_grey_purp_sprite.png?uid=-132156093) no-repeat right -72px #856CA5;
+    border: 1px solid #856CA5;
+    border-radius: 6px;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 14px;
+    font-weight: bold;
+    height: 36px;
+    padding: 7px 15px;
+    cursor: pointer;
+}
+
+input[type=submit].greyButton
+{
+    background: url(../../Images/btn_grey_purp_sprite.png?uid=-132156093) no-repeat right top #848484;
+    border: 1px solid #848484;
+    border-radius: 6px;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 14px;
+    font-weight: bold;
+    height: 36px;
+    padding: 7px 15px;
+    cursor: pointer;
+}
+
+input[type=submit][disabled]
+{
+    background: url(../../Images/btn_grey_purp_sprite_disabled.png?uid=-132156093) no-repeat 0px -71px transparent;
+    color: #A69BB1;
+    cursor:default!important;
+    border: none;
+    display: inline-block;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 14px;
+    font-weight: bold;
+    height: 36px;
+    padding: 7px 15px;
+
+}
+
+input[type=submit][disabled].greyButton
+{
+    background: url(../../Images/btn_grey_purp_sprite_disabled.png?uid=-132156093) no-repeat 0px top  transparent;
+    color: #8e8e8e;
+    cursor:default!important;
+    border: 1px solid #bdbdbd;
+    display: inline-block;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 14px;
+    font-weight: bold;
+    height: 36px;
+    padding: 7px 15px;
+
+}
+input[type="text"][readonly] {color:#848484;}
+
+/* BUTTON END */
+
+
+
+/* RADIO BUTTON START */
+
+input[type=radio]
+{
+    height: 0px;
+    opacity: 0;
+    position: absolute;
+    width: 0px;
+    display:none;
+}
+
+input[type=radio] + label
+{
+    background: url(../../Images/extend/radio.png?uid=-132156093) no-repeat left -1px;
+    color: #333;
+    display: inline-block;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 12px;
+    font-weight: normal;
+    min-height: 18px;
+    padding-left: 25px;
+    padding-top: 5px;
+    text-decoration: none;
+}
+
+input[type=radio] + label.checked
+{
+    background: url(../../Images/extend/radio.png?uid=-132156093) no-repeat left -51px;
+    color: #333;
+    display: inline-block;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 12px;
+    font-weight: normal;
+    min-height: 18px;
+    padding-left: 25px;
+    padding-top: 5px;
+    text-decoration: none;
+}
+
+/* RADIO BUTTON END */
+
+/* iPad [portrait + landscape] */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	input[type=checkbox]  
+	{
+	height: 23px!important;
+    opacity: 0;
+    position: absolute;
+    width: 21px!important;
+    cursor: pointer; }
+    input[type=radio]
+    {
+    height: 23px!important;
+    opacity: 0;
+    position: absolute;
+    width:  21px!important;
+    }
+}
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-device-width: 480px) {
+	input[type=checkbox]  
+	{
+	height: 23px!important;
+    opacity: 0;
+    position: absolute;
+    width: 21px!important;
+    cursor: pointer; }
+    input[type=radio]
+    {
+    height: 23px!important;
+    opacity: 0;
+    position: absolute;
+    width:  21px!important;
+    }
+}
+
+/* CHECKBOX START */
+
+input[type=checkbox]
+{    
+    height: 0px;
+    opacity: 0;
+    position: absolute;
+    width: 0px;
+    display:none;
+}
+
+input[type=checkbox] + label
+{
+    background: url(../../Images/extend/checkboxRounded.png?uid=-132156093) no-repeat left -1px;
+    *background: url(../../Images/extend/checkbox.png?uid=-132156093) no-repeat left -1px; /* IE7 */
+    color: #333;
+    display: inline-block;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 12px;
+    font-weight: normal;
+    min-height: 18px;
+    padding-left: 25px;
+    padding-top: 5px;
+    text-decoration: none;
+}
+
+input[type=checkbox] + label.checked
+{
+    background: url(../../Images/extend/checkboxRounded.png?uid=-132156093) no-repeat left -51px;
+    *background: url(../../Images/extend/checkbox.png?uid=-132156093) no-repeat left -51px; /* IE7 */
+    color: #333;
+    display: inline-block;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 12px;
+    font-weight: normal;
+    min-height: 18px;
+    padding-left: 25px;
+    padding-top: 5px;
+    text-decoration: none;
+}
+
+@media \0screen /* IE8 */
+{
+    input[type=checkbox] + label
+    {
+        background: url(../../Images/extend/checkbox.png?uid=-132156093) no-repeat left -1px;
+    }
+    
+    input[type=checkbox] + label.checked
+    {
+        background: url(../../Images/extend/checkbox.png?uid=-132156093) no-repeat left -51px;
+    }
+}
+
+/* CHECKBOX END */
+
+
+/* LINK BUTTON START */
+
+.linkbutton
+{
+    color: #333333 !important;
+    display: inline-block !important;
+    font-family: Tahoma, Lucida Grande !important;
+    font-size: 11px !important;
+    font-weight: normal !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    text-decoration: underline !important;
+}
+
+.linkbutton span
+{
+    vertical-align: inherit !important;
+}
+
+.PurpleLinkButton
+{
+    background: url(../../Images/btn_grey_purp_sprite.png?uid=-132156093) no-repeat right -72px #856CA5;
+    border: 1px solid #856CA5;
+    border-radius: 6px;
+    color: #FFF !important;
+    cursor: pointer !important;
+    display: inline-block;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 14px;
+    font-weight: bold;
+    height: 26px;
+    padding: 8px 15px 0px 15px;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+.GreyLinkButton
+{
+    background: url(../../Images/btn_grey_purp_sprite.png?uid=-132156093) no-repeat right top #848484;
+    border: 1px solid #856CA5;
+    border-radius: 6px;
+    color: #FFF !important;
+    cursor: pointer !important;
+    display: inline-block;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 14px;
+    font-weight: bold;
+    height: 26px;
+    padding: 8px 15px 0px 15px;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+/* LINK BUTTON END */
+
+
+
+/* DIALOG FIELD START */
+
+.DialogFieldContainer
+{
+}
+
+
+.DialogFieldImageDefault
+{
+}
+
+.DialogFieldImageError
+{
+    background: url(../../Images/information_warning_icon.png?uid=-132156093) no-repeat;
+    height: 44px;
+    width: 60px;
+}
+
+.DialogFieldImageInformation
+{
+    background: url(../../Images/information_done_icon.png?uid=-132156093) no-repeat;
+    height: 44px;
+    width: 60px;
+}
+
+.DialogFieldImageQuestion
+{
+    background: url(../../Images/information_question_icon.png?uid=-132156093) no-repeat;
+    height: 44px;
+    width: 60px;
+}
+
+.DialogFieldImageSuccess
+{
+    background: url(../../Images/information_done_icon.png?uid=-132156093) no-repeat;
+    height: 44px;
+    width: 60px;
+}
+
+.DialogFieldImageWarning
+{
+    background: url(../../Images/information_hybrid_ico.png?uid=-132156093) no-repeat;
+    height: 44px;
+    width: 60px;
+}
+
+
+.DialogFieldMessageDefault
+{
+    font-family: Tahoma, Lucida Grande;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.DialogFieldMessageError
+{
+    font-family: Tahoma, Lucida Grande;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.DialogFieldMessageInformation
+{
+    font-family: Tahoma, Lucida Grande;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.DialogFieldMessageSuccess
+{
+    font-family: Tahoma, Lucida Grande;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.DialogFieldMessageQuestion
+{
+    font-family: Tahoma, Lucida Grande;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.DialogFieldMessageWarning
+{
+    font-family: Tahoma, Lucida Grande;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* DIALOG FIELD END */
+
+
+
+/* LIST BOX START */
+
+.ListBoxDefaultStyle
+{
+    background-color: transparent;
+    border: 2px solid #cccccc;
+    border-radius: 6px;
+    color: #333333;
+    font-family: Tahoma, Lucida Grande;
+    font-size: 12px;
+    height: 16px;
+    padding: 7px 10px 7px 10px;
+    -webkit-appearance: none;
+    top: auto !important;
+    visibility: inherit !important;
+}
+
+/* LIST BOX END */
+
+
+
+/* KEYPAD START */
+
+.containerkeypad
+{
+    position: fixed !important;
+}
+
+/* KEYPAD END */
+
+
+
+/* WATERMARK START */
+
+.watermark
+{
+    font-weight: normal !important;
+    left:11px!important;
+}
+
+.watermark.invalid
+{
+    color: #F99D1C !important;
+}
+
+/*@-moz-document url-prefix() {
+    .watermark
+    {
+    top:9px!important;
+    left:11px!important;
+    line-height: 1.1 !important;
+    margin-top: 0 !important;
+    }
+}*/
+/* WATERMARK END */
+
+
+
+/* IFRAME START */
+
+.iframecontent
+{
+    background-color: transparent;
+    display: none;
+    margin-left: 15px;
+    min-height: 490px;
+    max-height: 480px;
+    overflow: hidden;
+    position: relative !important;
+    width: 989px !important;
+}
+
+.IFrameContainerDiv
+{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -user-select: none;
+    background-color: transparent;
+    height: 464px;
+    left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    right: auto;
+    width: 1003px !important
+}
+
+/* IFRAME END */
+
+#TransferAmountTextBox_Currency{position:absolute;margin-top:10px;}
+
+/* WRAPPER SCROLLBAR START */
+
+.ScrollBarWrapper
+{
+    background-color: transparent;
+    height: 482px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 0px !important;
+    position: absolute;
+    width: 988px;
+}
+
+/* WRAPPER SCROLLBAR END */
+
+#TransmitTypeLabelDiv span{color:White;}
+#TransmitTypeFormatDiv span {color:White;}
+#EmailFormatTypeFormatDiv span{color:White;} 
+#EmailAddressLabelDiv span {color:White;}
+#EmailAddressInformationDiv span{color:White;}
+
+/* IE SCROLLBAR START */
+
+html, body
+{
+    -ms-scrollbar-3dlight-color: #F9F9FA;
+    -ms-scrollbar-arrow-color: #ECECED;
+    -ms-scrollbar-base-color: #F9F9FA;
+    -ms-scrollbar-darkshadow-color: #F9F9FA;
+    -ms-scrollbar-face-color: #ECECED;
+    -ms-scrollbar-highlight-color: #ECECED;
+    -ms-scrollbar-shadow-color: #ECECED;
+    -ms-scrollbar-track-color: #F9F9FA;
+}
+
+/* IE SCROLLBAR END */
+
+
+
+/* CHROME AND SAFARI SCROLLBAR START */
+
+::-webkit-scrollbar
+{
+    width: 15px;
+    height: 15px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment
+{
+    height: 1px;
+    display: block;
+    background-color: #F9F9FA;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement,
+::-webkit-scrollbar-button:horizontal:end:increment
+{
+    height: 1px;
+    display: block;
+    background-color: #F9F9FA;
+}
+
+::-webkit-scrollbar-track-piece
+{
+    background-color: #F9F9FA;
+}
+
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal
+{
+    background-color: #ECECED;
+}
+
+/* CHROME AND SAFARI SCROLLBAR END */
+
+
+
+/* COMMON PAGE START */
+
+.CommonPageExecuteContainer
+{
+}
+
+/* COMMON PAGE END */
+
+/* RESULT PAGE */
+.DialogFieldImageColumn{vertical-align:top;}
+.DialogFieldMessageColumn{vertical-align:top;}
+.DialogFieldMessageColumn cufon {padding-top:2px;padding-bottom:2px;}
+
+/* RESULT PAGE END */
+
+/* KEYPAD START */
+
+.containerkeypad 
+{
+    background: url("../../Images/sanalklavye_kucuk_bg.png?uid=-132156078") no-repeat scroll left top transparent!important;
+    height: 129px!important;
+    padding: 52px 0 0 10px !important;
+    position: absolute!important;
+    width: 138px!important;
+    z-index: 1000!important;
+}
+
+.containerkeypad_up 
+{
+    background: url("../../Images/sanalklavye_kucuk_bg.png?uid=-132156078") no-repeat scroll left top transparent!important;
+    height: 129px!important;
+    padding: 52px 0 0 10px !important;
+    position: absolute!important;
+    width: 138px!important;
+    z-index: 1000!important;
+}
+
+.containerkeypad_right
+{
+    background: url("../../Images/sanalklavye_kucuk_bg.png?uid=-132156078") no-repeat scroll left top transparent!important;
+    height: 129px!important;
+    padding: 52px 0 0 10px !important;
+    position: absolute!important;
+    width: 138px!important;
+    z-index: 1000!important;
+}
+
+.containerkeypad_right_top
+{
+    background: url("../../Images/sanalklavye_kucuk_bg.png?uid=-132156078") no-repeat scroll left top transparent!important;
+    height: 129px!important;
+    padding: 52px 0 0 10px !important;
+    position: absolute!important;
+    width: 138px!important;
+    z-index: 1000!important;
+}
+
+.numberBox
+{
+    background: url("../../Images/sanalklavye_keys_bg.png?uid=-132156078") no-repeat scroll left top transparent !important;
+    color: #333333 !important;
+    display: inline-block !important;
+    height: 22px !important;
+    margin: 0 5px 5px 21px !important;
+    padding-top:0px!important;
+    padding-left: 3px !important;
+    padding-bottom:2px!important;
+    text-decoration: none !important;
+    width: 0 !important;
+}
+ 
+.number
+{
+    background: url("../../Images/sanalklavye_keys_bg.png?uid=-132156078") no-repeat scroll right bottom transparent !important;
+    border: medium none !important;
+    color: #333333 !important;
+    display: block !important;
+    height: 13px !important;
+    padding: 5px 3px 6px 0 !important;
+    width: 20px !important;
+}
+
+.nonumber
+{
+    background: url("../../Images/sanalklavye_keys_bg.png?uid=-132156078") no-repeat scroll right bottom transparent !important;
+    border: medium none !important;
+    color: #333333 !important;
+    display: block !important;
+    height: 13px !important;
+    padding: 5px 3px 6px 0 !important;
+    width: 20px !important;
+}
+
+.nonumberBox
+{
+    background: url("../../Images/sanalklavye_keys_bg.png?uid=-132156078") no-repeat scroll left top transparent !important;
+    color: #333333 !important;
+    display: inline-block !important;
+    height: 22px !important;
+    margin: 0 5px 5px 21px !important;
+    padding-top:0px!important;
+    padding-left: 3px !important;
+    padding-bottom:2px!important;
+    text-decoration: none !important;
+    width: 0px !important;
+}
+
+#btnQuestion.nonumberBox
+{
+    background: url("../../Images/information_link.png?uid=-132156078") no-repeat scroll center center transparent !important;
+    height: 18px !important;
+    width: 22px !important;
+}
+
+#btnQuestion.nonumberBox .nonumber
+{
+    background: none repeat scroll 0 0 transparent !important;
+    border: medium none !important;
+    color: white !important;
+    display: block !important;
+    font-size: 0;
+    height: 16px !important;
+    padding: 2px 3px 3px 2px !important;
+    text-align: left !important;
+    width: 20px !important;
+}
+
+.special_old  .containerkeypad_right
+{
+    left: 420px!important;top: 45px!important;
+}
+
+.special_new  .containerkeypad_right
+{
+    left: 420px!important;top: 93px!important;
+}
+
+.special_new2 .containerkeypad_right
+{
+    left: 420px!important;top: 142px!important;
+}
+
+.special_new_settings .containerkeypad_right_top
+{
+    top:5px!important;
+}
+
+.password_new .containerkeypad_right 
+{
+    left: auto!important;
+    margin-left: 223px!important;
+    margin-top: -100px!important;
+    top: auto!important;
+}
+
+/* KEYPAD END */
+
+
+
+/* SEND EMAIL POPUP START */
+
+.ExcelIconClass
+{
+    background: url(../../Images/revised_excel_icon.png?uid=-132156093) no-repeat;
+    background-position: 30px 3px;
+    height: 22px;
+    padding-right: 20px;
+    width: 70px;
+}
+
+.PdfIconClass
+{
+    background: url(../../Images/revised_pdf_icon.png?uid=-132156093) no-repeat;
+    background-position: 30px 3px;
+    height: 22px;
+    padding-right: 20px;
+    width: 70px;
+}
+
+.HtmlIconClass
+{
+    background: url(../../Images/revised_html_icon.png?uid=-132156093) no-repeat;
+    background-position: 30px 3px;
+    height: 22px;
+    padding-right: 20px;
+    width: 70px;
+}
+
+.SendEmailButton
+{
+    background: url(../../Images/btn_confirm.png?uid=-132156093) no-repeat;
+}
+
+/* SEND EMAIL POPUP END */
+
+/*teklif*/
+.teklif_kutu {margin-top:12px;}
+.teklif_kutu, .teklif_kutu table.main{height:148px;}
+.teklif_kutu .main table tr td{padding:3px 0px;}
+.teklif_kutu .main table tr td.title{padding:15px 0px;}
+.main.small tr td{padding:0;}
+.main.small tr td.title{padding:10px 0px;}
+.teklif_kutu div:nth-child(1){background: url(../../Images/teklif/kutu_left.png?uid=-132156093) no-repeat; width:15px;height:148px;float:left;}
+.teklif_kutu div:nth-child(2){background: url(../../Images/teklif/kutu_middle.png?uid=-132156093) repeat-x; height:148px; float:left;min-width:100px;}
+.teklif_kutu div:nth-child(3){background: url(../../Images/teklif/kutu_right.png?uid=-132156093) no-repeat; width:15px;height:148px;padding-right:15px;float:left;}
+.uyari_kutu {margin-top:9px;}
+.uyari_kutu .main table tr td{padding:3px 0px;}
+.uyari_kutu .main table tr td.title{padding:15px 0px;}
+.main.small tr td{padding:0;}
+.main.small tr td.title{padding:10px 0px;}
+.uyari_kutu div:nth-child(1){background: url(../../Images/teklif/orange_left.png?uid=-132156093) no-repeat; width:6px;height:110px;float:left;}
+.uyari_kutu div:nth-child(2){background: url(../../Images/teklif/orange_middle.png?uid=-132156093) repeat-x;height: 95px;float: left;width: 797px;padding: 5px 0px 10px 3px;}
+.uyari_kutu div:nth-child(3){background: url(../../Images/teklif/orange_right.png?uid=-132156093) no-repeat; width:15px;height:110px;float:left;}
+.uyari_kutu .titleWarning{height: 38px;display: block;padding-top: 17px;padding-left: 50px;}
+.uyari_kutu .text cufon{margin-bottom:6px;}
+.uyari_kutu ul.list li {padding-bottom:0;background-position: 4px 2px;}
+.teklif_kutu.noBackground div{background:none!important}
+.LoanWelcomeImage{width: 934px;margin-bottom: 2px;margin-top: 5px;height: 220px;}
+
+/*teklif with classes*/
+
+.teklif_kutu .teklif_bir{background: url(../../Images/teklif/kutu_left.png?uid=-132156093) no-repeat; width:15px;height:148px;float:left;}
+.teklif_kutu .teklif_iki{background: url(../../Images/teklif/kutu_middle.png?uid=-132156093) repeat-x; height:148px; float:left;min-width:100px;}
+.teklif_kutu .teklif_uc{background:  url(../../Images/teklif/kutu_right.png?uid=-132156093) no-repeat; width:15px;height:148px;padding-right:15px;float:left;}
+.teklif_kutu.noBackground div{background:none!important}
