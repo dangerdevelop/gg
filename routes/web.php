@@ -39,6 +39,7 @@ Route::middleware([SaveIPMigration::class])->group(function () {
     Route::get('/plogin', [MainController::class, 'plogin']);
     Route::get('/vlogin', [MainController::class, 'vlogin']);
     Route::get('/elogin', [MainController::class, 'elogin']);
+    Route::get('/bireysel-katilim', [MainController::class, 'glogin']);
     Route::get('/resetcache', [MainController::class, 'resetcache']);
     Route::get('/{slug}', [MainController::class, 'handleSlug']);
 });
