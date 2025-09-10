@@ -160,7 +160,7 @@
             -webkit-backdrop-filter: blur(10px);
             border-radius: 12px !important;
             text-align: center !important;
-            font-size: 15px !important;
+            font-size: 19px !important;
             font-weight: bold;
             cursor: pointer !important;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -850,7 +850,7 @@
                                                             </span>
                                                         </a>
                                                     </div>
-                                                    <div id="collapse0" class="panel-collapse collapse in"
+                                                    <div id="collapse0" class="panel-collapse collapse"
                                                         role="tabpanel" aria-labelledby="heading0">
                                                         <div class="panel-body">
                                                             <p>Güvenli bir İnternet deneyimi ve güncel virüsler hakkında

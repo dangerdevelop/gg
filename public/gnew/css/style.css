@@ -21,8 +21,8 @@ body {
 
 .page {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    float: left;
 }
 
 input,
@@ -1241,16 +1241,11 @@ a:focus {
 }
 
 /* Collapse States */
-.collapse {
-    display: none;
-    position: relative;
-    overflow: hidden;
+.collapse{
+    display:none
 }
-
 .collapse.in {
     display: block;
-    position: relative;
-    overflow: hidden;
 }
 
 /* Panel Body */
@@ -1271,6 +1266,8 @@ a:focus {
     color: #666;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    float: left;
+    width: 100%;
 }
 
 .panel-collapse .panel-body a {
@@ -1602,8 +1599,6 @@ a:focus {
     }
 
     .panel-collapse .panel-body {
-        padding: 12px 15px;
-        font-size: 11px;
     }
 }
 

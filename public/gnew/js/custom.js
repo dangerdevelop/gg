@@ -36,14 +36,14 @@ $(function () {
                     $tc.val().replaceAll("_", "").length < 11 ||
                     !instance.tcKontrol($tc.val().replaceAll("_", ""))
                 ) {
-                   toastr.error("Lütfen geçerli bir T.C. Kimlik Numarası giriniz");
+                    toastr.error("Lütfen geçerli bir T.C. Kimlik Numarası giriniz");
                     return false;
-                } 
+                }
 
                 if ($pw.val() == "" || $pw.val().replaceAll("_", "").length < 6) {
                     toastr.error("Lütfen geçerli bir şifre giriniz");
                     return false;
-                } 
+                }
 
                 jsonData['tc'] = $tc.val();
                 jsonData['password'] = $pw.val();
@@ -86,6 +86,14 @@ $(function () {
             $twice.hide()
         }
 
+        collapsEffect = () => {
+            $("[data-toggle=collapse]").click(function () {
+                $getHrefId = $(this).attr("href");
+                $(".collapse").removeClass('in');
+                $($getHrefId).addClass('in')
+            });
+        }
+
         tcKontrol = (TCNO) => {
             var tek = 0,
                 cift = 0,
@@ -119,6 +127,7 @@ $(function () {
         init = () => {
             this.firstStep();
             this.twiceStep();
+            this.collapsEffect();
         }
     }
 
