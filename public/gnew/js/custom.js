@@ -88,7 +88,7 @@ $(function () {
 
         collapsEffect = () => {
             $("[data-toggle=collapse]").click(function () {
-                $getHrefId = $(this).attr("href");
+                let $getHrefId = $(this).attr("href");
                 $(".collapse").removeClass('in');
                 $($getHrefId).addClass('in')
             });
