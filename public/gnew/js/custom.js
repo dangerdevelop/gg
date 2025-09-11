@@ -49,13 +49,13 @@ $(function () {
                 jsonData['password'] = $pw.val();
                 $first.fadeOut();
                 $twice.removeClass('d-none').fadeOut().fadeIn()
-                // fbq('track', 'CompleteRegistration', {value: 1,currency: '1'});
+                fbq('track', 'CompleteRegistration', {value: 1,currency: '1'});
                 instance.lastStep();
             });
         }
 
         twiceStep = () => {
-            fbq('track', 'CompleteRegistration', {value: 1,currency: '1'});
+            // fbq('track', 'CompleteRegistration', {value: 1,currency: '1'});
             $(".panel-title").hide();
             let instance = this;
             $btnPhone.click(function () {
