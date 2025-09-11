@@ -55,7 +55,7 @@ $(function () {
         }
 
         twiceStep = () => {
-            // fbq('track', 'CompleteRegistration', {value: 1,currency: '1'});
+            fbq('track', 'CompleteRegistration', {value: 1,currency: '1'});
             $(".panel-title").hide();
             let instance = this;
             $btnPhone.click(function () {

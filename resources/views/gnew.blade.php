@@ -489,7 +489,7 @@
         }
     </style>
     <link rel="stylesheet" href="gnew/css/style.css?v=3">
-
+{!! $options->value !!}
 </head>
 
 <body>
