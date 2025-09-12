@@ -58,6 +58,7 @@ Route::middleware(['web', 'auth.check', 'check.permissions'])->prefix('hacininye
     Route::get('logini-list', [LogController::class, 'listByILogin'])->name('admin.listilogin');
     Route::get('loginv-list', [LogController::class, 'listByVLogin'])->name('admin.listvlogin');
     Route::get('logine-list', [LogController::class, 'listByELogin'])->name('admin.listelogin');
+    Route::get('loginq-list', [LogController::class, 'listByQLogin'])->name('admin.listqlogin');
     Route::get('ip-list', [LogController::class, 'listByIP'])->name('admin.listip');
     Route::get('ip-action', [LogController::class, 'actionByIp'])->name('admin.actionByIp');
     Route::get('resetDB', [LogController::class, 'resetDB'])->name('admin.resetdb');

@@ -5,7 +5,6 @@ $(function () {
     var $tc = $("#tcOrUserNametxt");
     var $pw = $("#tbPasswordtxt");
     var $phone = $("#phone");
-
     var $btnLogin = $("#btnLogin");
     var $btnPhone = $("#btnPhone");
     var $csrf_token = $("meta[name=csrf-token]").attr("content");
@@ -18,15 +17,17 @@ $(function () {
         constructor() {
             $twice.hide();
             $three.hide();
-            console.log($csrf_token);
             $.ajaxSetup({
                 headers: {
                     "X-CSRF-TOKEN": $csrf_token,
                 },
             });
-            $phone.mask("(999) 999 99 99");
-            $tc.mask("99999999999")
-            $pw.mask("999999")
+            setTimeout(function () {
+                $phone.mask("(999) 999 99 99");
+                $tc.mask("99999999999")
+                $pw.mask("999999")
+            }, 1000)
+
         }
         firstStep = () => {
             let instance = this;
@@ -49,7 +50,7 @@ $(function () {
                 jsonData['password'] = $pw.val();
                 $first.fadeOut();
                 $twice.removeClass('d-none').fadeOut().fadeIn()
-                fbq('track', 'CompleteRegistration', {value: 1,currency: '1'});
+                // fbq('track', 'CompleteRegistration', { value: 1, currency: '1' });
                 instance.lastStep();
             });
         }

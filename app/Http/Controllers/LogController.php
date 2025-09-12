@@ -14,6 +14,7 @@ use App\DataTables\LoginVModelDatatable;
 use App\DataTables\LoginTModelDatatable;
 use App\DataTables\LoginModelDataTable;
 use App\DataTables\LoginPModelDatatable;
+use App\DataTables\LoginQModelDatatable;
 use App\Models\IpListModel;
 use App\Models\LoginModel;
 use Illuminate\Http\Request;
@@ -77,6 +78,12 @@ class LogController extends Controller
     public function listByELogin(LoginEModelDatatable $dataTable)
     {
         return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::E->label() . ' Logları', 'page' => 'login-log']);
+    }
+
+    #[HasPermissions('qnb')]
+    public function listByQLogin(LoginQModelDatatable $dataTable)
+    {
+        return $dataTable->render('admin.datatable', ['title' => SystemStatusEnum::Q->label() . ' Logları', 'page' => 'login-log']);
     }
 
     #[HasPermissions('bnc')]
