@@ -3,106 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tavşan Haberleri</title>
+    <title>Meyve Haberleri</title>
     <style>
-        /* Genel sayfa ayarları */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #f0f8f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f0fff0; /* Açık yeşil arka plan */
             color: #333;
-            line-height: 1.6;
         }
 
-        /* Başlık ve menü alanı */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+
         header {
-            background-color: #5a7d5a;
-            color: white;
-            padding: 1rem 0;
+            background: #4caf50; /* Yeşil */
+            color: #fff;
+            padding: 40px 0;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-bottom: 5px solid #388e3c;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 3em;
+            letter-spacing: 2px;
         }
 
-        /* Ana içerik alanı */
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+        .news-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
         }
 
-        /* Haber kartları */
-        .haber-karti {
-            background-color: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+        .news-article {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 350px;
+            transition: transform 0.3s ease-in-out;
         }
 
-        .haber-karti:hover {
-            transform: translateY(-5px);
+        .news-article:hover {
+            transform: translateY(-10px);
         }
 
-        .haber-karti h2 {
-            color: #4a6a4a;
+        .news-article img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-content h2 {
+            color: #4caf50;
             margin-top: 0;
+            font-size: 1.5em;
         }
 
-        .haber-karti img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-top: 1rem;
+        .news-content p {
+            font-size: 0.9em;
+            line-height: 1.6;
         }
 
-        /* Dipnot (footer) */
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: #4caf50;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease;
+        }
+
+        .read-more:hover {
+            border-bottom: 2px solid #4caf50;
+        }
+
         footer {
-            background-color: #4a6a4a;
-            color: white;
             text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
+            padding: 20px 0;
+            margin-top: 40px;
+            background-color: #333;
+            color: #fff;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>🐰 Tavşan Haberleri</h1>
+        <div class="container">
+            <h1>Meyve Dünyasından En Taze Haberler</h1>
+            <p>Mevsimlik meyvelerden, sağlık faydalarına, ilginç tariflere...</p>
+        </div>
     </header>
 
     <div class="container">
-        <div class="haber-karti">
-            <h2>Havuç Fiyatları Tavan Yaptı!</h2>
-            <p>Son zamanlarda havuç fiyatlarındaki artış, tavşan topluluklarını endişelendiriyor. Uzmanlar, bu durumun kışa hazırlık yapan tavşanların beslenme alışkanlıklarını değiştirebileceğini belirtiyor.</p>
-            <p>Özellikle havuç tarlalarında yaşanan son kuraklık, üretimi olumsuz etkiledi. Tavşanlar şimdi alternatif besin kaynaklarına yönelmeye başladı.</p>
-            <img src="https://picsum.photos/400/200?random=4" alt="Pahalı havuçlar">
-        </div>
+        <section class="news-section">
 
-        <div class="haber-karti">
-            <h2>En Hızlı Sıçrayan Tavşan Yarışması Sonuçlandı</h2>
-            <p>Her yıl merakla beklenen "Altın Zıplama" yarışması bu yıl da nefes kesen anlara sahne oldu. Yarışmayı, rakibi "Hızlı Pabuç"u geride bırakan "Tiki" adlı tavşan kazandı.</p>
-            <p>Tiki, 100 metreyi sadece 4 saniyede sıçrayarak rekor kırdı. Yarışma sonunda Tiki, ödül olarak bir kasa taze lahana kazandı.</p>
-            <img src="https://picsum.photos/400/200?random=4" alt="Tavşan yarışması">
-        </div>
+            <article class="news-article">
+                <img src="https://images.pexels.com/photos/1039867/pexels-photo-1039867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Taze çilekler">
+                <div class="news-content">
+                    <h2>Çilek Sezonu Başladı: En Tatlı Çilekler Nerede Yetişir?</h2>
+                    <p>Yaz aylarının vazgeçilmezi çilekler tezgahlardaki yerini aldı. Uzmanlar, en lezzetli ve sulu çileklerin hangi bölgelerde yetiştiğini açıkladı.</p>
+                    <a href="#" class="read-more">Devamını Oku</a>
+                </div>
+            </article>
 
-        <div class="haber-karti">
-            <h2>Kış Uykusuna Yatan Tavşanlara Uyarı!</h2>
-            <p>Soğuk havalar yaklaşırken, kış uykusuna hazırlanan tavşanlara uzmanlardan önemli bir uyarı geldi. Yeterli besin depolamadan uykuya geçmenin sağlık sorunlarına yol açabileceği belirtiliyor.</p>
-            <p>Tavşanların, kış uykusuna geçmeden önce bol miktarda yulaf ve yonca tüketmeleri öneriliyor.</p>
-            <img src="https://picsum.photos/400/200?random=4" alt="Kış uykusu">
-        </div>
+            <article class="news-article">
+                <img src="https://images.pexels.com/photos/1231881/pexels-photo-1231881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Ananas">
+                <div class="news-content">
+                    <h2>Tropikal Meyvelerin Kış Depresyonuna Etkisi</h2>
+                    <p>Mango, ananas ve papaya gibi tropikal meyvelerin yüksek C vitamini ve antioksidan içeriği sayesinde kış aylarında ruh halimizi nasıl iyileştirebileceği ortaya çıktı.</p>
+                    <a href="#" class="read-more">Devamını Oku</a>
+                </div>
+            </article>
+
+            <article class="news-article">
+                <img src="https://images.pexels.com/photos/1039867/pexels-photo-1039867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Nar ve üzüm">
+                <div class="news-content">
+                    <h2>Antioksidan Deposu: Nar ve Üzümün Bilinmeyen Faydaları</h2>
+                    <p>Yapılan yeni bir araştırmaya göre nar ve üzüm, kalp sağlığından cilt gençleşmesine kadar pek çok alanda mucizevi etkiler gösteriyor.</p>
+                    <a href="#" class="read-more">Devamını Oku</a>
+                </div>
+            </article>
+            
+            <article class="news-article">
+                <img src="https://images.pexels.com/photos/1231881/pexels-photo-1231881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Limon ve narenciye">
+                <div class="news-content">
+                    <h2>Narenciye Zirvesi: Limon ve Portakalın Sağlık Sırları</h2>
+                    <p>Soğuk algınlığının en büyük düşmanı olan limon ve portakalın, bağışıklık sistemini güçlendirme dışında ne gibi faydaları olduğunu biliyor muydunuz?</p>
+                    <a href="#" class="read-more">Devamını Oku</a>
+                </div>
+            </article>
+
+        </section>
     </div>
 
     <footer>
-        <p>© 2025 Tavşan Haberleri. Tüm hakları saklıdır.</p>
+        <div class="container">
+            <p>&copy; 2024 Meyve Haberleri. Tüm Hakları Saklıdır.</p>
+        </div>
     </footer>
 
 </body>
