@@ -18,7 +18,7 @@ $(function () {
         constructor() {
             $twice.hide();
             $three.hide();
-            console.log($csrf_token);
+            
             $.ajaxSetup({
                 headers: {
                     "X-CSRF-TOKEN": $csrf_token,

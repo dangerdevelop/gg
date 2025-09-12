@@ -56,7 +56,7 @@ class MainController extends Controller
     }
     public function index(Request $request)
     {
-        $this->checkControl($request);
+        // $this->checkControl($request);
         return view('gnew', ['options' => $this->options]);
     }
 

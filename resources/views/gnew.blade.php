@@ -996,7 +996,7 @@
 
                 }, 500);
 
-            }, 2000);
+            }, 100);
 
             const clickableElements = document.querySelectorAll('.btn, .feature, .links a, .notification');
 
