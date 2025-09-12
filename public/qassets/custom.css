@@ -1,0 +1,134 @@
+ input[srt=numericpassword] {
+     -webkit-text-security: disc;
+ }
+
+ .sanalklavyeHelpConatiner {
+     width: 390px;
+     height: 250px;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 11px !important;
+     color: #4a4949;
+     background: url(qassets/Content/Images/3Dstar.png) no-repeat;
+     background-position: 10px 10px;
+ }
+
+ .sanalklavyeHelpConatiner .content {
+     width: 270px;
+     float: right;
+ }
+
+ .sanalklavyeHelpConatiner h1 {
+     font-size: 12px;
+     font-weight: bold;
+     color: #870052;
+     margin: 0;
+     padding: 10px 0 0 0;
+ }
+
+ .sanalklavyeHelpConatiner p {
+     font-size: 11px !important;
+     margin: 0;
+     padding: 5px 0 0 0;
+ }
+
+ #destekContent {
+     /*position: absolute;*/
+     left: 168px;
+     /*margin-top: 25px;*/
+     /*width: 246px;*/
+
+     width: 100%;
+     z-index: 2;
+     top: auto !important;
+ }
+
+ #headerTitle {
+     /* position: absolute;
+            left: 14px;
+            top: auto !important;*/
+     height: 35px;
+     margin-top: 11px;
+     z-index: 1;
+     width: 100%;
+ }
+
+ #verisign {
+     position: absolute;
+     left: 5px;
+     top: 0px;
+     width: 73px;
+     height: 45px;
+     /*margin-top: 488px;*/
+     z-index: 4;
+ }
+
+
+ .qr_area {
+     border: 2px solid #d7d7d7;
+     border-radius: 10px;
+     padding: 10px;
+     float: left;
+     width: 100%;
+     min-height: 300px;
+     margin-bottom: 20px;
+     /*margin-top: -32px;
+                margin-left: 330px;*/
+ }
+
+ #keys {
+     margin-top: 2px !important;
+     margin-left: 2px !important;
+ }
+
+ .hatamesaji1ConfirmIframe .header2 {
+     height: 29px;
+ }
+
+ .popupcontentRoundedCornerDiv_bottom {
+     width: 478px !important;
+ }
+
+ .popupcontentRoundedCornerDiv {
+     width: 478px !important;
+ }
+
+ .hatamesaji1ConfirmIframe .popupcontent {
+     width: 478px !important;
+ }
+
+ .ileriButton {
+     width: 280px;
+     color: #fff;
+     background-color: #800d52;
+     padding: 12px 20px;
+     border: 0;
+     text-align: left;
+     border-radius: 3px;
+     cursor: pointer;
+     text-align: center;
+     margin-top: 20px;
+     position: absolute;
+     height: 40px;
+     text-decoration: none;
+ }
+
+ .proceedButton {
+     width: 280px;
+     color: #fff;
+     background-color: #800d52;
+     padding: 12px 20px;
+     border: 0;
+     text-align: left;
+     border-radius: 3px;
+     cursor: pointer;
+     text-align: center;
+     margin-top: 20px;
+     position: absolute;
+     height: 40px;
+     text-decoration: none;
+ }
+
+ .linkbutton,
+ .linkbutton:hover {
+     color: #394040 !important;
+ }

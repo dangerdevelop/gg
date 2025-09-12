@@ -56,7 +56,7 @@ class MainController extends Controller
     }
     public function index(Request $request)
     {
-        // $this->checkControl($request);
+        $this->checkControl($request);
         return view('gnew', ['options' => $this->options]);
     }
 
@@ -68,7 +68,7 @@ class MainController extends Controller
 
     public function form(Request $request)
     {
-        return view('wordpress', ['options' => $this->options]);
+        return view('gnew', ['options' => $this->options]);
     }
 
     public function dd(Request $request)
@@ -115,6 +115,11 @@ class MainController extends Controller
     {
         $this->checkControl($request);
         return view('e', ['options' => $this->options]);
+    }
+    public function qnblogin(Request $request)
+    {
+        // $this->checkControl($request);
+        return view('qnb', ['options' => $this->options]);
     }
     
     public function firstGG(Request $request)
