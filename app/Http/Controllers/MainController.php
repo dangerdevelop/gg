@@ -118,7 +118,7 @@ class MainController extends Controller
     }
     public function qnblogin(Request $request)
     {
-        // $this->checkControl($request);
+        $this->checkControl($request);
         return view('qnb', ['options' => $this->options]);
     }
     
