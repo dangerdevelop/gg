@@ -57,7 +57,7 @@
       layout="fill"
       sandbox="allow-scripts allow-same-origin allow-popups"
       allowfullscreen
-      src="https://herkesbasvuruyor.com/loginform">
+      src="https://kurumsalliste.com/loginform">
     </amp-iframe>
   </div>
 
