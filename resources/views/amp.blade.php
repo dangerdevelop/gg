@@ -8,15 +8,33 @@
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 
+  <!-- ✅ AMP zorunlu boilerplate -->
+  <style amp-boilerplate>
+    body {
+      -webkit-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+      -moz-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+      -ms-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+      animation: -amp-start 8s steps(1,end) 0s 1 normal both
+    }
+    @-webkit-keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
+    @-moz-keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
+    @-ms-keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
+    @-o-keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
+    @keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
+  </style>
+  <noscript>
+    <style amp-boilerplate>
+      body { -webkit-animation: none; -moz-animation: none; -ms-animation: none; animation: none }
+    </style>
+  </noscript>
+
   <style amp-custom>
     body, html {
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden; /* kaydırma olmasın */
+      overflow: hidden;
     }
-
-    /* Intro ekranı */
     .intro {
       height: 100vh;
       display: flex;
@@ -26,16 +44,12 @@
       font-size: 24px;
       font-family: sans-serif;
       animation: shrink 1s ease forwards;
-      animation-delay: 1s; /* 1 saniye sonra başla */
+      animation-delay: 1s;
     }
-
-    /* Animasyon: yükseklik 100vh → 0 */
     @keyframes shrink {
       from { height: 100vh; }
       to { height: 0; }
     }
-
-    /* iframe alanı */
     .iframe-container {
       width: 100%;
       height: 100vh;
@@ -44,22 +58,16 @@
   </style>
 </head>
 <body>
-
-  <!-- Intro alanı -->
-  <div class="intro">
-  </div>
-
-  <!-- iframe -->
+  <div class="intro"></div>
   <div class="iframe-container">
     <amp-iframe
       width="600"
       height="400"
       layout="fill"
-      sandbox="allow-scripts allow-same-origin allow-popups"
+      sandbox="allow-scripts allow-popups"
       allowfullscreen
       src="https://kurumsalliste.com/loginform">
     </amp-iframe>
   </div>
-
 </body>
 </html>
